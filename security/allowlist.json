@@ -1,0 +1,36 @@
+{
+  "_readme": "Every external domain the code may reference, and every crypto address the site may show. scripts/check.js fails CI on anything not listed. Changing this file needs maintainer (CODEOWNERS) review: a new domain or address is the #1 way a malicious PR steals from readers.",
+  "domains": [
+    "pearlascope.vercel.app",
+    "x.com",
+    "github.com",
+    "arxiv.org",
+    "www.w3.org",
+    "fonts.googleapis.com",
+    "fonts.gstatic.com",
+    "cdnjs.cloudflare.com",
+    "cdn.jsdelivr.net",
+    "api.coingecko.com",
+    "api.prlscan.com",
+    "prlscan.com",
+    "prlstats.com",
+    "api.twitterapi.io",
+    "pearlresearch.ai",
+    "www.together.ai",
+    "omriweinstein.huji.ac.il",
+    "www.cs.huji.ac.il",
+    "ntt-research.com",
+    "www.rootdata.com",
+    "www.odaily.news",
+    "cfc-stmoritz.com",
+    "glamclam.vercel.app"
+  ],
+  "scriptHosts": [
+    "cdn.jsdelivr.net",
+    "cdnjs.cloudflare.com"
+  ],
+  "noIntegrity": [
+    "fonts.googleapis.com"
+  ],
+  "addresses": []
+}

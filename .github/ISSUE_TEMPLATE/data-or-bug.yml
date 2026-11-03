@@ -1,0 +1,14 @@
+name: Wrong number or bug
+description: A figure on the site is wrong, stale, or something broke
+body:
+  - type: input
+    id: where
+    attributes: { label: Where on the site, placeholder: "Thesis → The dilution wall" }
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes: { label: What's wrong, and what it should be }
+    validations: { required: true }
+  - type: input
+    id: source
+    attributes: { label: Source for the correct figure, placeholder: "link, formula, or block height" }

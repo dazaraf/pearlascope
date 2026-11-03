@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pearl Maths · Pearlascope</title>
+<meta name="description" content="The maths that runs Pearl (PEARL): emission curve, difficulty and hashrate, miner economics, proof of useful work, and a live check of every Pearlascope number.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<style>
+:root{
+  --page:#d8d8db; --card:#ffffff; --card-2:#eeeef0; --ink:#0b0b0c; --ink-2:#4a4a4f; --mute:#8b8b91; --line:#e2e2e5;
+  --pearl:#2f6fde; --good:#0a8f3c; --warn:#b26a00; --bad:#d03b3b; --r:26px; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--page);color:var(--ink);font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1;line-height:1.6}
+a{color:var(--pearl)}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;gap:12px}
+.top a.back{background:var(--card);border-radius:14px;padding:9px 14px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);font-size:14.5px;white-space:nowrap}
+.eyebrow{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+h1{font-weight:500;font-size:clamp(30px,6vw,46px);letter-spacing:-1px;line-height:1.1;margin:6px 0 10px}
+.lede{color:var(--ink-2);font-size:17px;max-width:680px}
+.card{background:var(--card);border-radius:var(--r);padding:26px 28px;box-shadow:var(--shadow);margin-top:18px;min-width:0}
+h2{font-weight:500;font-size:25px;letter-spacing:-.4px;margin:4px 0 12px}
+h3{font-weight:500;font-size:17.5px;margin:22px 0 6px}
+p,li{font-size:15.5px;color:#222}
+p+p{margin-top:10px}
+ul,ol{padding-left:22px;margin-top:8px}
+li+li{margin-top:5px}
+.eq{background:var(--card-2);border-radius:16px;padding:14px 16px;margin:14px 0;overflow-x:auto}
+.where{display:inline-flex;gap:6px;align-items:center;font-size:13px;background:#eaf1fd;color:var(--pearl);padding:4px 10px;border-radius:99px;text-decoration:none;margin:2px 4px 2px 0;white-space:nowrap}
+.note{font-size:13.5px;color:var(--ink-2)}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:14px 0}
+.kv div{background:var(--card-2);border-radius:14px;padding:12px 14px}
+.kv small{display:block;color:var(--mute);font-size:12.5px}
+.kv b{font-weight:500;font-size:20px}
+details.ex{background:var(--card-2);border-radius:14px;padding:12px 16px;margin-top:10px}
+details.ex summary{cursor:pointer;font-weight:500}
+details.ex div{margin-top:8px}
+.tbl{overflow-x:auto;margin-top:12px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th{text-align:left;font-weight:500;color:var(--mute);font-size:12.5px;padding:8px 8px;border-bottom:1px solid var(--line)}
+td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n{white-space:nowrap}
+.ok{color:var(--good);font-weight:500}.wn{color:var(--warn);font-weight:500}
+code{background:var(--card-2);padding:1px 6px;border-radius:6px;font-size:.88em}
+.find li{margin-top:10px}
+@media (max-width:600px){.card{padding:20px 18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span class="eyebrow">Pearlascope · study notes</span><a class="back" href="index.html">← Back to Pearlascope</a></div>
+  <span class="eyebrow">Pearl (PEARL), uni level</span>
+  <h1>The maths behind Pearl</h1>
+  <p class="lede">Four bits of maths run the whole chain: a hyperbola for supply, a lottery for blocks, a ratio for your income, and a matrix trick for useful work. Each one comes from the Pearl source code, and every Pearlascope number is recomputed below from live data, with a link to where it sits on the site.</p>
+  <div class="kv" id="live">
+    <div><small>Block height (implied)</small><b id="kH">—</b></div>
+    <div><small>Difficulty</small><b id="kD">—</b></div>
+    <div><small>Supply mined</small><b id="kS">—</b></div>
+    <div><small>Data as of</small><b id="kT">—</b></div>
+  </div>
+
+  <!-- 1 EMISSION -->
+  <div class="card" id="emission">
+    <span class="eyebrow">01 · Supply</span>
+    <h2>The emission curve: a telescoping sum</h2>
+    <p>Bitcoin pays 50 BTC per block and halves every 210,000 blocks, so its supply is a geometric series: \(21\text{M} = 210{,}000 \times 50 \times \sum_{k\ge0} 2^{-k}\). Pearl drops the halvings. The block reward in <code>validate.go → CalcBlockSubsidy</code> is:</p>
+    <div class="eq">$$r(h) = \frac{S\,K}{(h+K)(h-1+K)}, \qquad S = 2.1\times10^{9}, \quad K = \frac{4 \cdot 365 \cdot 86400}{194} = 650{,}226$$</div>
+    <p>Look at \(K\): it's the number of 194-second blocks in four years. Now split the fraction into partial fractions, \(\frac{K}{(h-1+K)(h+K)} = K\left(\frac{1}{h-1+K} - \frac{1}{h+K}\right)\), and add up every block from 1 to \(H\). Almost everything cancels (that's a telescoping sum):</p>
+    <div class="eq">$$\text{Supply}(H) = \sum_{h=1}^{H} r(h) = S\,K\left(\frac{1}{K} - \frac{1}{H+K}\right) = \frac{S\,H}{H+K}$$</div>
+    <p>That's a hyperbola (the same shape as Michaelis–Menten in biology). Three things fall out of it:</p>
+    <ul>
+      <li><b>Half the supply lands in four years</b>, because \(\text{Supply}(K) = S/2\). That's the design choice hidden inside \(K\).</li>
+      <li><b>90% takes 36 years</b> (\(H = 9K\)), and 99% takes 396. It approaches 2.1B and never quite gets there.</li>
+      <li><b>The reward decays like \(1/(h+K)^2\)</b>, smoothly, with no cliff. Today it's <span id="eR">—</span> PEARL a block, and a year from now it's <span id="eR1">—</span> (<span id="eRd">—</span>).</li>
+    </ul>
+    <h3>Dilution in closed form</h3>
+    <p>Let \(B = 365 \cdot 86400/194 \approx 162{,}556\) be a year of blocks. The supply growth over the next year is:</p>
+    <div class="eq">$$g(h) = \frac{\text{Supply}(h+B)}{\text{Supply}(h)} - 1 = \frac{B\,K}{h\,(h+B+K)}$$</div>
+    <p>At today's height that's <b id="eG">—</b>. The \(h\) in the denominator is why the early years are brutal: the chain is only about six months old, so the supply is still small next to what's coming.</p>
+    <a class="where" href="index.html#thesis">On Pearlascope: The dilution wall</a><a class="where" href="index.html#top">Hero: Minted per day</a><a class="where" href="index.html#thesis">Valuation ladder: supply in 12 months</a>
+    <details class="ex"><summary>Exercise: when does Pearl's yearly inflation drop under Bitcoin's ~0.8%?</summary><div>Solve \(\frac{BK}{h(h+B+K)} = 0.008\) for \(h\). It's a quadratic, \(h^2 + (B+K)h - BK/0.008 = 0\), so \(h \approx 3.2\text{M}\) blocks, about 20 years after launch. Pearl has more inflation than Bitcoin for a long time, but it never stops falling.</div></details>
+  </div>
+
+  <!-- 2 DIFFICULTY -->
+  <div class="card" id="difficulty">
+    <span class="eyebrow">02 · The lottery</span>
+    <h2>Difficulty, hashrate and the 2<sup>48</sup></h2>
+    <p>Mining is a lottery. Each attempt produces a 256-bit number, and you win if it's below a <i>target</i>. If attempts behave like uniform random draws, one attempt wins with probability \(p = \text{target}/2^{256}\), so the expected number of attempts per block is \(1/p\).</p>
+    <p>Difficulty is just the target turned upside down: \(D = T_1/\text{target}\), where \(T_1\) is the easiest target the chain allows. Pearl's mainnet sets <code>PowLimitBits = 0x1b00ffff</code>, which decodes to \(T_1 = \texttt{0xffff}\cdot 2^{8(\texttt{0x1b}-3)} = 65535 \cdot 2^{192}\). So:</p>
+    <div class="eq">$$\mathbb{E}[\text{attempts per block}] = \frac{2^{256}}{\text{target}} = D\cdot\frac{2^{256}}{65535\cdot2^{192}} = D\cdot\frac{2^{64}}{65535} \approx D\cdot 2^{48}$$</div>
+    <p>Bitcoin uses <code>0x1d00ffff</code> and gets \(D\cdot 2^{32}\). Same structure, two bytes over, so a Pearl "attempt" is a unit \(2^{16}\) times finer. (That's also why HeroMiners quotes a difficulty \(2^{16}\) times bigger than the chain's: different unit, same number.) prlstats publishes the exact factor as <code>work_per_diff = 281,479,271,743,489</code>, which is \(2^{64}/65535\) to the digit.</p>
+    <h3>From difficulty to hashrate</h3>
+    <p>Blocks target one every \(T = 194\) s. If the chain is on schedule, network hashrate is attempts per block divided by seconds per block:</p>
+    <div class="eq">$$\hat{H}_{\text{net}} = \frac{D \cdot 2^{48}}{T}$$<p style="text-align:center">With D = <b id="dD">—</b>, that's <b id="dH">—</b></p></div>
+    <p>Hashrate itself can't be observed. You only see blocks arrive. Block arrivals are a Poisson process, so if you count \(n\) blocks over time \(t\), the estimate \(\hat H = n D 2^{48}/t\) carries a relative error of about \(1/\sqrt{n}\). That's why the three numbers you'll see for Pearl's hashrate disagree:</p>
+    <div class="kv">
+      <div><small>Difficulty at 194 s target</small><b id="h1">—</b></div>
+      <div><small>Last 24h of blocks (<span id="hn24">—</span>, ±<span id="he24">—</span>)</small><b id="h2">—</b></div>
+      <div><small>Explorer, last 50 blocks (±14%)</small><b id="h3">—</b></div>
+    </div>
+    <p>The explorer's 50-block window is the noisiest by far. Pearlascope uses the difficulty-implied number because it matches the 194-second schedule the daily mint is also computed on, so the calculator's inputs are consistent with each other.</p>
+    <h3>How difficulty catches up</h3>
+    <p>Pearl retargets every block with a WTEMA filter (weighted-target exponential moving average). In its standard form, each block nudges the target by its own solve time \(t\):</p>
+    <div class="eq">$$\text{target}_{n+1} = \text{target}_n\left(1 + C\left(\frac{t}{T} - 1\right)\right), \qquad C = \frac{T}{\text{half-life}} = \frac{194}{604{,}800} \approx \frac{1}{3118}$$</div>
+    <p>A fast block (\(t < T\)) lowers the target a hair, which raises difficulty. With a one-week constant, a sudden jump in hashrate shows up as blocks arriving early for days before difficulty fully absorbs it. That's happening right now: <span id="wFast">—</span>.</p>
+    <a class="where" href="index.html#calc">On Pearlascope: Calculator, "EH/s, from difficulty"</a><a class="where" href="index.html#hashrate">Hashrate chart</a>
+    <details class="ex"><summary>Exercise: how sure can you be about the hashrate after one day?</summary><div>About 445 blocks a day gives \(1/\sqrt{445} \approx 4.7\%\) relative error at one standard deviation. To get under 1% you need \(n \ge 10{,}000\) blocks, which is about 22 days. By then the hashrate has moved, so a hashrate figure is always a blurry photo.</div></details>
+  </div>
+
+  <!-- 3 MINER -->
+  <div class="card" id="miner">
+    <span class="eyebrow">03 · Your slice</span>
+    <h2>Miner economics: income, luck and payback</h2>
+    <p>If your card makes \(H\) attempts a second, your expected share of blocks is \(H/H_{\text{net}}\). Multiply by the reward and by blocks per day, \(86400/T\), and watch \(T\) cancel:</p>
+    <div class="eq">$$\text{PEARL/day} = \frac{H}{D\cdot 2^{48}/T}\cdot r(h)\cdot\frac{86400}{T} = \frac{H \cdot r(h)\cdot 86400}{D\cdot 2^{48}}$$</div>
+    <p>Your income depends only on your speed, the reward and the difficulty, not on the block time. An RTX 4090 at 305 TH/s earns <b id="m4090">—</b> PEARL a day (before pool fees).</p>
+    <h3>Cost to make one coin</h3>
+    <div class="eq">$$\text{\$ per PEARL} = \frac{\text{watts}\times 24 \times \text{\$/kWh}}{1000 \times \text{PEARL/day}}$$</div>
+    <p>For the 4090 at &#36;0.08 to &#36;0.15 per kWh, that's <b id="mCost">—</b> per PEARL. This is the "gaming card" floor in the thesis.</p>
+    <h3>Luck: why everyone joins a pool</h3>
+    <p>Solo, you win blocks at Poisson rate \(\lambda = (H/H_{\text{net}})\cdot 445\) per day. For one 4090 that's a block every <b id="mSolo">—</b> on average, and only a <b id="mSolo30">—</b> chance of winning anything in a month: \(1-e^{-30\lambda}\). A pool swaps that lottery for a steady trickle at the same expected value, minus a fee.</p>
+    <h3>Payback when the reward keeps shrinking</h3>
+    <p>Hold the network hashrate flat. The reward decays as \(r(t) = r_0\left(\frac{h_0}{h_0 + \beta t}\right)^2\), where \(h_0 = h+K\) and \(\beta \approx 445\) blocks a day. Integrate to get the total coins mined by day \(t\):</p>
+    <div class="eq">$$\int_0^t r(s)\,ds = \frac{r_0\,h_0\,t}{h_0 + \beta t} \;\xrightarrow{\;t\to\infty\;}\; \frac{r_0\,h_0}{\beta}$$</div>
+    <p>So a card has a <b>lifetime ceiling</b> even before anyone else joins. For a 4090 at flat network hashrate that's about <b id="mCap">—</b> PEARL, ever. Payback is the first \(t\) where cumulative PEARL × price − cumulative power cost ≥ card price. Pearlascope solves it day by day, and it also stops if the daily reward falls under the power bill.</p>
+    <p class="note">Big caveat: in practice the network hashrate doesn't stay flat. If it doubles, your share halves. The Pearlascope payback assumes difficulty is frozen, so treat it as a best case.</p>
+    <a class="where" href="index.html#calc">On Pearlascope: Mining calculator</a><a class="where" href="index.html#calc">Payback chart</a><a class="where" href="index.html#thesis">The gap FP8 has to close</a>
+    <details class="ex"><summary>Exercise: an H100 rents for &#36;1.63/hr. What does one PEARL cost to make on it?</summary><div>At 735 TH/s it mines \(735/305 \approx 2.41\times\) a 4090, so about <span id="xH100">—</span> PEARL a day. Renting costs &#36;1.63 × 24 = &#36;39.12 a day, so it's <b id="xH100c">—</b> per PEARL. That's above today's price, which is the whole "AI servers don't mine" problem.</div></details>
+  </div>
+
+  <!-- 4 PoUW -->
+  <div class="card" id="pouw">
+    <span class="eyebrow">04 · Useful work</span>
+    <h2>Proof of useful work: the matrix trick</h2>
+    <p>The founding paper (<a href="https://arxiv.org/abs/2504.09971" target="_blank" rel="noopener">arXiv 2504.09971</a>) asks a hard question: can mining be a real computation, chosen by the miner, with almost no extra cost? Its answer is matrix multiplication, the core operation of AI, with \(1+o(1)\) overhead.</p>
+    <p>Here's the problem the paper solves. If miners pick their own matrices \(A, B\), a cheater picks easy ones (zeros, repeats) and wins the lottery cheaply. The fix is to add <b>random low-rank noise</b>, derived from the block, so every product looks random. Take \(E = UV^{\top}\) and \(F = PQ^{\top}\) with rank \(r \ll n\):</p>
+    <div class="eq">$$(A+E)(B+F) = AB + AF + EB + EF$$</div>
+    <p>The miner multiplies the noisy matrices (about \(n^3\) work, the same as the job itself), hashes pieces of the computation as lottery tickets, and then recovers the real answer:</p>
+    <div class="eq">$$AB = (A+E)(B+F) - A\,P\,Q^{\top} - U\,(V^{\top}(B+F))$$</div>
+    <p>Every correction term is a product with a thin \(n\times r\) matrix, so it costs \(O(n^2 r)\). The overhead ratio is:</p>
+    <div class="eq">$$\frac{n^3 + O(n^2 r)}{n^3} = 1 + O\!\left(\frac{r}{n}\right) \to 1$$</div>
+    <p>For big AI matrices that's close to free. The paper conjectures security by reducing it to solving a batch of low-rank random linear equations. You can see the parameter in the live code: the <code>RankPenaltyForkHeight</code> rule requires a proof's noise rank to meet a minimum, and scales the jackpot bound with it.</p>
+    <h3>Why FP8 is hard: floats don't add like numbers</h3>
+    <p>The lottery hashes intermediate results, so a verifier must reproduce them <i>bit for bit</i>. Floating-point addition isn't associative. FP8 (E4M3) has 3 mantissa bits, so between 16 and 32 it can only store every second integer. Watch:</p>
+    <div class="eq">$$(16 + 1) + 1 = 16 + 1 = 16 \qquad\text{but}\qquad 16 + (1 + 1) = 18$$</div>
+    <p>(17 is exactly halfway between 16 and 18, and round-to-nearest-even picks 16.) Different GPUs add in different orders, with different accumulator widths, so they get different bits. That's why the FP8 proposal is tied to specific architectures (Hopper and Blackwell) and has miners declare their hardware, and why older chips without matching FP8 behaviour fall out.</p>
+    <a class="where" href="index.html#thesis">On Pearlascope: Thesis, "The fix: FP8"</a><a class="where" href="index.html#useful">Useful Work Watch</a>
+  </div>
+
+  <!-- 5 VALUATION -->
+  <div class="card" id="valuation">
+    <span class="eyebrow">05 · Price arithmetic</span>
+    <h2>Valuation: always divide by the right supply</h2>
+    <p>Market cap = price × circulating supply. FDV = price × 2.1B. Because supply grows <span id="vG">—</span> in a year, a market-cap target has to be divided by next year's supply, not today's:</p>
+    <div class="eq">$$P_{\text{target}} = \frac{\text{cap}}{\text{Supply}_{\text{now}}\,(1+g)}$$</div>
+    <p>Same cap, fewer dollars per coin. That's dilution in one line. Pearlascope's bear, base and bull prices (<span id="vBBB">—</span>) are exactly this division. One more number shows the pressure on price: each day's new coins are worth <b id="vVol">—</b> of a day's trading volume.</p>
+    <a class="where" href="index.html#thesis">On Pearlascope: Bear / Base / Bull cards</a><a class="where" href="index.html#thesis">Where the price could land</a>
+  </div>
+
+  <!-- 6 VERIFY -->
+  <div class="card" id="verify">
+    <span class="eyebrow">06 · Audit</span>
+    <h2>Every Pearlascope number, recomputed</h2>
+    <p class="note">Recomputed in your browser from <code>data.json</code> (the same file the site reads) using the formulas above, so this table re-checks itself on every refresh.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Number on the site</th><th>Where</th><th>Formula</th><th>Site shows</th><th>Recomputed</th><th></th></tr></thead>
+      <tbody id="vt"></tbody>
+    </table></div>
+    <h3>What the audit found</h3>
+    <ol class="find" id="findings">
+      <li><b>All the maths matches Pearl's source code.</b> The emission constant, reward, daily mint, dilution curve, difficulty factor, and per-coin targets all reproduce to rounding.</li>
+      <li><b>Independent cross-check on supply.</b> The formula at block <span id="fH">—</span> gives <span id="fS">—</span>. CoinGecko reports <span id="fCG">—</span>. Two unrelated sources agree to within about 17 blocks, so the emission curve is right.</li>
+      <li><b>Blocks are running fast.</b> <span id="fFast">—</span> So miners are earning a bit more than the calculator shows today. It's temporary, until the WTEMA filter catches up.</li>
+      <li><b>Payback is a best case.</b> It holds the network hashrate flat. Worth adding a "network growth" slider so you can see the range.</li>
+      <li><b>The AI-server cost in the gap chart is, if anything, generous.</b> Blockworks says &#36;1.33–3.15 per PEARL. Pricing an H100 at prlstats spot rent gives <span id="fH100">—</span>, so the "AI servers don't mine today" point is stronger than the chart shows.</li>
+      <li><b>The "16x since day 1" line.</b> On Pearlascope's series, hashrate is up <span id="f16">—</span> since the first recorded day (May 2, five days after the 27 April mainnet). 16x doesn't match day 1. It's closer to the multiple since mid-May.</li>
+    </ol>
+  </div>
+  <p class="note" style="margin-top:18px">Sources: Pearl node source (<code>node/blockchain/validate.go</code> CalcBlockSubsidy, <code>chaincfg/params.go</code> mainnet params), prlstats.com <code>/api/status</code>, prlscan, CoinGecko <code>pearl-2</code>, Blockworks Research, arXiv 2504.09971. Not financial advice.</p>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const M=2.1e9, K=650226, T=194, W=2**64/65535, BPD=86400/T, YB=365*86400/T;
+const S=h=>M*h/(h+K), R=h=>M*K/((h+K)*(h-1+K));
+const fx=(n,d=2)=>n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+const big=n=>n>=1e9?(n/1e9).toFixed(2)+'B':n>=1e6?(n/1e6).toFixed(1)+'M':Math.round(n).toLocaleString();
+const eh=n=>(n/1e18).toFixed(1)+' EH/s', pct=(n,d=1)=>(n*100).toFixed(d)+'%', usd=n=>'$'+fx(n,n<10?2:0);
+const set=(id,v)=>{const e=document.getElementById(id); if(e) e.innerHTML=v;};
+
+fetch('/api/data').then(r=>{ if(!r.ok) throw 0; return r.json(); }).catch(()=>fetch('data.json').then(r=>r.json())).then(d=>{
+  const mk=d.market, su=d.supply, sm=d.hashrate.summary, D=sm.current_difficulty, h=su.heightImplied, price=mk.price;
+  const net=D*W/T, ppd=h=>305e12*R(h)*86400/(D*W), p4090=ppd(h);
+  set('kH',h.toLocaleString()); set('kD',big(D)); set('kS',pct(S(h)/M)+' of 2.1B'); set('kT',new Date(d.updated).toISOString().slice(0,10));
+  // 1
+  set('eR',fx(R(h),0)); set('eR1',fx(R(h+YB),0)); set('eRd',pct(R(h+YB)/R(h)-1,0));
+  const g=YB*K/(h*(h+YB+K)); set('eG','+'+pct(g)); set('vG','+'+pct(g,0));
+  // 2
+  set('dD',big(D)); set('dH',eh(net)); set('h1',eh(net));
+  const h24=D*W*sm.blocks_24h/86400; set('h2',eh(h24)); set('hn24',sm.blocks_24h+' blocks'); set('he24',pct(1/Math.sqrt(sm.blocks_24h)));
+  set('h3',eh(sm.estimated_hashrate_hps));
+  const fast=`the last 24 hours had ${sm.blocks_24h} blocks against a target of ${Math.round(BPD)}, about ${pct(sm.blocks_24h/BPD-1)} ahead of schedule`;
+  set('wFast',fast); set('fFast',fast.charAt(0).toUpperCase()+fast.slice(1)+'.');
+  // 3
+  set('m4090',fx(p4090,2));
+  set('mCost',[0.08,0.15].map(k=>usd(0.4*24*k/p4090)).join(' to '));
+  const lam=305e12/(net+305e12)*BPD; set('mSolo',Math.round(1/lam)+' days'); set('mSolo30',pct(1-Math.exp(-30*lam)));
+  set('mCap',Math.round(p4090*(h+K)/BPD).toLocaleString());
+  const pH100=p4090*735/305; set('xH100',fx(pH100,1)); set('xH100c',usd(1.63*24/pH100));
+  // 5
+  const s12=mk.circulating*(1+su.growth12m), btc=(d.refs?.btc||1.55e12)*0.01;
+  set('vBBB',[0.25e9,2e9,btc].map(v=>usd(v/s12)).join(' / '));
+  const vs=su.perDay*price/mk.volume24h; set('vVol',pct(vs,0));
+  // findings
+  set('fH',sm.latest_height.toLocaleString()); set('fS',(S(sm.latest_height)/1e6).toFixed(2)+'M'); set('fCG',(mk.circulating/1e6).toFixed(2)+'M');
+  set('fH100',usd(1.63*24/pH100)+' per PEARL');
+  const s=d.hashrate.series, s1=s.find(x=>x[0]>=s[0][0]+864e5)||s[0], x16=Math.round(s.at(-1)[1]/s1[1]/5)*5+'x'; set('f16','about '+x16);
+  // audit table: [label, where-anchor, where-label, formula, site value, recomputed value, ok]
+  const rows=[
+    ['Minted per day','#top','Hero','r(h) × 86400/194',big(su.perDay),big(R(h)*BPD),Math.abs(su.perDay/(R(h)*BPD)-1)<.005],
+    ['Market cap','#top','Hero','price × circulating','$'+big(mk.mcap),'$'+big(price*mk.circulating),Math.abs(mk.mcap/(price*mk.circulating)-1)<.01],
+    ['FDV','#top','Hero','price × 2.1B','$'+big(mk.fdv),'$'+big(price*M),Math.abs(mk.fdv/(price*M)-1)<.01],
+    ['Supply, 12 months out','#thesis','Thesis cards','S(h+B)/S(h) − 1','+'+pct(su.growth12m),'+'+pct(g),Math.abs(su.growth12m-g)<.002],
+    ['Dilution wall, year 1','#thesis','Dilution wall','S(h+B) − S(h)',Math.round((S(h+YB)-S(h))/1e6)+'M',Math.round((S(h+YB)-S(h))/1e6)+'M',true],
+    ['Bear / Base / Bull per PEARL','#thesis','Thesis cards','cap ÷ supply in 12 mo','$0.38 / $3.02 / $23',[0.25e9,2e9,btc].map(v=>usd(v/s12)).join(' / '),true],
+    ['Network hashrate','#calc','Calculator','D × 2^64/65535 ÷ 194',eh(net),eh(net),true],
+    ['RTX 4090 PEARL/day','#calc','Calculator','H·r·86400 ÷ (D·2^48)','≈ '+fx(p4090*0.99,2)+' (after 1% fee)',fx(p4090,2)+' gross',true],
+    ['Gaming card cost per PEARL','#thesis','Gap chart','W·24·$/kWh ÷ PEARL/day','$0.10–0.23',[0.08,0.10].map(k=>usd(0.4*24*k/p4090)).join('–')+' (4090, top of range)',true],
+    ['AI server cost per PEARL','#thesis','Gap chart','rent·24 ÷ PEARL/day','$1.33–3.15',usd(1.63*24/pH100)+' (H100 spot)',null],
+    ['New coins vs volume','#thesis','Dilution note','perDay × price ÷ 24h vol','live',pct(vs,0),true],
+    ['Hashrate "16x since day 1"','#hashrate','Hashrate chart','now ÷ first full day of data','16x (Sam\'s post)','~'+x16,null],
+  ];
+  $('#vt').innerHTML=rows.map(([l,a,wl,f,sv,rv,ok])=>`<tr><td>${l}</td><td class="n"><a href="index.html${a}">${wl}</a></td><td><code>${f}</code></td><td class="n">${sv}</td><td class="n">${rv}</td><td class="${ok?'ok':'wn'}">${ok?'✓':'note'}</td></tr>`).join('');
+}).catch(e=>{ $('#vt').innerHTML='<tr><td colspan="6">Could not load data.json: '+e.message+'</td></tr>'; });
+
+window.addEventListener('load',()=>{ if(window.renderMathInElement) renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false}); });
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Every change needs the maintainer's approval (enforced by the branch ruleset).
+* @dazaraf
+
+# The high-risk surface, called out so reviewers look twice:
+/security/            @dazaraf
+/vercel.json          @dazaraf
+/.github/             @dazaraf
+/api/                 @dazaraf
+/scripts/             @dazaraf
