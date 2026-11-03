@@ -1,0 +1,10 @@
+name: Idea or new panel
+description: Propose a chart, a data source or a feature
+body:
+  - type: textarea
+    id: idea
+    attributes: { label: The idea, description: "What question would it answer for someone holding or mining Pearl?" }
+    validations: { required: true }
+  - type: input
+    id: data
+    attributes: { label: Free data source, description: "Pearlascope only uses free, public APIs." }

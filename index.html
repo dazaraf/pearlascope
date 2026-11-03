@@ -1,0 +1,1200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pearlascope · Pearl Analytics</title>
+<meta name="description" content="Live analytics for Pearl (PEARL), the proof-of-useful-work L1: price, hashrate, early-days comparison, and who is actually using it.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M6 34c6 16 46 16 52 0z' fill='%23111'/%3E%3Cpath d='M8 30C14 8 50 8 56 30c-8-4-40-4-48 0z' fill='%23111'/%3E%3Ccircle cx='32' cy='31' r='9' fill='%23eef0ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --page:#d8d8db; --frame:#f2f2f3; --card:#ffffff; --card-2:#e9e9eb; --hero-a:#e4e4e7; --hero-b:#cfcfd3;
+  --ink:#0b0b0c; --ink-2:#4a4a4f; --mute:#8b8b91; --line:#e2e2e5; --line-2:#d0d0d4;
+  --lime:#d9f45a; --lime-ink:#1c2300; --black:#0d0d0e; --black-2:#1b1b1d;
+  --pearl:#2a78d6; --btc:#eb6834; --zec:#1baf7a; --down:#d03b3b; --up:#0a8f3c;
+  --r-xl:40px; --r-lg:30px; --r-md:22px; --r-sm:14px;
+  --shadow:0 1px 0 rgba(255,255,255,.9) inset, 0 10px 30px -18px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--page);color:var(--ink);font-family:'Inter Tight',system-ui,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1,"ss01" 1}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+.frame{max-width:1480px;margin:16px auto;background:var(--frame);border-radius:var(--r-xl);padding:22px 26px 40px;box-shadow:0 1px 0 #fff inset,0 30px 80px -40px rgba(0,0,0,.35)}
+
+/* top bar */
+.top{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:19px;letter-spacing:-.3px}
+.brand svg{width:44px;height:44px}
+.tabs{justify-self:center;display:flex;background:var(--card);border-radius:18px;padding:5px;box-shadow:var(--shadow)}
+.tabs a{padding:11px 26px;border-radius:14px;font-size:15px;color:var(--ink-2)}
+.tabs a.on{background:var(--black);color:#fff}
+.right{display:flex;gap:10px;align-items:center}
+.pill{display:flex;align-items:center;gap:9px;background:var(--card);border-radius:16px;padding:11px 16px;font-size:14.5px;box-shadow:var(--shadow);white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--up);box-shadow:0 0 0 4px rgba(10,143,60,.14)}
+.dot.stale{background:var(--mute);box-shadow:none}
+.icon-btn{width:46px;height:46px;border-radius:16px;background:var(--card);display:grid;place-items:center;box-shadow:var(--shadow)}
+
+/* layout */
+.shell{display:grid;grid-template-columns:62px 1fr;gap:20px;align-items:start}
+.rail{position:sticky;top:16px;display:flex;flex-direction:column;gap:14px}
+.rail nav,.rail .help{background:var(--card);border-radius:22px;padding:8px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow)}
+.rail a{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;color:var(--ink-2);position:relative;transition:background .15s}
+.rail a:hover{background:var(--card-2)}
+.rail a.on{background:var(--black);color:#fff}
+.rail a span{position:absolute;left:58px;background:var(--black);color:#fff;font-size:12.5px;padding:6px 10px;border-radius:9px;white-space:nowrap;opacity:0;pointer-events:none;transform:translateX(-4px);transition:.15s;z-index:20}
+.rail a:hover span{opacity:1;transform:none}
+svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* hero: one viewport, does not scroll internally */
+.hero{height:calc(100vh - 110px);min-height:670px;max-height:920px;display:grid;grid-template-columns:1fr 380px;grid-template-rows:1fr 205px;gap:20px;overflow:hidden}
+.stage{grid-column:1;grid-row:1}.desk{grid-column:2;grid-row:1 / span 2}.minis{grid-column:1;grid-row:2}
+.stage{position:relative;border-radius:var(--r-lg);background:radial-gradient(120% 90% at 70% 40%,#f4f4f6 0%,var(--hero-a) 40%,var(--hero-b) 100%);padding:30px 32px;overflow:hidden;box-shadow:0 1px 0 rgba(255,255,255,.7) inset}
+.chips{display:flex;gap:10px;align-items:center}
+.chip{background:rgba(255,255,255,.85);border-radius:11px;padding:8px 13px;font-size:13.5px;box-shadow:0 1px 0 #fff inset}
+.chip.ghost{background:none;box-shadow:none;color:var(--ink-2);padding-left:0}
+.stage h1{font-size:clamp(46px,4.6vw,70px);font-weight:400;letter-spacing:-2.5px;line-height:1;margin:18px 0 8px}
+.stage .sub{font-size:15.5px;color:var(--ink-2);max-width:360px;position:relative;z-index:2}
+.stats{position:relative;margin-top:22px;display:flex;flex-direction:column;gap:10px;z-index:2;width:max-content}
+.stat{display:flex;align-items:center;gap:12px;background:rgba(236,236,239,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:18px;padding:10px 20px 10px 10px;min-width:220px;box-shadow:0 1px 0 rgba(255,255,255,.8) inset}
+.stat .ic{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.8)}
+.stat .ic.lime{background:var(--lime);color:var(--lime-ink)}
+.stat small{display:block;font-size:13px;color:var(--ink-2)}
+.stat b{font-weight:500;font-size:17px;letter-spacing:-.3px}
+.chg{font-size:13px;font-weight:500;margin-left:6px}
+.chg.down{color:var(--down)} .chg.up{color:var(--up)}
+.clam{position:absolute;right:-2%;top:50%;transform:translateY(-54%);width:min(58%,600px);filter:drop-shadow(0 40px 40px rgba(0,0,0,.28))}
+.dock{position:absolute;left:24px;right:24px;bottom:22px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(240,240,242,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:22px;padding:14px 14px 14px 22px;box-shadow:0 1px 0 rgba(255,255,255,.8) inset;z-index:2}
+.dock .meter{width:min(280px,36vw);height:6px;border-radius:6px;background:rgba(0,0,0,.08);overflow:hidden;margin-top:8px}
+.dock .meter div{height:100%;background:var(--black);border-radius:6px}
+.dock b{font-weight:500;font-size:15.5px} .dock small{color:var(--ink-2);font-size:13px;margin-left:8px}
+.btn-dark{background:var(--black);color:#fff;border-radius:16px;padding:14px 22px;font-size:15px;display:inline-flex;gap:10px;align-items:center;white-space:nowrap}
+.btn-dark:hover{background:#26262a}
+
+.desk{background:var(--card);border-radius:var(--r-lg);padding:24px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow);grid-row:1 / span 2;overflow:hidden}
+.desk-h{display:flex;gap:14px;align-items:center}
+.desk-h .ic{width:46px;height:46px;border-radius:14px;background:var(--card-2);display:grid;place-items:center}
+.desk-h b{font-weight:500;font-size:19px;display:block}
+.desk-h small{color:var(--ink-2);font-size:13.5px}
+.grid4{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:var(--card-2);border-radius:20px;padding:16px;text-align:left;min-height:112px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .15s,background .15s}
+.tile:hover{transform:translateY(-2px);background:#e1e1e4}
+.tile b{font-weight:500;font-size:16.5px;display:block;margin-top:14px}
+.tile small{color:var(--ink-2);font-size:13px;line-height:1.35}
+.tile.dark{background:var(--black);color:#fff}.tile.dark small{color:#9a9aa0}.tile.dark:hover{background:#222}
+.ask{margin-top:auto;border:1px solid var(--line);border-radius:22px;padding:18px}
+.ask p{font-size:15px;line-height:1.45;color:var(--ink-2)}
+.ask .row{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+.btn-lime{background:var(--lime);color:var(--lime-ink);border-radius:13px;padding:10px 16px;font-size:14px;font-weight:500;display:inline-flex;gap:8px;align-items:center}
+.warn-mini{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:flex;gap:8px}
+.warn-mini b{color:var(--ink);font-weight:500}
+
+.minis{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.card{background:var(--card);border-radius:var(--r-lg);padding:20px 22px;box-shadow:var(--shadow);position:relative;min-width:0}
+.xp{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:11px;background:var(--card-2);display:grid;place-items:center;opacity:.6;transition:opacity .15s;z-index:3;cursor:pointer}
+.xp:hover{opacity:1}.xp svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card.xp-on .card-h{padding-right:44px}
+.xp-head{margin-bottom:10px}.xp-head b{font-weight:500;font-size:18px;display:block}.xp-head small{color:var(--ink-2);font-size:13.5px}
+.xp-foot{display:flex;justify-content:space-between;gap:16px;white-space:nowrap;margin-top:14px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--mute)}
+.card-h{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.card-h b{font-weight:500;font-size:18px;display:block;letter-spacing:-.2px}
+.card-h small{color:var(--ink-2);font-size:13.5px}
+.arrow{width:42px;height:42px;border-radius:13px;background:var(--card-2);display:grid;place-items:center;flex:none}
+.arrow:hover{background:#dedee1}
+.card.black{background:var(--black);color:#fff}
+.card.black small{color:#9a9aa0}
+.card.black .arrow{background:var(--black-2)}
+.big-n{font-size:30px;font-weight:400;letter-spacing:-1px}
+.inner-dark{background:var(--black-2);border-radius:18px;padding:12px 14px;display:flex;align-items:center;gap:12px;margin-top:12px}
+.inner-dark .ic{width:38px;height:38px;border-radius:11px;background:var(--lime);color:var(--lime-ink);display:grid;place-items:center;flex:none}
+.spark{width:100%;height:96px;margin-top:8px;display:block}
+
+/* sections */
+section.sec{margin-top:20px;scroll-margin-top:16px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:44px 4px 16px}
+.sec-head h2{font-size:34px;font-weight:400;letter-spacing:-1.2px}
+.sec-head p{color:var(--ink-2);font-size:15px;max-width:560px;margin-top:6px}
+.eyebrow{font-size:12.5px;color:var(--mute);letter-spacing:.4px;text-transform:uppercase}
+.seg{display:flex;background:var(--card-2);border-radius:13px;padding:4px}
+.seg button{padding:7px 14px;border-radius:10px;font-size:13.5px;color:var(--ink-2)}
+.seg button.on{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.two{display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:start}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.chart{width:100%;height:360px;display:block}
+.chart-wrap{position:relative}
+.tip{position:absolute;pointer-events:none;background:var(--black);color:#fff;border-radius:12px;padding:9px 12px;font-size:13px;line-height:1.4;opacity:0;transition:opacity .1s;white-space:nowrap;z-index:5;transform:translate(-50%,-110%)}
+.tip small{color:#a7a7ad;display:block;font-size:12px}
+.legend{display:flex;gap:18px;font-size:13.5px;color:var(--ink-2);flex-wrap:wrap}
+.legend i{display:inline-block;width:12px;height:3px;border-radius:2px;margin-right:7px;vertical-align:middle}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{text-align:left;font-weight:400;color:var(--mute);font-size:12.5px;padding:0 0 10px;border-bottom:1px solid var(--line)}
+td{padding:12px 0;border-bottom:1px solid var(--line)}
+th:last-child,td:last-child{text-align:right}
+td a{border-bottom:1px solid var(--line-2)}
+.kv{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv span:first-child{color:var(--ink-2)}
+.empty{border:1.5px dashed var(--line-2);border-radius:20px;padding:28px;color:var(--ink-2);font-size:14.5px;line-height:1.55;text-align:center}
+.empty code,.prose code{background:var(--card-2);padding:2px 6px;border-radius:6px;font-size:.9em}
+
+.status{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;padding:5px 10px;border-radius:9px;background:var(--card-2);white-space:nowrap}
+.status.bad{background:#fbe5e5;color:#8d1f1f}.status.mid{background:#fdf1d6;color:#7a5200}.status.good{background:#e1f4e6;color:#14602b}
+.uw{display:flex;flex-direction:column;gap:12px}
+.uw-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.uw-row b{font-weight:500;font-size:15.5px}
+.uw-row p{color:var(--ink-2);font-size:14px;line-height:1.5;margin-top:4px}
+.uw-row a.src{font-size:12.5px;color:var(--mute);border-bottom:1px solid var(--line-2)}
+.timeline{display:flex;flex-direction:column}
+.tl{display:grid;grid-template-columns:86px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
+.tl span{color:var(--mute)}
+
+.wall{columns:3 320px;column-gap:20px}
+.wall>*{break-inside:avoid;margin-bottom:20px}
+.tweet-card{background:var(--card);border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow)}
+.note{background:var(--black);color:#fff;border-radius:var(--r-lg);padding:26px}
+.note h3{font-weight:500;font-size:20px;margin:14px 0 10px}
+.note p,.note li{color:#c9c9ce;font-size:14.5px;line-height:1.55}
+.note ol{padding-left:18px;margin-top:10px;display:flex;flex-direction:column;gap:8px}
+.note code{background:var(--black-2);color:var(--lime);padding:2px 6px;border-radius:6px;font-size:.88em}
+
+.prose{font-size:16px;line-height:1.65;color:#2a2a2e;max-width:760px}
+.prose h3{font-size:21px;font-weight:500;letter-spacing:-.3px;margin:30px 0 8px;color:var(--ink)}
+.prose p{margin-bottom:14px}
+.prose ul{padding-left:20px;margin-bottom:14px}
+.prose li{margin-bottom:6px}
+.prose a{border-bottom:1px solid var(--line-2)}
+.thesis-sum{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:6px}
+.ts{background:var(--card-2);border-radius:20px;padding:18px}
+.ts .eyebrow{display:block;margin-bottom:8px}
+.ts p{font-size:14.5px;line-height:1.5;color:#2a2a2e}
+.case-n{font-size:34px;font-weight:500;letter-spacing:-1px;color:var(--ink);margin:2px 0 10px;line-height:1.1}
+.case-n small{display:block;font-size:12px;letter-spacing:0;color:var(--ink-2);font-weight:400;margin-top:4px}
+.case.bear{box-shadow:inset 3px 0 0 #DA4547}.case.base{box-shadow:inset 3px 0 0 var(--ink-2)}.case.bull{box-shadow:inset 3px 0 0 #0E8C7A}
+.pc-top{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:6px 0 16px}
+.pc-n span{font-size:40px;font-weight:500;letter-spacing:-1.2px;color:var(--ink);line-height:1}
+.pc-n small{display:block;font-size:13px;color:var(--ink-2);margin-top:6px;line-height:1.4;max-width:300px}
+.pc-bar{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--card-2)}
+.pc-bar i{display:block;height:100%}
+.pc-legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:12.5px;color:var(--ink-2)}
+.pc-legend b{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.pc-trend{margin-top:14px;font-size:12.5px;color:var(--ink-2)}
+.pc-note{font-size:12.5px;color:var(--ink-2);margin-top:14px;line-height:1.5;max-width:760px}
+.pc-note a{border-bottom:1px solid var(--line-2)}
+@media(max-width:700px){.pc-top{grid-template-columns:1fr}}
+.th-short .th-lead{font-size:19px;line-height:1.5;letter-spacing:-.2px;margin:10px 0 0;color:var(--ink);max-width:72ch}
+.th-charts{margin:0}
+.th-note{font-size:12.5px;color:var(--ink-2);margin-top:14px;line-height:1.5}
+.rbars{display:grid;gap:14px;margin-top:18px;position:relative}
+.rb-row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;font-size:13px}
+.rb-row small{display:block;color:var(--mute);font-size:11.5px}
+.rb-track{position:relative;height:26px;background:var(--card-2);border-radius:8px}
+.rb-fill{position:absolute;top:0;bottom:0;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#fff;white-space:nowrap;min-width:46px}
+.rb-mark{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--ink)}
+.rb-mark span{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:11px;white-space:nowrap;color:var(--ink)}
+.vbars{display:flex;align-items:flex-end;gap:12px;height:180px;margin-top:26px;padding-bottom:4px;border-bottom:1px solid var(--line)}
+.vb{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;font-size:12px;color:var(--ink-2)}
+.vb i{display:block;width:100%;max-width:64px;border-radius:10px 10px 4px 4px;background:var(--pearl)}
+.vb b{font-weight:500;color:var(--ink);margin-bottom:6px}
+.vb-x{display:flex;gap:12px;margin-top:6px}.vb-x span{flex:1;text-align:center;font-size:11.5px;color:var(--mute)}
+.lbars{display:grid;gap:10px;margin-top:18px}
+.lb-row{display:grid;grid-template-columns:170px 1fr 92px;gap:12px;align-items:center;font-size:13px}
+.lb-row small{display:block;color:var(--mute);font-size:11.5px}
+.lb-track{height:22px;background:var(--card-2);border-radius:7px;overflow:hidden}
+.lb-fill{height:100%;border-radius:7px}
+.lb-v{text-align:right;font-variant-numeric:tabular-nums}
+.lb-v small{color:var(--mute)}
+.ct{display:grid;gap:4px;margin-top:14px}
+.ct-row{display:grid;grid-template-columns:18px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.ct-row:last-child{border-bottom:0}
+.ct-row small{display:block;color:var(--ink-2);font-size:13px;margin-top:2px;line-height:1.45}
+.ct-dot{width:12px;height:12px;border-radius:50%;margin-top:4px;border:2px solid var(--line-2);background:var(--card)}
+.ct-row.done .ct-dot{background:var(--up);border-color:var(--up)}
+.ct-row.live .ct-dot{background:var(--lime);border-color:#a8c22a}
+.pb{display:grid;gap:8px;margin-top:16px}
+.pb-row{display:grid;grid-template-columns:120px 1fr 120px;gap:10px;align-items:center;font-size:13px}
+.pb-track{height:20px;background:var(--card-2);border-radius:6px;overflow:hidden}
+.pb-fill{height:100%;border-radius:6px;background:var(--pearl)}
+.pb-row .tag{font-size:11px;padding:2px 7px;border-radius:99px;background:var(--card-2);color:var(--ink-2);white-space:nowrap}
+.pb-row .tag.ok{background:#dff3e6;color:var(--up)}.pb-row .tag.cut{background:#f8e0e0;color:var(--down)}
+@media (max-width:720px){.rb-row,.lb-row{grid-template-columns:1fr}.pb-row{grid-template-columns:96px 1fr}.pb-row .tag{grid-column:2}}
+.case-note{font-size:12.5px;color:var(--ink-2);margin-top:14px;line-height:1.5}
+.case-note a{border-bottom:1px solid var(--line-2)}
+details.full summary{list-style:none;cursor:pointer;margin-top:20px}
+details.full summary::-webkit-details-marker{display:none}
+details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
+
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.person{background:var(--card);border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow)}
+.avatar{width:58px;height:58px;border-radius:18px;background:var(--black);color:#fff;display:grid;place-items:center;font-size:20px;font-weight:500;margin-bottom:16px;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.person b{font-weight:500;font-size:18px;display:block}
+.person .role{color:var(--ink-2);font-size:13.5px;margin:2px 0 12px}
+.person p{font-size:14px;line-height:1.55;color:#2a2a2e}
+.person .links{display:flex;gap:10px;margin-top:14px;font-size:13px;flex-wrap:wrap}
+.person .links a{background:var(--card-2);padding:6px 10px;border-radius:9px}
+.unv{font-size:12px;color:#7a5200;background:#fdf1d6;padding:2px 7px;border-radius:6px;margin-left:4px}
+
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.warn{margin-top:20px;background:#fbe9e3;color:#5c2312;border-radius:var(--r-md);padding:18px 22px;font-size:14.5px;line-height:1.5}
+.foot{margin-top:40px;color:var(--mute);font-size:13px;line-height:1.6;padding:0 4px}
+.foot code{background:var(--card-2);padding:1px 5px;border-radius:5px}
+
+
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-2)}
+.fld.full{grid-column:1 / -1}
+.fld input,.fld select{font:inherit;font-size:15px;color:var(--ink);background:var(--card-2);border:1px solid transparent;border-radius:13px;padding:11px 13px;outline:none;appearance:none;-webkit-appearance:none}
+.fld select{background-image:linear-gradient(45deg,transparent 50%,#4a4a4f 50%),linear-gradient(135deg,#4a4a4f 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%;background-size:5px 5px;background-repeat:no-repeat}
+.fld input:focus,.fld select:focus{border-color:var(--ink);background:#fff}
+.calc-note{font-size:12.5px;color:var(--mute);margin-top:16px;line-height:1.5}.calc-note a{border-bottom:1px solid var(--line-2)}
+.out-big{font-size:52px;letter-spacing:-2px;margin-top:18px;line-height:1}
+.out-big.neg{color:#ff8a80}.out-big.pos{color:var(--lime)}
+.out-lbl{color:#9a9aa0;font-size:13.5px;margin-top:6px}
+.out-rows{margin-top:20px;border-top:1px solid #2a2a2e}
+.out-rows div{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #2a2a2e;font-size:14.5px}
+.out-rows span{color:#9a9aa0}.out-rows b{font-weight:500}
+.calc-warn{font-size:12.5px;color:#9a9aa0;line-height:1.5;margin-top:16px}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq details:last-child{border-bottom:0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:16px 0;font-size:16.5px;font-weight:500}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-weight:300;font-size:22px;line-height:1;color:var(--ink-2);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{color:#2a2a2e;font-size:15px;line-height:1.6;padding:0 0 18px;max-width:820px}
+.faq .a a{border-bottom:1px solid var(--line-2)}
+.faq .a code{background:var(--card-2);padding:1px 6px;border-radius:6px;font-size:.9em}
+
+
+.tw header{display:flex;gap:11px;align-items:center}
+.tw-av{width:40px;height:40px;border-radius:13px;object-fit:cover;background:var(--card-2);flex:none}
+.tw-who{flex:1;min-width:0}.tw-who b{font-weight:500;font-size:14.5px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tw-who small{color:var(--mute);font-size:12.5px}
+.tw-v{display:inline-grid;place-items:center;width:15px;height:15px;border-radius:50%;background:var(--pearl);color:#fff;font-size:9px;vertical-align:1px}
+.tw-x{width:32px;height:32px;border-radius:10px;background:var(--card-2);display:grid;place-items:center;flex:none;color:var(--ink)}
+.tw-via,.tw-pin{display:inline-block;margin-top:12px;font-size:12px;color:var(--ink-2);background:var(--card-2);padding:3px 8px;border-radius:7px}
+.tw-pin{background:var(--lime);color:var(--lime-ink);margin-right:6px}
+.tw-text{font-size:14.5px;line-height:1.5;margin-top:12px;color:#1d1d20;word-wrap:break-word;display:-webkit-box;-webkit-line-clamp:9;-webkit-box-orient:vertical;overflow:hidden}
+.tw-more{font-size:13px;color:var(--pearl);margin-top:6px;display:inline-block}
+.wall-more{display:flex;justify-content:center;margin-top:4px}
+.tw-text a{color:var(--pearl)}
+.tw-img{width:100%;border-radius:14px;margin-top:12px;display:block;max-height:340px;object-fit:cover;background:var(--card-2)}
+.tw footer{display:flex;gap:16px;margin-top:14px;font-size:12.5px;color:var(--mute)}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(20,20,24,.28);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:.2s;z-index:40}
+.drawer{position:fixed;top:16px;right:16px;bottom:16px;width:min(560px,calc(100vw - 32px));background:var(--frame);border-radius:var(--r-lg);box-shadow:0 30px 80px -20px rgba(0,0,0,.4);transform:translateX(110%);transition:transform .28s cubic-bezier(.2,.8,.2,1);z-index:41;display:flex;flex-direction:column}
+.drawer.open{transform:none}.scrim.open{opacity:1;pointer-events:auto}
+.drawer-h{display:flex;justify-content:space-between;align-items:center;padding:24px 26px 10px}
+.drawer-h h3{font-size:26px;font-weight:400;letter-spacing:-.6px}
+.drawer-b{padding:6px 26px 30px;overflow:auto}
+.drawer-b .prose{font-size:15.5px}
+
+@media (max-width:1180px){
+  .hero{height:auto;max-height:none;grid-template-columns:1fr;grid-template-rows:auto}
+  .stage,.desk,.minis{grid-column:1;grid-row:auto}
+  .stage{min-height:560px}
+  .minis,.two,.three,.ways,.thesis-sum{grid-template-columns:1fr}
+  .calc-grid{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .frame{margin:0;border-radius:0;padding:16px}
+  .shell{grid-template-columns:1fr}.rail{display:none}
+  .tabs{display:none}.top{grid-template-columns:1fr auto}
+  .stage{min-height:620px;padding:22px}.stats{left:22px;top:180px}
+  .clam{width:92%;right:-14%;top:62%;opacity:.95}
+  .stat{min-width:0}.dock{flex-direction:column;align-items:stretch}
+  .sec-head{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <radialGradient id="pearlG" cx="38%" cy="32%" r="70%">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#f3f1fb"/>
+      <stop offset=".7" stop-color="#d9dcef"/><stop offset="1" stop-color="#a9aec9"/>
+    </radialGradient>
+    <linearGradient id="irid" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd9f1" stop-opacity=".55"/><stop offset=".5" stop-color="#d3f5ff" stop-opacity=".0"/>
+      <stop offset="1" stop-color="#e2ffd6" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="shellTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3a3f"/><stop offset=".55" stop-color="#16161a"/><stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+    <linearGradient id="shellBot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c1c20"/><stop offset="1" stop-color="#2e2e33"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b5b63"/><stop offset="1" stop-color="#9a9aa3"/>
+    </linearGradient>
+    <symbol id="logo" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="18" fill="#0d0d0e"/>
+      <path d="M12 31 C16 14 48 14 52 31 C44 27 20 27 12 31Z" fill="#fff"/>
+      <path d="M12 35 C16 50 48 50 52 35 Z" fill="#fff"/>
+      <circle cx="32" cy="33.5" r="7.2" fill="url(#pearlG)" stroke="#0d0d0e" stroke-width="1.6"/>
+      <circle cx="29.6" cy="31" r="1.8" fill="#fff"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="frame">
+  <header class="top">
+    <a class="brand" href="#top"><svg><use href="#logo"/></svg>Pearlascope</a>
+    <nav class="tabs">
+      <a href="#top" class="on" data-tab>Overview</a>
+      <a href="#price" data-tab>Charts</a>
+      <a href="#useful" data-tab>Useful Work</a>
+      <a href="#wall" data-tab>Wall</a>
+    </nav>
+    <div class="right">
+      <div class="pill"><span class="dot" id="liveDot"></span><span id="livePill">PEARL · loading</span></div>
+      <a class="icon-btn" href="https://x.com/dudubitcoin" target="_blank" rel="noopener" title="Built by @dudubitcoin"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.9 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg></a>
+    </div>
+  </header>
+
+  <div class="shell" id="top">
+    <aside class="rail">
+      <nav id="railNav">
+        <a href="#top" class="on"><svg class="i" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v8a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></svg><span>Overview</span></a>
+        <a href="#price"><svg class="i" viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/><path d="M15 6h5v5"/></svg><span>Price</span></a>
+        <a href="#hashrate"><svg class="i" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg><span>Hashrate</span></a>
+        <a href="#early"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><span>Early days vs BTC &amp; ZEC</span></a>
+        <a href="#useful"><svg class="i" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Useful Work Watch</span></a>
+        <a href="#wall"><svg class="i" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg><span>Wall of Pearl</span></a>
+        <a href="#thesis"><svg class="i" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h4"/></svg><span>PEARL Thesis</span></a>
+        <a href="#team"><svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 010 7M18 14.8c1.8.8 3 2.6 3.5 5.2"/></svg><span>The Team</span></a>
+        <a href="#calc"><svg class="i" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M8.5 7h7M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h3.5"/></svg><span>Mining calculator</span></a>
+        <a href="#get"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M14.5 9.5c-.4-.9-1.4-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.6 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.2-.6-2.6-1.6M12 6.5V8m0 8v1.5"/></svg><span>Get PEARL</span></a>
+        <a href="#faq"><svg class="i" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M10 9a2 2 0 113 1.7c-.7.4-1 .8-1 1.5M12 14h.01"/></svg><span>FAQ</span></a>
+        <a href="math.html"><svg class="i" viewBox="0 0 24 24"><path d="M5 5h14M5 5l7 7-7 7h14"/></svg><span>The maths</span></a>
+      </nav>
+      <div class="help">
+        <a href="#" data-open="howto"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .6-1.5 1.1-1.5 2.2M12 17h.01"/></svg><span>How to use this site</span></a>
+      </div>
+    </aside>
+
+    <main>
+      <!-- HERO -->
+      <div class="hero">
+        <div class="stage">
+          <div class="chips"><span class="chip">Proof-of-useful-work L1</span><span class="chip ghost">Mainnet since 27 Apr 2026</span></div>
+          <h1>Pearl</h1>
+          <p class="sub">Bitcoin's design with a different puzzle: miners multiply matrices, the same math that runs AI.</p>
+          <div class="stats">
+            <div class="stat"><div class="ic lime"><svg class="i" viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/></svg></div><div><small>Price</small><b id="hPrice">—</b><span class="chg" id="hChg"></span></div></div>
+            <div class="stat"><div class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M3 10h18"/></svg></div><div><small>Market cap · FDV</small><b id="hMcap">—</b></div></div>
+            <div class="stat"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 3v18M5 10l7-7 7 7"/></svg></div><div><small>Minted per day</small><b id="hMint">—</b></div></div>
+          </div>
+          <svg class="clam" viewBox="0 0 600 460" aria-hidden="true">
+            <!-- top shell, opened back -->
+            <g transform="translate(300 214) rotate(-6)">
+              <path d="M-250 10 C-230 -190 230 -190 250 10 C160 -18 -160 -18 -250 10Z" fill="url(#shellTop)"/>
+              <path d="M-238 2 C-200 -150 200 -150 238 2 C150 -16 -150 -16 -238 2Z" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="2"/>
+              <g stroke="rgba(255,255,255,.10)" stroke-width="2" fill="none">
+                <path d="M0 -8 L0 -150"/><path d="M0 -8 L-60 -140"/><path d="M0 -8 L60 -140"/><path d="M0 -8 L-118 -118"/><path d="M0 -8 L118 -118"/><path d="M0 -8 L-170 -84"/><path d="M0 -8 L170 -84"/><path d="M0 -8 L-212 -40"/><path d="M0 -8 L212 -40"/>
+              </g>
+              <path d="M-250 10 C-160 -18 160 -18 250 10 C150 -4 -150 -4 -250 10Z" fill="url(#inner)" opacity=".9"/>
+            </g>
+            <!-- bottom shell -->
+            <path d="M48 262 C70 430 530 430 552 262 C430 300 170 300 48 262Z" fill="url(#shellBot)"/>
+            <path d="M48 262 C170 300 430 300 552 262 C520 286 80 286 48 262Z" fill="url(#inner)"/>
+            <g stroke="rgba(255,255,255,.08)" stroke-width="2" fill="none">
+              <path d="M300 292 L300 408"/><path d="M300 292 L230 400"/><path d="M300 292 L370 400"/><path d="M300 292 L160 380"/><path d="M300 292 L440 380"/><path d="M300 292 L100 340"/><path d="M300 292 L500 340"/>
+            </g>
+            <!-- pearl -->
+            <ellipse cx="300" cy="292" rx="96" ry="14" fill="rgba(0,0,0,.35)"/>
+            <circle cx="300" cy="226" r="70" fill="url(#pearlG)"/>
+            <circle cx="300" cy="226" r="70" fill="url(#irid)"/>
+            <ellipse cx="276" cy="196" rx="22" ry="14" fill="#fff" opacity=".9" transform="rotate(-30 276 196)"/>
+            <circle cx="330" cy="262" r="6" fill="#fff" opacity=".35"/>
+          </svg>
+          <div class="dock">
+            <div>
+              <b id="dSupply">Supply mined</b><small id="dSupplySub"></small>
+              <div class="meter"><div id="dMeter" style="width:0"></div></div>
+            </div>
+            <a class="btn-dark" href="#" data-open="thesis">Read the PEARL thesis <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </div>
+        </div>
+
+        <div class="desk">
+          <div class="desk-h">
+            <div class="ic"><svg width="26" height="26"><use href="#logo"/></svg></div>
+            <div><b>Pearl Desk</b><small>Start here if Pearl is new to you</small></div>
+          </div>
+          <div class="grid4">
+            <button class="tile dark" data-open="what"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span><b>What is Pearl?</b><small>The chain in four steps</small></span></button>
+            <button class="tile" data-open="team"><svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/></svg><span><b>The Team</b><small>Who built it, who backs it</small></span></button>
+            <button class="tile" data-open="thesis"><svg class="i" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg><span><b>PEARL Thesis</b><small>Bear, base and bull</small></span></button>
+            <button class="tile" data-open="howto"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .6-1.5 1.1-1.5 2.2M12 17h.01"/></svg><span><b>How To Use This Site</b><small>What each panel tells you</small></span></button>
+          </div>
+          <div class="ask">
+            <p>"Is anyone actually paying for the AI work Pearl miners do, or is it still mining with extra steps?"</p>
+            <div class="row">
+              <span class="warn-mini"><span>⚠</span><span><b>Pearl is PEARL now.</b> The "PRL" on KuCoin, MEXC and Coinbase is Perle. If the price starts with a zero, it's the wrong coin.</span></span>
+            </div>
+            <div class="row"><span></span><a class="btn-lime" href="#useful">Useful Work Watch <svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          </div>
+        </div>
+
+        <div class="minis" style="grid-column:1">
+          <a class="card" href="#price">
+            <div class="card-h"><div><b>Price</b><small id="mPriceSub">since listing</small></div><span class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+            <svg class="spark" id="sparkPrice" preserveAspectRatio="none"></svg>
+          </a>
+          <a class="card" href="#hashrate">
+            <div class="card-h"><div><b>Hashrate</b><small id="mHashSub">network</small></div><span class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+            <svg class="spark" id="sparkHash" preserveAspectRatio="none"></svg>
+          </a>
+          <a class="card black" href="#useful">
+            <div class="card-h"><div><b>Useful Work Watch</b><small>Who's really using Pearl</small></div><span class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+            <div class="inner-dark">
+              <div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <div><b style="font-weight:500;font-size:15px">Paid AI work: unproven</b><br><small id="uwTeaser">Last independent study: zero useful compute</small></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px"><small>Miner payouts per day</small><span class="big-n" id="mPayout">—</span></div>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRICE -->
+      <section class="sec" id="price">
+        <div class="sec-head"><div><span class="eyebrow">01 · Market</span><h2>Price</h2><p>PEARL in USD, daily close from CoinGecko. Thin liquidity across a handful of small venues, so expect wicks.</p></div>
+          <div class="seg" id="priceRange"><button data-d="30">30D</button><button data-d="90">90D</button><button data-d="all" class="on">All</button></div></div>
+        <div class="two">
+          <div class="card"><div class="chart-wrap"><svg class="chart" id="chartPrice"></svg><div class="tip"></div></div></div>
+          <div class="card">
+            <div class="card-h"><div><b>Where it trades</b><small>24h volume by venue</small></div></div>
+            <table style="margin-top:14px" id="venues"><thead><tr><th>Venue</th><th>Pair</th><th>24h vol</th></tr></thead><tbody></tbody></table>
+            <div style="margin-top:22px" id="supplyKV"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HASHRATE -->
+      <section class="sec" id="hashrate">
+        <div class="sec-head"><div><span class="eyebrow">02 · Network</span><h2>Hashrate</h2><p>How much matmul work miners point at Pearl. Difficulty chases price, so this is the market's real vote on miner margins.</p></div></div>
+        <div class="two">
+          <div class="card"><div class="chart-wrap" id="hashWrap"><svg class="chart" id="chartHash"></svg><div class="tip"></div></div></div>
+          <div class="card"><div class="card-h"><div><b>Who mines the blocks</b><small>Pool share of the last 24h</small></div></div>
+            <table style="margin-top:14px" id="pools"><thead><tr><th>Pool</th><th>Fee</th><th>Blocks · share</th></tr></thead><tbody></tbody></table>
+            <p style="font-size:13px;color:var(--ink-2);margin-top:14px;line-height:1.5" id="poolNote"></p></div>
+        </div>
+      </section>
+
+      <!-- EARLY DAYS -->
+      <section class="sec" id="early">
+        <div class="sec-head"><div><span class="eyebrow">03 · Context</span><h2>Early days vs Bitcoin &amp; Zcash</h2><p>Hashrate growth from launch, each chain indexed to its own day 7 = 1×, on a log scale. Units differ (SHA-256, Equihash, matmul), so compare the curve, not the number.</p></div>
+          <div class="legend"><span><i style="background:var(--pearl)"></i>Pearl</span><span><i style="background:var(--btc)"></i>Bitcoin (2009)</span><span><i style="background:var(--zec)"></i>Zcash (2016)</span></div></div>
+        <div class="card"><div class="chart-wrap" id="earlyWrap"><svg class="chart" id="chartEarly"></svg><div class="tip"></div></div></div>
+      </section>
+
+      <!-- USEFUL WORK -->
+      <section class="sec" id="useful">
+        <div class="sec-head"><div><span class="eyebrow">04 · The question that matters</span><h2>Useful Work Watch</h2><p>The chain can check that a miner multiplied matrices. It can't check that anyone needed the answer. This panel tracks who is doing work someone paid for.</p></div></div>
+        <div class="card" id="poolCard" style="margin-bottom:20px">
+          <div class="card-h"><div><b>Who won the blocks, last 24h</b><small>Retail pools vs miners on their own address · <span id="pcBlocks">—</span></small></div></div>
+          <div class="pc-top"><div class="pc-n"><span id="pcSolo">—</span><small>at most this share could be AI providers mining as a side effect of paid inference</small></div>
+            <div class="pc-n"><span id="pcPool">—</span><small>won by retail mining pools, i.e. mining for the reward</small></div></div>
+          <div class="pc-bar" id="pcBar"></div>
+          <div class="pc-legend" id="pcLegend"></div>
+          <div id="pcTrend" class="pc-trend"></div>
+          <p class="pc-note">How to read it: a retail pool member runs mining software for PEARL. A provider like Together AI mines inside its own inference stack and would most likely pay itself directly, so solo blocks are a ceiling on useful mining, not proof of it. Some solo miners are just hobbyists. Source: <a href="https://prlscan.com" target="_blank" rel="noopener">prlscan</a> miner labels, refreshed hourly.</p>
+        </div>
+        <div class="two">
+          <div class="card"><div class="card-h"><div><b>Who's using Pearl usefully</b><small>Curated, every row sourced</small></div></div><div class="uw" id="uwList"></div></div>
+          <div class="card"><div class="card-h"><div><b>Protocol fixes since launch</b><small>The team's answer to the usefulness gap</small></div></div>
+            <div class="timeline" id="tlList" style="margin-top:8px"></div></div>
+        </div>
+      </section>
+
+      <!-- WALL -->
+      <section class="sec" id="wall">
+        <div class="sec-head"><div><span class="eyebrow">05 · Timeline</span><h2>Wall of Pearl</h2><p>The hottest Pearl posts on X: likes and reposts, weighted toward the last few days so fresh posts rise. Perle is filtered out, and the list is curated by hand on top.</p></div></div>
+        <div class="wall" id="wallGrid">
+          <div class="note">
+            <span class="btn-lime" style="pointer-events:none">Help build this</span>
+            <h3>How to expand Pearl analytics</h3>
+            <p>Pearlascope runs on free, public data. Every panel here can get sharper with one more source:</p>
+            <ol>
+              <li><b>Run a node.</b> <code>pearld</code> exposes <code>getnetworkhashps</code> and block data over RPC. Pool splits and miner-software share come from the coinbase tags.</li>
+              <li><b>Tag useful work.</b> If you serve paid inference on Pearl, send the endpoint and pricing. It goes on the watch list with a source link.</li>
+              <li><b>Send a post.</b> Found a sharp Pearl thread? Send the link and it goes on the wall.</li>
+              <li><b>Open data.</b> Everything shown is in <code>data.json</code>. Pull it, chart it, prove us wrong.</li>
+            </ol>
+            <p style="margin-top:14px">DMs open at <a href="https://x.com/dudubitcoin" target="_blank" rel="noopener" style="color:var(--lime)">@dudubitcoin</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- THESIS (v2, 2026-11-02 draft: rewritten with the Blockworks report, the Jacob bear case and the FP8 status; Dudu reviews before release) -->
+      <section class="sec" id="thesis">
+        <div class="sec-head"><div><span class="eyebrow">06 · Opinion</span><h2>The PEARL Thesis</h2><p>The best idea in crypto × AI this year, priced like a GPU coin. The whole bet is whether FP8 turns it into Bitcoin for AI before the dilution eats the holders.</p></div></div>
+        <div class="card">
+          <div class="thesis-sum">
+            <div class="ts case bear"><span class="eyebrow">Bear · just another GPU coin</span><div class="case-n"><span data-case="0.25e9">—</span><small>per PEARL · <span data-case-x="0.25e9"></span></small></div><p>FP8 slips or doesn't change the math. Gaming cards keep mining random matrices and dumping ~<span data-k="payout">$1.4M</span> a day. Their power bill (~$0.10–0.23 a coin) is the only floor: ~$0.25B.</p></div>
+            <div class="ts case base"><span class="eyebrow">Base · FP8 ships</span><div class="case-n"><span data-case="2e9">—</span><small>per PEARL · <span data-case-x="2e9"></span></small></div><p>The fork lands, the AI-server cost per coin drops to gaming-card levels, Coinbase lists it. Real AI blocks start to show up but stay a minority. Pearl trades at ~10% of Zcash: ~$2B.</p></div>
+            <div class="ts case bull"><span class="eyebrow">Bull · the discount loop</span><div class="case-n"><span data-case="15e9">—</span><small>per PEARL · <span data-case-x="15e9"></span></small></div><p>A named provider passes mining income on as cheaper inference, rivals on OpenRouter have to mine to keep up, security follows. 1% of Bitcoin: ~$15B. Blue sky, compute settles in PEARL: $50B+.</p></div>
+          </div>
+          <p class="case-note">Prices use the supply 12 months out (<span data-k="growth">+82%</span> from today), not fully diluted. Case triggers follow Blockworks Research's three steps (<a href="https://x.com/minnus/status/2117304739738051033" target="_blank" rel="noopener">"Pearl: Bitcoin for AI?"</a>, Nov 2026). Blue sky from Brian Breslow's <a href="https://x.com/brezshares/status/2098035744598319569" target="_blank" rel="noopener">"Heresy"</a>. The base case is mine. I hold PEARL.</p>
+        </div>
+
+        <div class="card th-short">
+          <span class="eyebrow">The short version</span>
+          <p class="th-lead">Two professors in Jerusalem rebuilt Bitcoin so the mining is the math AI runs on. The idea is real, the code ships every week, and the lab just raised $130M to prove it pays. Today almost none of the mining is useful, gaming cards do 82% of it, and holders eat 81% more supply over the next year. I'm holding through that because the fix has a name (FP8), it's in an open pull request updated this week, and the market is pricing it like it never lands.</p>
+        </div>
+
+        <div class="two th-charts">
+          <div class="card">
+            <div class="card-h"><div><b>The gap FP8 has to close</b><small>what one PEARL costs to make, $ per coin</small></div></div>
+            <div class="rbars" id="thGap"></div>
+            <p class="th-note">An AI server that mines gives up paid AI work: that's its real cost. Today that’s roughly 10x a gaming card’s power bill, so AI servers don’t mine. FP8 (with the Pearl-GEMM rewrite) brings it down to the same range. Source: Blockworks Research.</p>
+          </div>
+          <div class="card">
+            <div class="card-h"><div><b>The dilution wall</b><small>supply added each year from today, from the emission code</small></div></div>
+            <div class="vbars" id="thDil"></div>
+            <div class="vb-x" id="thDilX"></div>
+            <p class="th-note">No halvings: the reward shrinks a little every block (<code>2.1B × H / (H + 650,226)</code>). Year one is the worst year, ~<span id="thNew">297M</span> new PEARL. New coins are worth <span id="thVolShare">~28%</span> of a day's trading, against about 0.1% for Bitcoin.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><div><b>Where the price could land</b><small>market cap at next year's supply, log scale, with the neighbours</small></div></div>
+          <div class="lbars" id="thVal"></div>
+          <p class="th-note">Live marks: CoinGecko. Zcash is the closest thing to a differentiated proof-of-work coin that made it. 1% of Bitcoin is the bull bar.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-h"><div><b>Catalyst tracker</b><small>what moves the case up a tier, and where each one is</small></div></div>
+          <div class="ct">
+            <div class="ct-row done"><span class="ct-dot"></span><div><b>Lab funded</b><small>Oct 25 · $55M equity + a $75M GPU vehicle, closed. The lab now has to prove duplex mining pays.</small></div></div>
+            <div class="ct-row done"><span class="ct-dot"></span><div><b>Coinbase + Kraken roadmaps</b><small>Oct 19 · on the listing roadmap, not listed. A real venue lets miners sell without moving the price.</small></div></div>
+            <div class="ct-row live"><span class="ct-dot"></span><div><b>FP8 fork (PIP-3)</b><small>Draft. Code in <a href="https://github.com/pearl-research-labs/pearl/pull/311" target="_blank" rel="noopener">PR #311</a>, open since Sep 9, updated Nov 2. Hopper and MoE pieces merged. No activation height yet. The trigger: merge + a height.</small></div></div>
+            <div class="ct-row live"><span class="ct-dot"></span><div><b>Lab sells inference on Liquid Inference</b><small>Oct 7 · one of six launch providers. If mining income lets it undercut the other five, that's the first real proof.</small></div></div>
+            <div class="ct-row"><span class="ct-dot"></span><div><b>Real AI blocks become material</b><small>Under 1% today (Blockworks). Watch <a href="#useful">Useful Work Watch</a>.</small></div></div>
+            <div class="ct-row"><span class="ct-dot"></span><div><b>A named provider passes the discount on</b><small>The single most bullish thing that can happen. Together AI tried in May (25%+ off) and deprecated the endpoint a couple of months later.</small></div></div>
+            <div class="ct-row"><span class="ct-dot"></span><div><b>FP4 support</b><small>Targeted Q1 2027. Newest Nvidia chips run models in 4 bits.</small></div></div>
+            <div class="ct-row"><span class="ct-dot"></span><div><b>Lab discloses its launch-week holdings</b><small>~125M PEARL came out in week one, 98% never moved. Claims say the team mined under 5%. Not confirmed.</small></div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <details class="full" id="thesisFull">
+            <summary><span class="btn-dark">Read the full thesis <svg class="i" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+            <div class="prose" style="margin-top:26px">
+              <h3>What Pearl is</h3>
+              <p>Bitcoin miners burn about as much electricity as a mid-sized country guessing numbers. The guessing is the security. The guesses get thrown away.</p>
+              <p>Pearl keeps the Bitcoin part and swaps the puzzle. Miners multiply matrices, the operation that eats almost all of AI's compute. The chain mixes fresh random noise from the last block into both matrices, the GPU multiplies, small tiles of the result become lottery tickets for the next block, and the noise peels back off so an AI customer still gets the right answer. The winner ships a zero-knowledge proof, so a laptop can check the block without redoing an H100 job and nobody's prompt is exposed. Under the hood it's btcd: UTXOs, Taproot addresses starting <code>prl1</code>, a 2.1B cap.</p>
+
+              <h3>Why I care</h3>
+              <p>Every useful-work chain before this one picked between easy to check and useless, or useful and impossible to check. Pearl is the first serious attempt at both, from Omri Weinstein (matrix multiplication complexity, ex-Nvidia, Hebrew University) and Ilan Komargodski (the ZK proofs it runs on, same department). Between them their research covers both halves of the design. I'll admit the local pride: the most-talked-about AI coin of the year came out of a math department in Jerusalem.</p>
+
+              <h3>The problem today: it's mostly a GPU lottery</h3>
+              <p>The chain proves the math was done, not that anyone needed it. So the cheapest way to mine is a gaming card multiplying random numbers. Blockworks estimates fewer than 1% of blocks match a real AI model and consumer cards run ~82% of hashrate. Two reasons the real AI servers stay out:</p>
+              <ul>
+                <li><b>Format.</b> Mining only counts INT7 math. Normal models don't run in INT7, so even Pearl's best rebuilt model can only mine on two-thirds of its math.</li>
+                <li><b>Size.</b> Only big batches fill a tile. Reading a long prompt mines; writing the reply one token at a time mostly doesn't. A summariser earns tickets on 25–40% of its math, a chatbot on ~5%. A dedicated miner: ~100%.</li>
+              </ul>
+              <p>Net: an AI server gives up $1.33–3.15 of paid AI work for every coin it mines. A gaming card pays $0.10–0.23 in power. Nobody sane switches.</p>
+
+              <h3>The fix: FP8</h3>
+              <p>FP8 is the 8-bit format Nvidia's data-center chips already run AI in. PIP-3 moves mining to it, so standard open models (Llama, DeepSeek, partly the new MoE models) mine without being rebuilt, and the Pearl-GEMM rewrite cuts the slowdown on a serving GPU from 10–15% to 0–3%. That puts the AI server's cost per coin at $0.09–0.43, the same range as a gaming card. That's the whole game. Once serving inference is as cheap a way to mine as running a gaming card, every provider who doesn't mine is leaving money on the table.</p>
+              <p>The catch: the draft only accepts Nvidia Hopper and Blackwell. RTX 40 and 30 cards and every AMD card get cut off at the fork, and they do most of the mining today. Expect a hashrate air pocket on the day it activates. And it doesn't fix the size problem: chatbots still mine badly.</p>
+
+              <h3>Who actually flips the switch</h3>
+              <p>Mining lives inside the AI software, so it's whoever runs the software on the GPU that decides, not whoever owns the building. Bitcoin miners turned AI landlords mostly can't: their tenants run the chips. The natural first adopters are serverless providers who run both the GPUs and the software, then GPU marketplaces and neoclouds. That's a thinner pipeline than "every Bitcoin miner switches to Pearl". Which is why the lab raising $130M and selling inference itself on Liquid Inference matters: it's the cleanest test, run by the people best placed to pass it.</p>
+
+              <h3>The bull loop</h3>
+              <p>A provider that mines can pass the PEARL income on as a lower price. Routers like OpenRouter send traffic to the cheapest provider, so it wins volume. Rivals have to mine to keep up. More mining means more security, more security earns a store-of-value premium, a higher price funds deeper discounts. That's the reflexive version, and it's the one worth $15B+.</p>
+
+              <h3>The bear case, taken seriously</h3>
+              <p>Jacob from Blockworks (<a href="https://x.com/immutablejacob/status/2113639893993676886" target="_blank" rel="noopener">"The $PEARL Bear Case"</a>) makes four points. I agree with three of them.</p>
+              <ul>
+                <li><b>It isn't scarce yet.</b> Supply grows ~81% this year against Bitcoin's ~0.8%. Bitcoin's early inflation happened at a few million dollars of market cap when nobody knew how to price it. Pearl is doing it at ~$0.5B. Fair. This is the cost of holding it now.</li>
+                <li><b>Useful work doesn't create demand for the token.</b> AI customers pay in dollars. A provider's discount is funded by selling PEARL, so more usage means more selling. Fair today. It changes only if compute gets priced or settled in PEARL, which is the lab's stated plan and nowhere near shipped.</li>
+                <li><b>Cheap rentable GPUs make it attackable.</b> Ethereum Classic, Bitcoin Gold and Vertcoin all got 51%'d by rented hardware. Pearl miners earn ~$1.4M a day against Bitcoin's ~$34M of subsidy. Kryptex alone wins close to half the blocks. Fair, and the concentration is the part I like least.</li>
+                <li><b>Zcash 2016.</b> ZEC fell 91% in four months while its market cap grew 8x, because supply grew 84x. The comparison is real but the scale isn't: Pearl's next-year growth is 81%, not 84x.</li>
+              </ul>
+              <p>Where I disagree: the bear case prices FP8 at zero. It's an open pull request with merged pieces and a funded team whose own research is the exact thing being built. Zero is the wrong number.</p>
+
+              <h3>The boring risks</h3>
+              <ul>
+                <li>Every new number format is a hard fork that drops old hardware. Bitcoin hasn't changed its puzzle in 17 years; Pearl shipped four consensus forks between June and August.</li>
+                <li>Someone builds a Pearl-only chip that out-mines GPUs without serving any AI. Nobody is known to be building one.</li>
+                <li>The top 1% of addresses hold ~71% of supply. The lab hasn't disclosed what it mined in the low-difficulty week.</li>
+                <li>Miners sell fast: about half of pool payouts go straight to one custodian's deposit addresses, and only ~10% is still in miners' wallets a week later.</li>
+                <li>Liquidity sits on small exchanges, and the ticker collides with Perle.</li>
+              </ul>
+
+              <h3>Where I stand</h3>
+              <p>I hold PEARL and I'm not selling here. I'm also not adding until FP8 gets an activation height or a real provider starts mining, because buying ahead of 81% dilution with no date is how you donate to miners. I'd rather be early and small than late and big. If FP8 merges and the AI-server cost per coin really lands at gaming-card levels, this goes from a GPU coin to the only working proof of useful work in crypto, at about 3% of Zcash's market cap.</p>
+
+              <h3>What I'm watching</h3>
+              <p>The chain, not the timeline. PR #311 merging with an activation height. The share of blocks from real models. The lab's prices on Liquid Inference against the other five providers. A Coinbase listing date. A holdings disclosure. Kryptex dropping under 50%. When the first verified paying customer on mining hardware shows up in Useful Work Watch, the case moves up a tier.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <section class="sec" id="team">
+        <div class="sec-head"><div><span class="eyebrow">07 · People</span><h2>The Team</h2><p>Pearl Research Labs. Researchers first, company second.</p></div></div>
+        <div class="team" id="teamGrid"></div>
+      </section>
+
+
+      <!-- CALCULATOR -->
+      <section class="sec" id="calc">
+        <div class="sec-head"><div><span class="eyebrow">08 · Mining</span><h2>Mining profitability</h2><p>Your share of the network times the coins minted per day, minus pool fee and power. Network hashrate, reward and price are live; everything else is yours to change.</p></div></div>
+        <div class="two">
+          <div class="card">
+            <div class="calc-grid">
+              <label class="fld full"><span>GPU</span><select id="cGpu"></select></label>
+              <label class="fld"><span>Your hashrate (TH/s)</span><input id="cHash" type="number" min="0" step="1"></label>
+              <label class="fld"><span>Number of cards</span><input id="cQty" type="number" min="1" step="1" value="1"></label>
+              <label class="fld"><span>Power per card (W)</span><input id="cWatt" type="number" min="0" step="10"></label>
+              <label class="fld"><span>Electricity ($/kWh)</span><input id="cKwh" type="number" min="0" step="0.01" value="0.10"></label>
+              <label class="fld"><span>Pool fee (%)</span><input id="cFee" type="number" min="0" step="0.1" value="1"></label>
+              <label class="fld"><span>Rental cost ($/hr per card, 0 if you own it)</span><input id="cRent" type="number" min="0" step="0.01" value="0"></label>
+              <label class="fld"><span>Card price ($ each, 0 if you own it)</span><input id="cCost" type="number" min="0" step="50"></label>
+              <label class="fld"><span>PEARL price ($)</span><input id="cPrice" type="number" min="0" step="0.01"></label>
+              <label class="fld"><span>Network hashrate (EH/s, from difficulty)</span><input id="cNet" type="number" min="0" step="0.1"></label>
+            </div>
+            <p class="calc-note">Card presets and street prices: <a href="https://prlstats.com" target="_blank" rel="noopener">prlstats</a> (median of whattomine, miningboard, hashrate.no; data-center cards measured). Sources disagree a lot: the RTX 4090 ranges 150–330 TH/s. Put in what your rig reports. Live inputs reset on reload.</p>
+          </div>
+          <div class="card black calc-out">
+            <div class="card-h"><div><b>Per day</b><small id="cSub">at current difficulty</small></div></div>
+            <div class="out-big" id="oProfit">—</div>
+            <div class="out-lbl" id="oProfitLbl">profit per day</div>
+            <div class="out-rows">
+              <div><span>PEARL mined</span><b id="oPrl">—</b></div>
+              <div><span>Revenue</span><b id="oRev">—</b></div>
+              <div><span>Power cost</span><b id="oPow">—</b></div>
+              <div><span>Rental cost</span><b id="oRentC">—</b></div>
+              <div><span>Per month (30d)</span><b id="oMonth">—</b></div>
+              <div><span>Break-even PEARL price</span><b id="oBreak">—</b></div>
+              <div><span>Your share of network</span><b id="oShare">—</b></div>
+              <div><span>Payback, today's numbers</span><b id="oPay">—</b></div>
+              <div><span>Payback as rewards shrink</span><b id="oPayD">—</b></div>
+            </div>
+            <p class="calc-warn">Difficulty follows price: when PEARL pumps, more GPUs show up and your share shrinks. Emissions also drop a little every block. Treat this as today's snapshot, not a forecast.</p>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <div class="card-h"><div><b>Is it worth buying a card to mine?</b><small id="pbSub">payback per card</small></div></div>
+          <div class="pb" id="pbList"></div>
+          <p class="th-note"><b>Short answer: not to buy one.</b> The cards that pay back fastest are RTX 40-series, and the FP8 fork as drafted cuts them off, so you're betting the fork stays more than a year away. The RTX 5090 survives FP8 but doesn't pay back at today's price. Renting always loses: an H100 rents for ~$39 a day and mines ~$14. If you already own a gaming card, mining is free money until the fork. Data-center cards (H100 and up) are left out of the chart: at $26k+ they never pay back from mining alone.</p>
+        </div>
+      </section>
+
+      <!-- GET -->
+      <section class="sec" id="get">
+        <div class="sec-head"><div><span class="eyebrow">09 · Practical</span><h2>Getting PEARL</h2></div></div>
+        <div class="ways">
+          <div class="card"><span class="eyebrow">Way 01</span><div class="card-h" style="margin-top:8px"><b>Buy on an exchange</b></div><p class="prose" style="font-size:14.5px;margin-top:8px">BigONE or Ourbit, PEARL/USDT, limit orders only. Small venues, so withdraw to Oyster afterwards.</p></div>
+          <div class="card"><span class="eyebrow">Way 02</span><div class="card-h" style="margin-top:8px"><b>Wrapped on Ethereum</b></div><p class="prose" style="font-size:14.5px;margin-top:8px">WPRL on Uniswap via the third-party PearlBridge. It's an IOU on a bridge, not native PEARL.</p></div>
+          <div class="card"><span class="eyebrow">Way 03</span><div class="card-h" style="margin-top:8px"><b>Mine it</b></div><p class="prose" style="font-size:14.5px;margin-top:8px">An NVIDIA GPU, the Oyster wallet and a pool. Rent a card by the hour before you buy one.</p></div>
+        </div>
+        <div class="warn"><b>Pearl's ticker is PEARL</b> (it used to be PRL). The "PRL" on KuCoin, MEXC, Gate and Coinbase is Perle, a different coin around $0.08. Pearl trades as PEARL, or still PRL on a few venues, on BigONE, Ourbit, SafeTrade and Gate's PEARL pair. If the price starts with a zero, you're on the wrong one.</div>
+      </section>
+
+
+      <!-- FAQ -->
+      <section class="sec" id="faq">
+        <div class="sec-head"><div><span class="eyebrow">10 · Questions</span><h2>FAQ</h2></div></div>
+        <div class="card faq" id="faqList"></div>
+      </section>
+
+      <div class="foot" id="foot">Not financial advice. Data: CoinGecko (<code>pearl-2</code>), prlscan.com API (hashrate, pools), CoinMetrics Community (BTC/ZEC early hashrate), Pearl source code (emission curve from <code>validate.go</code>, 194s blocks), hand-curated rows with links. <span id="footUpd"></span></div>
+    </main>
+  </div>
+</div>
+
+<script src="team.js"></script>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-h"><h3 id="drTitle"></h3><button class="icon-btn" id="drClose" aria-label="Close"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="drawer-b" id="drBody"></div>
+</aside>
+
+<script>
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const fmtUsd = (n, d) => n == null ? '—' : n >= 1e9 ? '$' + (n/1e9).toFixed(2) + 'B' : n >= 1e6 ? '$' + (n/1e6).toFixed(d ?? 1) + 'M' : n >= 1e3 ? '$' + Math.round(n/1e3) + 'K' : '$' + n.toFixed(2);
+const fmtN = n => n >= 1e6 ? (n/1e6).toFixed(1) + 'M' : n >= 1e3 ? Math.round(n/1e3) + 'K' : Math.round(n).toString();
+const fmtHash = h => { const u=['H/s','KH/s','MH/s','GH/s','TH/s','PH/s','EH/s','ZH/s']; let i=0; while(h>=1000&&i<u.length-1){h/=1000;i++} return h.toFixed(h<10?2:1)+' '+u[i]; };
+const dfmt = t => new Date(t).toLocaleDateString('en-GB',{day:'numeric',month:'short'});
+const NS='http://www.w3.org/2000/svg';
+const el = (tag, attrs={}, parent) => { const e=document.createElementNS(NS,tag); for(const k in attrs) e.setAttribute(k,attrs[k]); parent&&parent.appendChild(e); return e; };
+
+let DATA = null;
+
+// ---------- content: drawer + team + useful work ----------
+const TEAM = window.TEAM || [];
+const USEFUL = [
+  { name:'Together AI · Gemma endpoint', status:'bad', label:'Deprecated', text:'Pearl-powered Gemma endpoint launched 15 May 2026, priced 25%+ below market, funded by expected PEARL emissions. Deprecated from Together\'s serverless API a couple of months later (Blockworks Research, Nov 2026).', src:'https://www.together.ai/', srcLabel:'Together AI' },
+  { name:'Official vLLM miner (Pearl pool)', status:'mid', label:'Real model, small share', text:'Runs an actual model and mines as a side effect. H100/H200 only, 20% pool fee. Its share of total hashrate is not published; a node would let us measure it.', src:'https://github.com/pearl-research-labs/pearl', srcLabel:'GitHub' },
+  { name:'Third-party miners (SRBMiner etc.)', status:'bad', label:'No useful output', text:'The dominant mining software contains no inference code. Basu found the protocol accepted random-number matrices from NVIDIA, AMD, CPU and Apple Silicon.', src:'https://arxiv.org/abs/2606.04819', srcLabel:'arXiv 2606.04819' },
+  { name:'First verified paying customer on mining hardware', status:'', label:'Not yet seen', text:'The row that changes the thesis. Know one? Send the endpoint, pricing and proof it runs on mining GPUs.', src:'https://x.com/dudubitcoin', srcLabel:'Send it' },
+];
+const TIMELINE = [
+  ['27 Apr','Mainnet launch. No pre-mine, no investor allocation in code.'],
+  ['15 May','Together AI launches Pearl-powered Gemma endpoint.'],
+  ['Jun','Hard fork for MoE models. Basu publishes the usefulness-gap study.'],
+  ['Jul','Dense-only soft fork.'],
+  ['Aug','Rank-penalty soft fork (cut some miners\' effective hashrate 50–87.5%). Salted noise-seed hard fork. A mining pool is hacked.'],
+  ['Sep','FP8 mining scheme specified.'],
+  ['Oct','Ding paper proposes a more flexible scheme (arXiv 2610.25347).'],
+];
+
+const DRAWERS = {
+  what: { title:'What is Pearl?', html:()=>`<div class="prose">
+    <p>Pearl is a layer-1 blockchain built like Bitcoin, with one change: the mining puzzle is matrix multiplication, the operation AI runs on.</p>
+    <h3>01 · A GPU takes an AI job</h3><p>Running or training a model is mostly one operation: multiplying huge matrices.</p>
+    <h3>02 · The math doubles as mining</h3><p>While it multiplies, the GPU also draws lottery tickets for the next block, at close to zero extra cost.</p>
+    <h3>03 · A proof seals the block</h3><p>The winning block carries a zero-knowledge proof, so nodes check the work without redoing it.</p>
+    <h3>04 · Two payouts</h3><p>The AI customer gets an answer. The miner gets PEARL.</p>
+    <p style="margin-top:18px">Max supply 2.1B, no halvings, 194-second blocks. Founding paper: <a href="https://arxiv.org/abs/2504.09971" target="_blank" rel="noopener">arXiv 2504.09971</a>.</p></div>` },
+  team: { title:'The Team', html:()=> teamHTML(true) + `<p style="margin-top:18px"><a class="btn-dark" href="#team" data-close>See the full team section</a></p>` },
+  thesis: { title:'PEARL Thesis', html:()=>`<div class="prose">
+    <p><b>The best idea in crypto × AI this year, on a token that is still mostly a bet on the team.</b></p>
+    <h3>The idea</h3><p>A currency secured by the world's most-demanded computation. Serious researchers, no VC table, and a fast pace of protocol fixes.</p>
+    <h3>The gap</h3><p>The chain can verify that matrices were multiplied, not that anyone needed the answer. The last independent study found zero useful compute. Miners are paid ${$('[data-k=payout]').textContent} a day, and supply grows ${$('[data-k=growth]').textContent} in 12 months.</p>
+    <h3>Bear · Base · Bull</h3><p><b>Bear</b> ~$0.25B: a GPU lottery, ${$('[data-case="0.25e9"]').textContent}/PEARL. <b>Base</b> ~$5B: Fortessia holds, ${$('[data-case="5e9"]').textContent}/PEARL. <b>Bull</b> $25B+: the money of compute, ${$('[data-case="25e9"]').textContent}/PEARL. On supply 12 months out.</p>
+    <h3>What decides it</h3><p>Overhead. If paid inference becomes the cheapest way to mine, useful miners squeeze out the rest. Watch FP8 (PIP-3), the green rows in Useful Work Watch, and the hashrate against price.</p>
+    <p style="margin-top:18px"><a class="btn-dark" href="#thesis" data-close data-expand>Read the full thesis</a></p></div>` },
+  howto: { title:'How To Use This Site', html:()=>`<div class="prose">
+    <p>Pearlascope is one page that answers one question: is Pearl becoming the Bitcoin of AI, or a GPU lottery?</p>
+    <h3>The hero</h3><p>Live price, market cap and daily issuance up top. The two small charts are price and hashrate. The black card is the usefulness check.</p>
+    <h3>The left rail</h3><p>Jumps to each section. Hover an icon to see its name.</p>
+    <h3>Reading the charts</h3><p>Hover any chart for exact values. Price is USD daily. The early-days chart indexes each chain to its own day 7, so you compare growth curves, not raw hash units.</p>
+    <h3>Useful Work Watch</h3><p>Red = no useful output. Amber = real but unproven or subsidised. Green = verified paid AI work on mining hardware. Every row links its source.</p>
+    <h3>Freshness</h3><p>The pill at the top right shows the live price and when data was last pulled. A grey dot means the live feed failed and you're seeing the last saved snapshot.</p>
+    <h3>The usual</h3><p>Not financial advice. Check the ticker: Pearl is PEARL. A "PRL" starting with a zero is Perle.</p></div>` },
+};
+
+function teamHTML(compact){
+  if(!TEAM.length) return `<div class="empty">Team profiles loading.</div>`;
+  return `<div class="team" style="${compact?'grid-template-columns:1fr':''}">` + TEAM.map(p=>`
+    <div class="person">
+      <div class="avatar">${p.photo?`<img src="${p.photo}" alt="${p.name}">`:p.icon==='code'?'<svg class="i" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>':p.icon==='logo'?'<svg width="58" height="58"><use href="#logo"/></svg>':p.name.split(' ').map(w=>w[0]).join('')}</div>
+      <b>${p.name}</b><div class="role">${p.role}</div>
+      <p>${p.bio}</p>
+      <div class="links">${(p.links||[]).map(l=>`<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('')}</div>
+    </div>`).join('') + `</div>`;
+}
+
+function openDrawer(k){
+  const d = DRAWERS[k]; if(!d) return;
+  $('#drTitle').textContent = d.title; $('#drBody').innerHTML = d.html();
+  $('#drawer').classList.add('open'); $('#scrim').classList.add('open'); $('#drawer').setAttribute('aria-hidden','false');
+}
+function closeDrawer(){ $('#drawer').classList.remove('open'); $('#scrim').classList.remove('open'); $('#drawer').setAttribute('aria-hidden','true'); }
+document.addEventListener('click', e => {
+  const o = e.target.closest('[data-open]'); if(o){ e.preventDefault(); openDrawer(o.dataset.open); return; }
+  const c = e.target.closest('[data-close]'); if(c){ closeDrawer(); if(c.hasAttribute('data-expand')) $('#thesisFull').open = true; }
+});
+$('#scrim').onclick = closeDrawer; $('#drClose').onclick = closeDrawer;
+document.addEventListener('keydown', e => e.key==='Escape' && closeDrawer());
+
+// ---------- charts ----------
+function lineChart(svg, series, opts={}){
+  // series: [{name,color,pts:[[x,y]...]}]
+  svg.innerHTML='';
+  const W = svg.clientWidth || 800, H = svg.clientHeight || 360;
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  const m = opts.mini ? {l:0,r:0,t:10,b:4} : {l:58,r:opts.rightPad||20,t:16,b:30};
+  const all = series.flatMap(s=>s.pts);
+  if(!all.length) return;
+  const xs = all.map(p=>p[0]), ys = all.map(p=>p[1]);
+  let x0=Math.min(...xs), x1=Math.max(...xs);
+  const log = !!opts.log;
+  const ty = v => log ? Math.log10(v) : v;
+  let y0 = opts.zero ? 0 : Math.min(...ys.map(ty)), y1 = Math.max(...ys.map(ty));
+  const pad = (y1-y0)*0.08 || 1; if(!opts.zero) y0 -= pad; y1 += pad;
+  const X = v => m.l + (v-x0)/(x1-x0||1)*(W-m.l-m.r);
+  const Y = v => H-m.b - (ty(v)-y0)/(y1-y0)*(H-m.t-m.b);
+  if(!opts.mini){
+    const ticks = log ? (()=>{const t=[];for(let e=Math.ceil(y0);e<=Math.floor(y1);e++)t.push(10**e);return t})() : niceTicks(y0,y1,4);
+    ticks.forEach(t=>{ const y=Y(t); el('line',{x1:m.l,x2:W-m.r,y1:y,y2:y,stroke:'#ececef','stroke-width':1},svg);
+      const tx=el('text',{x:m.l-10,y:y,'text-anchor':'end','dominant-baseline':'middle','font-size':12,fill:'#8b8b91'},svg); tx.textContent=t===0?'0':opts.yfmt?opts.yfmt(t):t; });
+    const xt = opts.xticks ? opts.xticks(x0,x1) : timeTicks(x0,x1,6);
+    xt.forEach(t=>{ const tx=el('text',{x:X(t),y:H-8,'text-anchor':'middle','font-size':12,fill:'#8b8b91'},svg); tx.textContent=(opts.xfmt||dfmt)(t); });
+  }
+  series.forEach(s=>{
+    const d = s.pts.map((p,i)=>(i?'L':'M')+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1)).join('');
+    if(series.length===1){
+      const gid='g'+Math.random().toString(36).slice(2);
+      const g=el('linearGradient',{id:gid,x1:0,y1:0,x2:0,y2:1},el('defs',{},svg));
+      el('stop',{offset:0,'stop-color':s.color,'stop-opacity':.16},g); el('stop',{offset:1,'stop-color':s.color,'stop-opacity':0},g);
+      el('path',{d:d+`L${X(s.pts.at(-1)[0])} ${H-m.b}L${X(s.pts[0][0])} ${H-m.b}Z`,fill:`url(#${gid})`},svg);
+    }
+    el('path',{d,fill:'none',stroke:s.color,'stroke-width':2,'stroke-linejoin':'round','stroke-linecap':'round'},svg);
+    const last=s.pts.at(-1); el('circle',{cx:X(last[0]),cy:Y(last[1]),r:4.5,fill:s.color,stroke:'#fff','stroke-width':2},svg);
+    if(opts.label && !opts.mini){ const t=el('text',{x:X(last[0])+8,y:Y(last[1]),'dominant-baseline':'middle','font-size':12.5,fill:'#4a4a4f'},svg); t.textContent=s.name; }
+  });
+  if(opts.mini) return;
+  // hover
+  const tip = svg.parentElement.querySelector('.tip');
+  const vline = el('line',{y1:m.t,y2:H-m.b,stroke:'#0b0b0c','stroke-width':1,'stroke-dasharray':'3 3',opacity:0},svg);
+  const dots = series.map(s=>el('circle',{r:5,fill:s.color,stroke:'#fff','stroke-width':2,opacity:0},svg));
+  const hit = el('rect',{x:m.l,y:0,width:W-m.l-m.r,height:H,fill:'transparent'},svg);
+  hit.addEventListener('mousemove',ev=>{
+    const r=svg.getBoundingClientRect(); const px=(ev.clientX-r.left)*(W/r.width); const xv=x0+(px-m.l)/(W-m.l-m.r)*(x1-x0);
+    let rows=[], xpx=null;
+    series.forEach((s,i)=>{ let best=null,bd=Infinity; s.pts.forEach(p=>{const dd=Math.abs(p[0]-xv); if(dd<bd){bd=dd;best=p}});
+      if(!best || bd > (x1-x0)*0.05){ dots[i].setAttribute('opacity',0); return; }
+      dots[i].setAttribute('cx',X(best[0])); dots[i].setAttribute('cy',Y(best[1])); dots[i].setAttribute('opacity',1);
+      xpx = xpx ?? X(best[0]); rows.push(`${series.length>1?`<span style="color:${s.color}">●</span> ${s.name}: `:''}${(opts.vfmt||(v=>v))(best[1])}`); });
+    if(xpx==null) return;
+    vline.setAttribute('x1',xpx); vline.setAttribute('x2',xpx); vline.setAttribute('opacity',.35);
+    tip.innerHTML=`<small>${(opts.xfmt||dfmt)(xv)}</small>${rows.join('<br>')}`;
+    tip.style.left=(xpx/W*r.width)+'px'; tip.style.top=(m.t+20)+'px'; tip.style.opacity=1;
+  });
+  hit.addEventListener('mouseleave',()=>{ tip.style.opacity=0; vline.setAttribute('opacity',0); dots.forEach(d=>d.setAttribute('opacity',0)); });
+}
+function niceTicks(a,b,n){ const span=b-a, step0=span/n, mag=10**Math.floor(Math.log10(step0)); const step=[1,2,2.5,5,10].map(k=>k*mag).find(s=>s>=step0); const t=[]; for(let v=Math.ceil(a/step)*step; v<=b; v+=step) t.push(+v.toFixed(10)); return t; }
+function timeTicks(a,b,n){ const t=[]; const d=new Date(a); d.setDate(1); d.setMonth(d.getMonth()+1); while(d.getTime()<=b){ t.push(d.getTime()); d.setMonth(d.getMonth()+1);} const k=Math.ceil(t.length/n); return t.filter((_,i)=>i%k===0); }
+function emptyChart(wrap, msg){ wrap.innerHTML = `<div class="empty" style="margin:40px 0">${msg}</div>`; }
+
+// ---------- render ----------
+function render(){
+  const d = DATA, mk = d.market || {}, su = d.supply || {};
+  const up = mk.chg24h >= 0;
+  $('#hPrice').textContent = mk.price ? '$' + mk.price.toFixed(2) : '—';
+  $('#hChg').textContent = mk.chg24h != null ? (up?'+':'') + mk.chg24h.toFixed(1) + '% 24h' : '';
+  $('#hChg').className = 'chg ' + (up?'up':'down');
+  $('#hMcap').textContent = fmtUsd(mk.mcap) + ' · ' + fmtUsd(mk.fdv);
+  const payout = su.perDay * (mk.price||0);
+  $('#hMint').textContent = su.perDay ? fmtN(su.perDay) + ' PEARL' : '—';
+  $('#mPayout').textContent = fmtUsd(payout);
+  $$('[data-k=payout]').forEach(e=>e.textContent=fmtUsd(payout));
+  $$('[data-k=growth]').forEach(e=>e.textContent='+' + Math.round(su.growth12m*100) + '%');
+  // Pool vs solo blocks (the duplex ceiling)
+  const mi = d.miners;
+  if (mi && mi.blocks) {
+    const pct = (x) => (x * 100).toFixed(1) + '%';
+    $('#pcBlocks').textContent = `${mi.blocks} blocks, ${new Date(mi.at).toLocaleString('en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}`;
+    $('#pcSolo').textContent = pct(mi.soloShare);
+    $('#pcPool').textContent = pct(mi.poolShare);
+    const shades = ['#15171C','#3b3e46','#5f636d','#868a93','#aeb1b8','#cfd1d5'];
+    const other = mi.poolShare - mi.topPools.reduce((a, p) => a + p.share, 0);
+    const segs = mi.topPools.map((p, i) => ({ name: p.name, share: p.share, c: shades[i] }));
+    if (other > 0.0005) segs.push({ name: 'Other pools', share: other, c: '#e2e3e6' });
+    segs.push({ name: `Solo · ${mi.soloAddresses} addresses`, share: mi.soloShare, c: '#0E8C7A' });
+    $('#pcBar').innerHTML = segs.map((g) => `<i style="width:${(+g.share||0) * 100}%;background:${g.c}" title="${esc(g.name)} ${pct(g.share)}"></i>`).join('');
+    $('#pcLegend').innerHTML = segs.map((g) => `<span><b style="background:${g.c}"></b>${esc(g.name)} ${pct(g.share)}</span>`).join('');
+    const h = d.minerHistory || [];
+    $('#pcTrend').textContent = h.length > 1
+      ? 'Solo share by day: ' + h.slice(-14).map((p) => `${p[0].slice(5)} ${(p[1] * 100).toFixed(1)}%`).join(' · ')
+      : 'Tracking started 1 Nov 2026. A daily trend builds here.';
+  } else { $('#poolCard').style.display = 'none'; }
+
+  // Bear/base/bull: market cap ÷ supply 12 months out, and the multiple from today's price.
+  const supply12 = (mk.circulating || 0) * (1 + (su.growth12m || 0));
+  $$('[data-case]').forEach(e=>{ const v = +e.dataset.case / supply12; e.textContent = supply12 ? '$' + (v < 10 ? v.toFixed(2) : Math.round(v)) : '—'; });
+  $$('[data-case-x]').forEach(e=>{ const x = (+e.dataset.caseX / supply12) / (mk.price || NaN); e.textContent = isFinite(x) ? (x < 1 ? '−' + Math.round((1 - x) * 100) + '% from today' : x.toFixed(x < 10 ? 1 : 0) + 'x from today') : ''; });
+  $('#dSupply').textContent = (su.pctMined*100).toFixed(1) + '% of 2.1B mined';
+  $('#dSupplySub').textContent = `block ~${(su.heightImplied||0).toLocaleString()} · +${Math.round(su.growth12m*100)}% supply in 12 mo`;
+  $('#dMeter').style.width = (su.pctMined*100) + '%';
+  $('#livePill').textContent = `PEARL $${mk.price?.toFixed(2)} · ${new Date(d.updated).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})}`;
+  $('#footUpd').textContent = 'Last pull: ' + new Date(d.updated).toLocaleString('en-GB');
+
+  // price
+  const ps = d.priceSeries || [];
+  if(ps.length){ $('#mPriceSub').textContent = `${dfmt(ps[0][0])} → today · ATH $${mk.ath?.toFixed(2)}`;
+    lineChart($('#sparkPrice'),[{name:'PEARL',color:'#2a78d6',pts:ps}],{mini:true}); }
+  drawPrice('all');
+
+  // venues + supply
+  const tot = (d.venues||[]).reduce((a,v)=>a+v.usd,0);
+  $('#venues tbody').innerHTML = (d.venues||[]).map(v=>`<tr><td>${v.url?`<a href="${safeUrl(v.url)}" target="_blank" rel="noopener nofollow">${esc(v.venue)}</a>`:esc(v.venue)}</td><td>${esc(v.pair)}</td><td>${fmtUsd(v.usd)} <span style="color:var(--mute)">${Math.round(v.usd/tot*100)}%</span></td></tr>`).join('');
+  const sellP = mk.volume24h ? payout / mk.volume24h : null;
+  $('#supplyKV').innerHTML = [
+    ['Circulating', fmtN(mk.circulating) + ' PEARL'], ['Reward per block', Math.round(su.rewardPerBlock).toLocaleString() + ' PEARL'],
+    ['Minted per day', fmtN(su.perDay) + ' PEARL · ' + fmtUsd(payout)], ['New supply as % of 24h volume', sellP ? Math.round(sellP*100) + '%' : '—'],
+  ].map(([k,v])=>`<div class="kv"><span>${k}</span><span>${v}</span></div>`).join('');
+
+  // hashrate
+  const hr = d.hashrate;
+  if(hr && hr.series && hr.series.length){
+    $('#mHashSub').textContent = 'now ' + fmtHash(hr.series.at(-1)[1]);
+    lineChart($('#sparkHash'),[{name:'Hashrate',color:'#2a78d6',pts:hr.series}],{mini:true});
+    lineChart($('#chartHash'),[{name:'Hashrate',color:'#2a78d6',pts:hr.series}],{yfmt:fmtHash,vfmt:fmtHash});
+    const pl=(hr.pools||[]).filter(p=>p.blocks24h>0);
+    $('#pools tbody').innerHTML = pl.map(p=>`<tr><td><a href="${safeUrl(p.url)}" target="_blank" rel="noopener nofollow">${esc(p.name)}</a></td><td>${+p.fee}%</td><td>${+p.blocks24h} · ${(+p.share24h).toFixed(0)}%</td></tr>`).join('');
+    const top2 = pl.slice(0,2).reduce((a,p)=>a+p.share24h,0);
+    $('#poolNote').textContent = `Top two pools found ${top2.toFixed(0)}% of yesterday's blocks. Basu measured 24 EH/s in June; the network now runs ${fmtHash(hr.series.at(-1)[1])}.`;
+    $('#uwTeaser').textContent = `${fmtHash(hr.series.at(-1)[1])} of matmul, paid customer share unknown`;
+  } else {
+    $('#mHashSub').textContent = 'feed not connected yet';
+    $('#sparkHash').outerHTML = `<div class="empty" style="margin-top:14px;padding:22px;font-size:13.5px">No free hashrate feed wired yet. Nothing shown beats a made-up line.</div>`;
+    $('#pools tbody').innerHTML='<tr><td colspan=3 style="color:var(--mute)">No pool data</td></tr>';
+    emptyChart($('#hashWrap'),'Hashrate history needs a public explorer endpoint or our own <code>pearld</code> node. Shown here as soon as it\'s connected.');
+  }
+
+  // early days
+  drawEarly();
+
+  // useful work
+  $('#uwList').innerHTML = USEFUL.map(u=>`<div class="uw-row"><div><b>${u.name}</b><p>${u.text}</p><a class="src" href="${u.src}" target="_blank" rel="noopener">${u.srcLabel} ↗</a></div><div><span class="status ${u.status}">${u.label}</span></div></div>`).join('');
+  $('#tlList').innerHTML = TIMELINE.map(([a,b])=>`<div class="tl"><span>${a}</span><div>${b}</div></div>`).join('');
+
+  // wall
+  // Hot ranking: likes + 3×reposts, decayed by age so recent posts rise (same as fetch-tweets.js)
+  const hot = t => (t.likes + 3*t.reposts) / Math.pow(1 + (Date.now()-Date.parse(t.createdAt))/864e5/5, 1.5);
+  const tw = (d.tweets || []).slice().sort((a,b)=>(b.pinned-a.pinned) || hot(b)-hot(a));
+  const note = $('#wallGrid .note');
+  $('#wallGrid').innerHTML='';
+  if(!tw.length){ $('#wallGrid').insertAdjacentHTML('beforeend',`<div class="tweet-card"><div class="empty" style="border:0;padding:12px">The wall fills from <code>tweets.json</code>. Add a post URL and it shows here as a native embed.</div></div>`); }
+  const WALL_N = window.__wallAll ? tw.length : 12;
+  tw.slice(0,WALL_N).forEach(t=>$('#wallGrid').insertAdjacentHTML('beforeend',tweetCard(t)));
+  $('#wallGrid').prepend(note);
+  $('#wallMore')?.remove();
+  if(tw.length>WALL_N) $('#wallGrid').insertAdjacentHTML('afterend',`<div class="wall-more" id="wallMore"><button class="btn-dark" onclick="window.__wallAll=true;render()">Show all ${tw.length} posts</button></div>`);
+
+  initCalc();
+  renderThesis();
+
+  // team
+  $('#teamGrid').innerHTML = teamHTML(false).replace(/^<div class="team"[^>]*>/,'').replace(/<\/div>$/,'');
+}
+
+const esc = s => String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// Third-party data (CoinGecko, prlscan, twitterapi.io) only ever reaches the DOM through esc(); links must be https.
+const safeUrl = u => /^https:\/\//i.test(String(u??'')) ? esc(u) : '#';
+function tweetText(s){
+  return esc(s).replace(/https:\/\/t\.co\/\w+\s*$/,'')
+    .replace(/(https?:\/\/[^\s]+)/g,'<a href="$1" target="_blank" rel="noopener">link</a>')
+    .replace(/(^|\s)@(\w{1,15})/g,'$1<a href="https://x.com/$2" target="_blank" rel="noopener">@$2</a>')
+    .replace(/(^|\s)\$([A-Za-z]{2,10})/g,'$1<b>$$$2</b>')
+    .replace(/\n/g,'<br>');
+}
+const kfmt = n => n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(1).replace('.0','')+'K':String(n);
+function tweetCard(t){
+  const a=t.author||{}; const d=new Date(t.createdAt);
+  return `<article class="tweet-card tw">
+    <header><img class="tw-av" src="${safeUrl(a.avatar)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+      <div class="tw-who"><b>${esc(a.name)}${a.verified?' <span class="tw-v">✓</span>':''}</b><small>@${esc(a.handle)} · ${isNaN(d)?'':d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})}</small></div>
+      <a class="tw-x" href="${safeUrl(t.url)}" target="_blank" rel="noopener" title="Open on X"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.9 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg></a></header>
+    ${t.pinned?'<span class="tw-pin">Pinned</span>':''}${t.via?`<span class="tw-via">Reposted by @${esc(t.via)}</span>`:''}
+    <p class="tw-text">${tweetText(t.text)}</p>${(t.text||'').length>420?`<a class="tw-more" href="${safeUrl(t.url)}" target="_blank" rel="noopener">Read on X →</a>`:''}
+    ${t.media?.[0]?`<a href="${safeUrl(t.url)}" target="_blank" rel="noopener"><img class="tw-img" src="${safeUrl(t.media[0])}" alt="" loading="lazy" onerror="this.remove()"></a>`:''}
+    <footer><span>♥ ${kfmt(t.likes)}</span><span>↻ ${kfmt(t.reposts)}</span><span>💬 ${kfmt(t.replies)}</span>${t.views?`<span>${kfmt(t.views)} views</span>`:''}</footer>
+  </article>`;
+}
+
+function drawPrice(range){
+  const ps = DATA.priceSeries||[]; if(!ps.length) return;
+  const cut = range==='all' ? 0 : Date.now() - range*864e5;
+  lineChart($('#chartPrice'),[{name:'PEARL',color:'#2a78d6',pts:ps.filter(p=>p[0]>=cut)}],{yfmt:v=>'$'+v.toFixed(2),vfmt:v=>'$'+v.toFixed(3)});
+}
+$('#priceRange').addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b) return; $$('#priceRange button').forEach(x=>x.classList.toggle('on',x===b)); drawPrice(b.dataset.d==='all'?'all':+b.dataset.d); });
+
+function drawEarly(){
+  const e = DATA.early || {}, hr = DATA.hashrate;
+  const DAY=864e5;
+  const index = (pts, launch) => { // pts [[t, h]] → [[day, h/h7]]
+    const days = pts.map(([t,h])=>[Math.round((t-launch)/DAY), h]).filter(p=>p[0]>=7&&p[0]<=365&&p[1]>0);
+    const base = days[0]?.[1]; return base ? days.map(([dd,h])=>[dd,h/base]) : [];
+  };
+  const series=[];
+  if(hr && hr.series?.length) series.push({name:'Pearl',color:'#2a78d6',pts:index(hr.series, Date.UTC(2026,3,27))});
+  if(e.btc?.series) series.push({name:'Bitcoin',color:'#eb6834',pts:index(e.btc.series, Date.UTC(2009,0,3))});
+  if(e.zec?.series) series.push({name:'Zcash',color:'#1baf7a',pts:index(e.zec.series, Date.UTC(2016,9,28))});
+  const usable = series.filter(s=>s.pts.length>1);
+  if(!usable.length){ emptyChart($('#earlyWrap'),'Comparison loads once hashrate histories are pulled.'); return; }
+  const maxDay = Math.max(...usable.map(s=>s.pts.at(-1)[0]));
+  const lim = Math.min(maxDay, 365);
+  usable.forEach(s=>s.pts=s.pts.filter(p=>p[0]<=lim));
+  lineChart($('#chartEarly'),usable,{log:true,label:true,rightPad:70,yfmt:v=>v>=1?v+'×':v+'×',vfmt:v=>v.toFixed(v<10?2:0)+'×',
+    xfmt:v=>'Day '+Math.round(v), xticks:(a,b)=>{const t=[];for(let x=30;x<=b;x+=30)t.push(x);return t}});
+}
+
+
+
+// ---------- thesis charts ----------
+function renderThesis(){
+  const mk = DATA.market || {}, su = DATA.supply || {}, price = mk.price || 0;
+  // gap chart: $ per PEARL to produce (Blockworks Research, Nov 2026)
+  const gap = [['Gaming card','power only',0.10,0.23,'#8b8b91'],['AI server today','paid AI work given up',1.33,3.15,'#d03b3b'],['AI server after FP8','with Pearl-GEMM',0.09,0.43,'#0a8f3c']];
+  const max = Math.max(3.4, price*1.15), pc = v => (v/max*100).toFixed(2)+'%';
+  $('#thGap').innerHTML = gap.map(([l,s,a,b,c])=>`<div class="rb-row"><div>${l}<small>${s}</small></div><div class="rb-track"><div class="rb-fill" style="left:${pc(a)};width:${pc(b-a)};background:${c}">$${a.toFixed(2)}–${b.toFixed(2)}</div>${price?`<div class="rb-mark" style="left:${pc(price)}">${l==='Gaming card'?`<span>PEARL $${price.toFixed(2)}</span>`:''}</div>`:''}</div></div>`).join('');
+  // dilution: new supply per year from the emission curve
+  const K=650226, M=2.1e9, B=365*86400/194, h0=su.heightImplied||0, S=h=>M*h/(h+K);
+  if(h0){
+    const yrs=[1,2,3,4,5].map(y=>({y, g:S(h0+y*B)/S(h0+(y-1)*B)-1, n:S(h0+y*B)-S(h0+(y-1)*B)}));
+    const gm=yrs[0].g;
+    $('#thDil').innerHTML = yrs.map(r=>`<div class="vb"><b>+${Math.round(r.g*100)}%</b><i style="height:${(r.g/gm*85).toFixed(1)}%;opacity:${(1-(r.y-1)*0.14).toFixed(2)}"></i></div>`).join('');
+    $('#thDilX').innerHTML = yrs.map(r=>`<span>Year ${r.y}<br>${Math.round(r.n/1e6)}M</span>`).join('');
+    $('#thNew').textContent = Math.round(yrs[0].n/1e6)+'M';
+    if(mk.volume24h && su.perDay) $('#thVolShare').textContent = '~'+Math.round(su.perDay*price/mk.volume24h*100)+'%';
+  }
+  // valuation ladder, log scale
+  const sup12 = (mk.circulating||0)*(1+(su.growth12m||0)), refs = DATA.refs || {zec:19.7e9, tao:2.6e9, btc:1.55e12};
+  const rows = [['Bear','just another GPU coin',0.25e9,'#DA4547',1],['Pearl today','market cap now',mk.mcap,'var(--pearl)',0],['Base','FP8 ships',2e9,'#4a4a4f',1],['Bittensor','TAO, live',refs.tao,'#c9c9ce',0],['Bull','1% of Bitcoin',refs.btc*0.01,'#0E8C7A',1],['Zcash','ZEC, live',refs.zec,'#1baf7a',0],['Blue sky','compute settles in PEARL',50e9,'#0b0b0c',1]].filter(r=>r[2]).sort((a,b)=>a[2]-b[2]);
+  const lo=Math.log10(1e8), hi=Math.log10(1e11), w=v=>Math.max(2,(Math.log10(v)-lo)/(hi-lo)*100).toFixed(1)+'%';
+  const usd=v=>v>=1e9?'$'+(v/1e9).toFixed(v>=1e10?0:1)+'B':'$'+Math.round(v/1e6)+'M';
+  $('#thVal').innerHTML = rows.map(([l,s,v,c,sc])=>`<div class="lb-row"><div>${l}<small>${s}</small></div><div class="lb-track"><div class="lb-fill" style="width:${w(v)};background:${c}"></div></div><div class="lb-v">${usd(v)}${sc&&sup12?`<small><br>$${(v/sup12)<10?(v/sup12).toFixed(2):Math.round(v/sup12)}/PEARL</small>`:''}</div></div>`).join('');
+}
+
+// ---------- mining calculator ----------
+const GPUS = [ // prlstats.com/api/gpus (whattomine, miningboard, hashrate.no, measured PeakMiner runs), Nov 2026: [name, TH/s, W, street price $, spot rent $/hr, FP8 fate]
+  ["RTX 5090", 405, 525, 6000, 0, "ok"],
+  ["RTX 4090", 305, 400, 2400, 0, "cut"],
+  ["RTX 5080", 215, 275, 1580, 0, "unclear"],
+  ["RTX 4080 Super", 204, 295, 1150, 0, "cut"],
+  ["RTX 4080", 188, 300, 1050, 0, "cut"],
+  ["RTX 5070 Ti", 178, 230, 1059, 0, "unclear"],
+  ["RTX 4070 Ti", 150, 210, 720, 0, "cut"],
+  ["RTX 3090", 130, 300, 850, 0, "cut"],
+  ["RTX 3070", 76, 185, 320, 0, "cut"],
+  ["B200", 1382, 984, 65000, 3.2, "ok"],
+  ["B300", 814, 1072, 72000, 3.6, "ok"],
+  ["H200", 735, 700, 35000, 1.92, "ok"],
+  ["H100 SXM", 735, 697, 26000, 1.63, "ok"],
+  ["H100 PCIe", 460, 350, 23000, 1.4, "ok"],
+  ["A100 SXM", 200, 400, 9000, 0.7, "cut"],
+  ['Custom',0,0,0,0,'']];
+let calcInit=false;
+function initCalc(){
+  const sel=$('#cGpu');
+  if(!calcInit){
+    sel.innerHTML=GPUS.map((g,i)=>`<option value="${i}">${g[0]}${g[1]?` · ${g[1]} TH/s · ${g[2]} W · $${g[3].toLocaleString()}`:''}</option>`).join('');
+    sel.value=1; // RTX 4090
+    const apply=()=>{ const g=GPUS[+sel.value]; if(g[1]){ $('#cHash').value=g[1]; $('#cWatt').value=g[2]; $('#cCost').value=g[3]; } calc(); };
+    sel.onchange=apply;
+    ['cHash','cQty','cWatt','cKwh','cFee','cRent','cPrice','cNet','cCost'].forEach(id=>$('#'+id).addEventListener('input',()=>{ if(id==='cHash'||id==='cWatt') sel.value=GPUS.length-1; calc(); }));
+    apply(); calcInit=true;
+  }
+  // Difficulty-implied hashrate (D × 2^48 / 194s) matches perDay, which is also at the 194s target. The explorer's
+  // short-window estimate runs ~20% hot when blocks come fast, which understated revenue per card.
+  const diff = DATA.hashrate?.summary?.current_difficulty;
+  const net = diff ? diff*2**48/194 : (DATA.hashrate?.summary?.estimated_hashrate_hps || DATA.hashrate?.series?.at(-1)?.[1]);
+  if(document.activeElement!==$('#cPrice')) $('#cPrice').value = DATA.market?.price?.toFixed(3) ?? '';
+  if(net && document.activeElement!==$('#cNet')) $('#cNet').value = (net/1e18).toFixed(1);
+  calc();
+}
+function calc(){
+  const v=id=>parseFloat($('#'+id).value)||0;
+  const hs=v('cHash')*1e12*Math.max(1,v('cQty')), net=v('cNet')*1e18, qty=Math.max(1,v('cQty'));
+  const perDay = DATA.supply?.perDay || 0, price=v('cPrice');
+  if(!net||!perDay){ $('#oProfit').textContent='—'; return; }
+  const share = hs/(net+hs);
+  const prl = share*perDay*(1-v('cFee')/100);
+  const rev = prl*price, pow = v('cWatt')*qty/1000*24*v('cKwh'), rent = v('cRent')*24*qty;
+  const profit = rev-pow-rent;
+  const money = n => (n<0?'−$':'$')+Math.abs(n).toFixed(Math.abs(n)<100?2:0);
+  $('#oProfit').textContent = money(profit);
+  $('#oProfit').className = 'out-big ' + (profit<0?'neg':'pos');
+  $('#oProfitLbl').textContent = profit<0 ? 'loss per day' : 'profit per day';
+  $('#oPrl').textContent = prl.toFixed(2)+' PEARL';
+  $('#oRev').textContent = money(rev); $('#oPow').textContent = money(pow); $('#oRentC').textContent = money(rent);
+  $('#oMonth').textContent = money(profit*30);
+  $('#oBreak').textContent = prl>0 ? '$'+((pow+rent)/prl).toFixed(3) : '—';
+  $('#oShare').textContent = (share*100).toPrecision(2)+'%';
+  const cost = v('cCost')*qty;
+  $('#oPay').textContent = !cost ? 'own it' : profit>0 ? days(cost/profit) : 'never';
+  $('#oPayD').textContent = !cost ? '—' : days(paybackDecay(cost, rev, pow+rent));
+  renderPayback();
+  $('#cSub').textContent = `${qty} card${qty>1?'s':''} · ${v('cNet')} EH/s network · ${Math.round(perDay).toLocaleString()} PEARL/day minted`;
+}
+
+// Days until cumulative profit covers the card, with the block reward shrinking every block
+// (reward ∝ 1/(h+K)², so ~31% lower a year from now) and difficulty held flat. Infinity = never at today's price.
+function paybackDecay(cost, rev, costPerDay){
+  const K=650226, h0=(DATA.supply?.heightImplied||0)+K; let cum=0;
+  for(let t=1;t<=3650;t++){ const r=rev*(h0/(h0+t*86400/194))**2; cum+=r-costPerDay; if(cum>=cost) return t; if(r<costPerDay) return Infinity; }
+  return Infinity;
+}
+const days = d => !isFinite(d) ? 'never' : d>=730 ? (d/365).toFixed(1)+' years' : Math.round(d)+' days';
+function renderPayback(){
+  const v=id=>parseFloat($('#'+id).value)||0, wrap=$('#pbList'); if(!wrap) return;
+  const diff=DATA.hashrate?.summary?.current_difficulty, perDay=DATA.supply?.perDay, price=v('cPrice'), kwh=v('cKwh'), fee=v('cFee')/100;
+  if(!diff||!perDay||!price) return;
+  const net=diff*2**48/194;
+  const rows=GPUS.filter(g=>g[1]&&g[3]<20000).map(g=>{ const rev=g[1]*1e12/net*perDay*(1-fee)*price, pw=g[2]*24/1000*kwh; return {g, d:paybackDecay(g[3],rev,pw)}; }).sort((a,b)=>a.d-b.d);
+  const cap=1095, tag={ok:['ok','survives FP8'],unclear:['','FP8 unclear'],cut:['cut','cut at FP8']};
+  wrap.innerHTML=rows.map(({g,d})=>`<div class="pb-row"><div>${g[0]}<small style="display:block;color:var(--mute);font-size:11.5px">$${g[3].toLocaleString()}</small></div><div class="pb-track"><div class="pb-fill" style="width:${isFinite(d)?Math.min(100,d/cap*100).toFixed(1):100}%;background:${!isFinite(d)||d>cap?'#d03b3b':d>365?'#e0a526':'var(--up)'}"></div></div><div>${days(d)} <span class="tag ${tag[g[5]][0]}">${tag[g[5]][1]}</span></div></div>`).join('');
+  $('#pbSub').textContent=`buying the card at street price · $${kwh.toFixed(2)}/kWh · PEARL $${price.toFixed(2)} · rewards shrinking, difficulty flat`;
+}
+
+// ---------- FAQ ----------
+const FAQ = [
+  ['Is Pearl UTXO-based?','Yes. Pearl is a fork of btcd, the Go implementation of Bitcoin, so it keeps Bitcoin\'s UTXO model: coins live as unspent outputs, not account balances. Addresses are Taproot and start with <code>prl1</code>. The repo also includes a post-quantum signature scheme (XMSS).'],
+  ['What makes it different from Bitcoin?','The puzzle. Bitcoin miners hash; Pearl miners multiply matrices, the core operation of AI. Each winning block carries a zero-knowledge proof so nodes can verify the work without redoing it. Supply also never halves: it follows 2.1B × H / (H + 650,226), shrinking a little every block.'],
+  ['Is the "useful work" actually useful today?','Not provably. The chain verifies that matrices were multiplied, not that anyone needed the result. Basu\'s June study (<a href="https://arxiv.org/abs/2606.04819" target="_blank" rel="noopener">arXiv 2606.04819</a>) found zero useful compute, and the protocol has since shipped several forks to close the gap. Follow it in <a href="#useful">Useful Work Watch</a>.'],
+  ['PEARL or PRL: which is the right one?','Pearl, CoinGecko id <code>pearl-2</code>, around $1–2. Its ticker changed from PRL to PEARL. The "PRL" on KuCoin, MEXC, Gate and Coinbase is Perle, a Solana token around $0.08. Pearl trades as PEARL, or still PRL on a few venues, on BigONE, Ourbit, SafeTrade and Gate\'s PEARL pair.'],
+  ['Was there a pre-mine or VC allocation?','No pre-mine and no investor or founder allocation in the code. But about 121.7M PEARL came out in the first ~6 days at low difficulty, and an earlier whitepaper said that funded team R&D. Separately, the company (not the token) closed $55M of equity and a $75M GPU vehicle on Oct 25 (per Blockworks Research). The lab hasn\'t disclosed how much PEARL it holds. See <a href="#team">The Team</a>.'],
+  ['Can I mine on a Mac?','Not in practice. The official vLLM miner needs NVIDIA + CUDA (pool accepts H100/H200 only), and third-party miners target Linux on NVIDIA/AMD. A Mac can run a full node fine; there\'s an official Apple Silicon build.'],
+  ['What do I need to run a node?','The prebuilt <code>pearld</code> for macOS, Linux or Windows from the <a href="https://github.com/pearl-research-labs/pearl/releases" target="_blank" rel="noopener">GitHub releases</a>. It\'s a btcd-style node: modest RAM, a few tens of GB of disk, always-on internet. Run with <code>--txindex</code> if you want full block and transaction data over RPC.'],
+  ['Where do I keep PEARL?','Native PEARL needs a Pearl wallet: Oyster (desktop app or <code>oystercli</code>). MetaMask and Phantom can\'t hold it. WPRL on Ethereum is a third-party bridge IOU, not native PEARL. Write the seed on paper.'],
+  ['Is mining profitable?','Depends on your card, power price and today\'s difficulty. Plug your numbers into the <a href="#calc">calculator</a>. Difficulty follows price, and SRBMiner\'s release notes warn a future upgrade could make consumer GPUs uncompetitive. Rent a card before you buy one.'],
+  ['Where does this site\'s data come from?','CoinGecko for price, prlscan.com for hashrate and pools, CoinMetrics Community for Bitcoin and Zcash history, and Pearl\'s own source code for the emission curve. Curated rows link their sources. All of it is free, and the code is open.'],
+  ['Is this financial advice?','No. It\'s an analytics page built in public by <a href="https://x.com/dudubitcoin" target="_blank" rel="noopener">@dudubitcoin</a>. Verify, then decide.'],
+];
+$('#faqList').innerHTML = FAQ.map(([q,a])=>`<details><summary>${q}</summary><div class="a">${a}</div></details>`).join('');
+
+// ---------- rail active state ----------
+const secs = ['top','price','hashrate','early','useful','wall','thesis','team','calc','get','faq'].map(id=>document.getElementById(id));
+const io = new IntersectionObserver(es=>{ es.forEach(en=>{ if(en.isIntersecting){ const id=en.target.id;
+  $$('#railNav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));
+  const tabFor = {top:'#top',price:'#price',hashrate:'#price',early:'#price',useful:'#useful',wall:'#wall'}[id];
+  if(tabFor) $$('[data-tab]').forEach(a=>a.classList.toggle('on',a.getAttribute('href')===tabFor)); } }); },{rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(s=>s&&io.observe(s));
+
+// ---------- boot: snapshot first, then live price ----------
+async function boot(){
+  // Live: /api/data (Vercel function, edge-cached ~15 min). Local / fallback: the data.json snapshot.
+  const getJSON = async u => { const r = await fetch(u); if(!r.ok) throw new Error(r.status); return r.json(); };
+  try { DATA = await getJSON('/api/data'); } catch { try { DATA = await getJSON('data.json?'+Date.now()); } catch { DATA = {market:{},supply:{}}; } }
+  render();
+  try {
+    const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=pearl-2&vs_currencies=usd&include_market_cap=true&include_24hr_change=true&include_24hr_vol=true');
+    const j = (await r.json())['pearl-2'];
+    if(j && j.usd){ const ratio = DATA.market.fdv && DATA.market.mcap ? DATA.market.fdv/DATA.market.mcap : null;
+      Object.assign(DATA.market,{price:j.usd,mcap:j.usd_market_cap,chg24h:j.usd_24h_change,volume24h:j.usd_24h_vol}); if(ratio) DATA.market.fdv = j.usd_market_cap*ratio;
+      DATA.updated = new Date().toISOString(); render(); }
+  } catch { $('#liveDot').classList.add('stale'); }
+}
+
+/* EXPORT: a PNG button on every chart card */
+const XP_SEL='.chart-wrap,.rbars,.vbars,.lbars,.pc-bar,#pbList';
+function initExport(){
+  const cards=new Set(); document.querySelectorAll(XP_SEL).forEach(el=>{ const c=el.closest('.card'); if(c) cards.add(c); });
+  cards.forEach(card=>{
+    if(card.querySelector(':scope > .xp')) return;
+    const b=document.createElement('button'); b.className='xp'; b.title='Export as image'; b.setAttribute('aria-label','Export as image');
+    b.innerHTML='<svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
+    b.addEventListener('click',e=>{ e.preventDefault(); e.stopPropagation(); exportCard(card); });
+    card.classList.add('xp-on'); card.appendChild(b);
+  });
+}
+async function exportCard(card){
+  const sec=card.closest('section'), h2=sec?.querySelector('.sec-head h2')?.textContent.trim()||'Pearlascope';
+  const title=card.querySelector('.card-h b')?.textContent.trim()||h2;
+  const added=[];
+  if(!card.querySelector('.card-h')){
+    const h=document.createElement('div'); h.className='xp-head';
+    h.innerHTML='<b></b><small></small>'; h.querySelector('b').textContent=h2;
+    h.querySelector('small').textContent=sec?.querySelector('.sec-head p')?.textContent.trim()||'';
+    card.prepend(h); added.push(h);
+  }
+  const f=document.createElement('div'); f.className='xp-foot';
+  f.innerHTML='<span>Pearlascope · Pearl (PEARL) analytics</span><span>@dudubitcoin · '+new Date().toISOString().slice(0,10)+'</span>';
+  card.appendChild(f); added.push(f);
+  const opts={pixelRatio:2,backgroundColor:getComputedStyle(card).backgroundColor,filter:n=>!(n.classList&&(n.classList.contains('xp')||n.classList.contains('tip')))};
+  try{
+    let url; try{ url=await htmlToImage.toPng(card,opts); }catch(_){ url=await htmlToImage.toPng(card,{...opts,skipFonts:true}); }
+    const a=document.createElement('a'); a.href=url;
+    a.download='pearlascope-'+title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.png'; a.click();
+  }catch(err){ console.error('export failed',err); }
+  finally{ added.forEach(n=>n.remove()); }
+}
+let rt; window.addEventListener('resize',()=>{ clearTimeout(rt); rt=setTimeout(()=>DATA&&render(),150); });
+boot();
+initExport();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js" integrity="sha384-UbfRVKN3/elS1r7JcK2FhmPP+KlJ4CvYwbyYD7tH+uTkbT9bNJr9eJeQ0FoFbAgz" crossorigin="anonymous"></script>
+</body>
+</html>
