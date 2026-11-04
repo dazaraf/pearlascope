@@ -2,7 +2,7 @@
 // History starts ~2026-05-01 (block 36,470); the first 4 days ran at difficulty 1.
 module.exports = async function (get) {
   const B = 'https://api.prlscan.com/v1';
-  const m = await get(`${B}/analytics/block-metrics?limit=100000&window=500&max_points=600`);
+  const m = await get(`${B}/analytics/block-metrics?limit=100000&window=50&max_points=600`);
   const series = m.items
     .filter(p => p.estimated_hashrate_hps > 0)
     .map(p => [Date.parse(p.time), p.estimated_hashrate_hps]);
