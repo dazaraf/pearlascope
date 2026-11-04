@@ -321,12 +321,20 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
 @media (max-width:760px){
   .frame{margin:0;border-radius:0;padding:16px}
   .shell{grid-template-columns:1fr}.rail{display:none}
-  .tabs{display:none}.top{grid-template-columns:1fr auto}
-  .stage{min-height:620px;padding:22px}.stats{left:22px;top:180px}
-  .clam{width:92%;right:-14%;top:62%;opacity:.95}
+  .tabs{display:none}.top{grid-template-columns:auto minmax(0,1fr);gap:10px}
+  .brand{font-size:17px;gap:9px}.brand svg{width:38px;height:38px}
+  .right{justify-content:flex-end;min-width:0;gap:8px}
+  .pill{min-width:0;padding:9px 12px;font-size:13.5px;gap:7px}#livePill{overflow:hidden;text-overflow:ellipsis}
+  .icon-btn{width:40px;height:40px;border-radius:14px;flex:none}
+  /* phone hero: text, then the clam, then the stats, all in flow so nothing overlaps */
+  .stage{min-height:0;padding:22px;display:flex;flex-direction:column}
+  .stage h1{margin-top:6px}
+  .clam{order:1;position:relative;right:auto;top:auto;transform:none;width:100%;max-width:380px;margin:4px auto -18px;align-self:center}
+  .stats{order:2;width:auto;margin-top:0}
   .stat{min-width:0}.dock{flex-direction:column;align-items:stretch}
   .sec-head{flex-direction:column;align-items:flex-start}
 }
+@media (max-width:440px){.pill-t{display:none}}
 </style>
 </head>
 <body>
@@ -890,7 +898,9 @@ function render(){
   const supply12 = (mk.circulating || 0) * (1 + (su.growth12m || 0));
   $$('[data-case]').forEach(e=>{ const v = +e.dataset.case / supply12; e.textContent = supply12 ? '$' + (v < 10 ? v.toFixed(2) : Math.round(v)) : '—'; });
   $$('[data-case-x]').forEach(e=>{ const x = (+e.dataset.caseX / supply12) / (mk.price || NaN); e.textContent = isFinite(x) ? (x < 1 ? '−' + Math.round((1 - x) * 100) + '% from today' : x.toFixed(x < 10 ? 1 : 0) + 'x from today') : ''; });
-  $('#livePill').textContent = `PEARL $${mk.price?.toFixed(2)} · ${new Date(d.updated).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})}`;
+  const pillT = document.createElement('span'); pillT.className = 'pill-t';
+  pillT.textContent = ` · ${new Date(d.updated).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})}`;
+  $('#livePill').textContent = `PEARL $${mk.price?.toFixed(2)}`; $('#livePill').append(pillT);
   $('#footUpd').textContent = 'Last pull: ' + new Date(d.updated).toLocaleString('en-GB');
 
   // price
