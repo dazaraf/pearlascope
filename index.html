@@ -50,7 +50,7 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stro
 
 /* hero: one viewport, does not scroll internally */
 .hero{height:calc(100vh - 110px);min-height:670px;max-height:920px;display:grid;grid-template-columns:1fr 380px;grid-template-rows:1fr 205px;gap:20px;overflow:hidden}
-.stage{grid-column:1;grid-row:1}.desk{grid-column:2;grid-row:1 / span 2}.minis{grid-column:1;grid-row:2}
+.stage{grid-column:1;grid-row:1}.desk{grid-column:2;grid-row:1}.minis{grid-column:1;grid-row:2}
 .stage{position:relative;border-radius:var(--r-lg);background:radial-gradient(120% 90% at 70% 40%,#f4f4f6 0%,var(--hero-a) 40%,var(--hero-b) 100%);padding:30px 32px;overflow:hidden;box-shadow:0 1px 0 rgba(255,255,255,.7) inset}
 .chips{display:flex;gap:10px;align-items:center}
 .chip{background:rgba(255,255,255,.85);border-radius:11px;padding:8px 13px;font-size:13.5px;box-shadow:0 1px 0 #fff inset}
@@ -378,7 +378,6 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
       <!-- HERO -->
       <div class="hero">
         <div class="stage">
-          <div class="chips"><span class="chip">Proof-of-useful-work L1</span><span class="chip ghost">Mainnet since 27 Apr 2026</span></div>
           <h1>Pearl</h1>
           <p class="sub">Bitcoin's design with a different puzzle: miners multiply matrices, the same math that runs AI.</p>
           <div class="stats">
@@ -409,13 +408,6 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
             <ellipse cx="276" cy="196" rx="22" ry="14" fill="#fff" opacity=".9" transform="rotate(-30 276 196)"/>
             <circle cx="330" cy="262" r="6" fill="#fff" opacity=".35"/>
           </svg>
-          <div class="dock">
-            <div>
-              <b id="dSupply">Supply mined</b><small id="dSupplySub"></small>
-              <div class="meter"><div id="dMeter" style="width:0"></div></div>
-            </div>
-            <a class="btn-dark" href="#" data-open="thesis">Read the PEARL thesis <svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
-          </div>
         </div>
 
         <div class="desk">
@@ -438,24 +430,6 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
           </div>
         </div>
 
-        <div class="minis" style="grid-column:1">
-          <a class="card" href="#price">
-            <div class="card-h"><div><b>Price</b><small id="mPriceSub">since listing</small></div><span class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
-            <svg class="spark" id="sparkPrice" preserveAspectRatio="none"></svg>
-          </a>
-          <a class="card" href="#hashrate">
-            <div class="card-h"><div><b>Hashrate</b><small id="mHashSub">network</small></div><span class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
-            <svg class="spark" id="sparkHash" preserveAspectRatio="none"></svg>
-          </a>
-          <a class="card black" href="#useful">
-            <div class="card-h"><div><b>Useful Work Watch</b><small>Who's really using Pearl</small></div><span class="arrow"><svg class="i" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
-            <div class="inner-dark">
-              <div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
-              <div><b style="font-weight:500;font-size:15px">Paid AI work: unproven</b><br><small id="uwTeaser">Last independent study: zero useful compute</small></div>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px"><small>Miner payouts per day</small><span class="big-n" id="mPayout">—</span></div>
-          </a>
-        </div>
       </div>
 
       <!-- PRICE -->
@@ -760,12 +734,12 @@ const DRAWERS = {
     <p><b>The best idea in crypto × AI this year, on a token that is still mostly a bet on the team.</b></p>
     <h3>The idea</h3><p>A currency secured by the world's most-demanded computation. Serious researchers, no VC table, and a fast pace of protocol fixes.</p>
     <h3>The gap</h3><p>The chain can verify that matrices were multiplied, not that anyone needed the answer. The last independent study found zero useful compute. Miners are paid ${$('[data-k=payout]').textContent} a day, and supply grows ${$('[data-k=growth]').textContent} in 12 months.</p>
-    <h3>Bear · Base · Bull</h3><p><b>Bear</b> ~$0.25B: a GPU lottery, ${$('[data-case="0.25e9"]').textContent}/PEARL. <b>Base</b> ~$5B: Fortessia holds, ${$('[data-case="5e9"]').textContent}/PEARL. <b>Bull</b> $25B+: the money of compute, ${$('[data-case="25e9"]').textContent}/PEARL. On supply 12 months out.</p>
+    <h3>Bear · Base · Bull</h3><p><b>Bear</b> ~$0.25B: a GPU lottery, ${$('[data-case="0.25e9"]').textContent}/PEARL. <b>Base</b> ~$2B: FP8 ships, ${$('[data-case="2e9"]').textContent}/PEARL. <b>Bull</b> ~$15B: the discount loop, ${$('[data-case="15e9"]').textContent}/PEARL. On supply 12 months out.</p>
     <h3>What decides it</h3><p>Overhead. If paid inference becomes the cheapest way to mine, useful miners squeeze out the rest. Watch FP8 (PIP-3), the green rows in Useful Work Watch, and the hashrate against price.</p>
     <p style="margin-top:18px"><a class="btn-dark" href="#thesis" data-close data-expand>Read the full thesis</a></p></div>` },
   howto: { title:'How To Use This Site', html:()=>`<div class="prose">
     <p>Pearlascope is one page that answers one question: is Pearl becoming the Bitcoin of AI, or a GPU lottery?</p>
-    <h3>The hero</h3><p>Live price, market cap and daily issuance up top. The two small charts are price and hashrate. The black card is the usefulness check.</p>
+    <h3>The hero</h3><p>Live price, market cap and daily issuance up top.</p>
     <h3>The left rail</h3><p>Jumps to each section. Hover an icon to see its name.</p>
     <h3>Reading the charts</h3><p>Hover any chart for exact values. Price is USD daily. The early-days chart indexes each chain to its own day 7, so you compare growth curves, not raw hash units.</p>
     <h3>Useful Work Watch</h3><p>Red = no useful output. Amber = real but unproven or subsidised. Green = verified paid AI work on mining hardware. Every row links its source.</p>
@@ -867,7 +841,6 @@ function render(){
   $('#hMcap').textContent = fmtUsd(mk.mcap) + ' · ' + fmtUsd(mk.fdv);
   const payout = su.perDay * (mk.price||0);
   $('#hMint').textContent = su.perDay ? fmtN(su.perDay) + ' PEARL' : '—';
-  $('#mPayout').textContent = fmtUsd(payout);
   $$('[data-k=payout]').forEach(e=>e.textContent=fmtUsd(payout));
   $$('[data-k=growth]').forEach(e=>e.textContent='+' + Math.round(su.growth12m*100) + '%');
   // Pool vs solo blocks (the duplex ceiling)
@@ -894,16 +867,11 @@ function render(){
   const supply12 = (mk.circulating || 0) * (1 + (su.growth12m || 0));
   $$('[data-case]').forEach(e=>{ const v = +e.dataset.case / supply12; e.textContent = supply12 ? '$' + (v < 10 ? v.toFixed(2) : Math.round(v)) : '—'; });
   $$('[data-case-x]').forEach(e=>{ const x = (+e.dataset.caseX / supply12) / (mk.price || NaN); e.textContent = isFinite(x) ? (x < 1 ? '−' + Math.round((1 - x) * 100) + '% from today' : x.toFixed(x < 10 ? 1 : 0) + 'x from today') : ''; });
-  $('#dSupply').textContent = (su.pctMined*100).toFixed(1) + '% of 2.1B mined';
-  $('#dSupplySub').textContent = `block ~${(su.heightImplied||0).toLocaleString()} · +${Math.round(su.growth12m*100)}% supply in 12 mo`;
-  $('#dMeter').style.width = (su.pctMined*100) + '%';
   $('#livePill').textContent = `PEARL $${mk.price?.toFixed(2)} · ${new Date(d.updated).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})}`;
   $('#footUpd').textContent = 'Last pull: ' + new Date(d.updated).toLocaleString('en-GB');
 
   // price
   const ps = d.priceSeries || [];
-  if(ps.length){ $('#mPriceSub').textContent = `${dfmt(ps[0][0])} → today · ATH $${mk.ath?.toFixed(2)}`;
-    lineChart($('#sparkPrice'),[{name:'PEARL',color:'#2a78d6',pts:ps}],{mini:true}); }
   drawPrice('all');
 
   // venues + supply
@@ -918,17 +886,12 @@ function render(){
   // hashrate
   const hr = d.hashrate;
   if(hr && hr.series && hr.series.length){
-    $('#mHashSub').textContent = 'now ' + fmtHash(hr.series.at(-1)[1]);
-    lineChart($('#sparkHash'),[{name:'Hashrate',color:'#2a78d6',pts:hr.series}],{mini:true});
     lineChart($('#chartHash'),[{name:'Hashrate',color:'#2a78d6',pts:hr.series}],{yfmt:fmtHash,vfmt:fmtHash});
     const pl=(hr.pools||[]).filter(p=>p.blocks24h>0);
     $('#pools tbody').innerHTML = pl.map(p=>`<tr><td><a href="${safeUrl(p.url)}" target="_blank" rel="noopener nofollow">${esc(p.name)}</a></td><td>${+p.fee}%</td><td>${+p.blocks24h} · ${(+p.share24h).toFixed(0)}%</td></tr>`).join('');
     const top2 = pl.slice(0,2).reduce((a,p)=>a+p.share24h,0);
     $('#poolNote').textContent = `Top two pools found ${top2.toFixed(0)}% of yesterday's blocks. Basu measured 24 EH/s in June; the network now runs ${fmtHash(hr.series.at(-1)[1])}.`;
-    $('#uwTeaser').textContent = `${fmtHash(hr.series.at(-1)[1])} of matmul, paid customer share unknown`;
   } else {
-    $('#mHashSub').textContent = 'feed not connected yet';
-    $('#sparkHash').outerHTML = `<div class="empty" style="margin-top:14px;padding:22px;font-size:13.5px">No free hashrate feed wired yet. Nothing shown beats a made-up line.</div>`;
     $('#pools tbody').innerHTML='<tr><td colspan=3 style="color:var(--mute)">No pool data</td></tr>';
     emptyChart($('#hashWrap'),'Hashrate history needs a public explorer endpoint or our own <code>pearld</code> node. Shown here as soon as it\'s connected.');
   }
