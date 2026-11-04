@@ -2,9 +2,9 @@
 
 Live analytics for **Pearl**, the proof-of-useful-work L1 where mining is the matrix maths AI runs on.
 
-**Site:** https://pearlascope.vercel.app · **The maths:** https://pearlascope.vercel.app/math
+**Site:** https://pearlascope.com · **The maths:** https://pearlascope.com/math
 
-Price, supply and dilution, network hashrate, who mines the blocks, how much of the mining is actually useful, a mining calculator with payback, a thesis with bear/base/bull cases, and a wall of the hottest Pearl posts on X. Every derived number is recomputed from first principles on the [maths page](https://pearlascope.vercel.app/math), straight from Pearl's own source code.
+Price, supply and dilution, network hashrate, who mines the blocks, how much of the mining is actually useful, a mining calculator with payback, a thesis with bear/base/bull cases, and a wall of the hottest Pearl posts on X. Every derived number is recomputed from first principles on the [maths page](https://pearlascope.com/math), straight from Pearl's own source code.
 
 Not financial advice. The thesis section is the maintainer's opinion, and he holds PEARL.
 

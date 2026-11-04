@@ -1,6 +1,8 @@
 {
   "_readme": "Every external domain the code may reference, and every crypto address the site may show. scripts/check.js fails CI on anything not listed. Changing this file needs maintainer (CODEOWNERS) review: a new domain or address is the #1 way a malicious PR steals from readers.",
   "domains": [
+    "www.pearlascope.com",
+    "pearlascope.com",
     "pearlascope.vercel.app",
     "x.com",
     "github.com",
