@@ -19,4 +19,4 @@
 - Price: CoinGecko (id pearl-2). Hashrate and pools: prlscan.com. Bitcoin and Zcash history: CoinMetrics Community. Emission curve: Pearl's source code.
 
 ## Source code
-- https://github.com/dazaraf/pearlascope (MIT)
+- https://github.com/pearlascope/pearlascope (MIT)
