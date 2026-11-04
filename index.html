@@ -451,7 +451,7 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
         <div class="sec-head"><div><span class="eyebrow">02 · Network</span><h2>Hashrate</h2><p>How much matmul work miners point at Pearl. Difficulty chases price, so this is the market's real vote on miner margins.</p></div></div>
         <div class="two">
           <div class="card"><div class="chart-wrap" id="hashWrap"><svg class="chart" id="chartHash"></svg><div class="tip"></div></div>
-            <p style="font-size:13px;color:var(--ink-2);margin-top:14px;line-height:1.5" id="hashNote">Nobody measures hashrate directly; every site estimates it. Ours: <b>hashrate = difficulty × 2<sup>48</sup> ÷ average block time</b>, averaged over the last 500 blocks (about a day). Shorter windows read higher while hashrate is climbing.</p></div>
+            <p style="font-size:13px;color:var(--ink-2);margin-top:14px;line-height:1.5" id="hashNote">Nobody measures hashrate directly; every site estimates it. Ours: <b>hashrate = difficulty × 2<sup>48</sup> ÷ average block time</b>, averaged over the last 50 blocks (about 2.5 hours), the same window prlscan shows. Over such a short window one fast or slow block moves it about 2%, so expect a jumpy line.</p></div>
           <div class="card"><div class="card-h"><div><b>Who mines the blocks</b><small>Pool share of the last 24h</small></div></div>
             <table style="margin-top:14px" id="pools"><thead><tr><th>Pool</th><th>Fee</th><th>Blocks · share</th></tr></thead><tbody></tbody></table>
             <p style="font-size:13px;color:var(--ink-2);margin-top:14px;line-height:1.5" id="poolNote"></p></div>
@@ -889,7 +889,7 @@ function render(){
   if(hr && hr.series && hr.series.length){
     lineChart($('#chartHash'),[{name:'Hashrate',color:'#2a78d6',pts:hr.series}],{yfmt:fmtHash,vfmt:fmtHash});
     const pl=(hr.pools||[]).filter(p=>p.blocks24h>0);
-    const sm=hr.summary; if(sm && sm.estimated_hashrate_hps) $('#hashNote').insertAdjacentHTML('beforeend',` Right now: ${fmtHash(hr.series.at(-1)[1])} over 500 blocks, ${fmtHash(sm.estimated_hashrate_hps)} over the last 50 (blocks every ${(+sm.avg_block_time_seconds).toFixed(0)}s vs the 194s target).`);
+    const sm=hr.summary; if(sm && sm.avg_block_time_seconds) $('#hashNote').insertAdjacentHTML('beforeend',` Right now: ${fmtHash(hr.series.at(-1)[1])}, with blocks every ${(+sm.avg_block_time_seconds).toFixed(0)}s against the 194s target.`);
     $('#pools tbody').innerHTML = pl.map(p=>`<tr><td><a href="${safeUrl(p.url)}" target="_blank" rel="noopener nofollow">${esc(p.name)}</a></td><td>${+p.fee}%</td><td>${+p.blocks24h} · ${(+p.share24h).toFixed(0)}%</td></tr>`).join('');
     const top2 = pl.slice(0,2).reduce((a,p)=>a+p.share24h,0);
     $('#poolNote').textContent = `Top two pools found ${top2.toFixed(0)}% of yesterday's blocks. Basu measured 24 EH/s in June; the network now runs ${fmtHash(hr.series.at(-1)[1])}.`;
