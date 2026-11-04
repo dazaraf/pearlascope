@@ -89,9 +89,10 @@ async function build(prev = {}, local = true) {
   const cm = f => { const d = readJSON(path.join(RAW, f)); return d ? { series: d.coinmetrics.map(r => [Date.parse(r.time), +r.HashRate]).filter(p => p[1] > 0) } : null; };
   out.early = local ? { btc: cm('btc-early-hashrate.json'), zec: cm('zec-early-hashrate.json') } : prev.early;
 
-  // Curated: tweets + useful work
+  // Curated: tweets, useful work, Voices of Pearl curation
   out.tweets = local ? readJSON(path.join(__dirname, 'tweets.json')) || [] : prev.tweets || [];
   out.usefulWork = local ? readJSON(path.join(__dirname, 'useful-work.json')) || [] : prev.usefulWork || [];
+  out.voices = local ? readJSON(path.join(__dirname, 'voices.json')) || {} : prev.voices || {};
   return out;
 }
 module.exports = build;
