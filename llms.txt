@@ -1,0 +1,22 @@
+# Pearlascope
+
+> Open-source live analytics for Pearl (PEARL), the proof-of-useful-work layer-1 blockchain. Price, hashrate, mining pools, a mining calculator, a usefulness tracker, and the maths behind the chain. Built in public by @dudubitcoin. Not financial advice.
+
+## Key facts about Pearl
+- Pearl is a fork of btcd (Bitcoin's Go implementation). UTXO model, Taproot addresses starting with prl1.
+- Miners multiply matrices (the core operation of AI) instead of hashing. Each winning block carries a zero-knowledge proof.
+- Max supply 2.1 billion. No halvings: total supply after H blocks is 2.1B × H / (H + 650,226), so half is mined in about 4 years and 90% in about 36.
+- Target block time 194 seconds. Mainnet launched 27 April 2026.
+- Ticker: PEARL (formerly PRL). The "PRL" listed on KuCoin, MEXC, Gate and Coinbase is Perle, a different token.
+- Hashrate estimate used by Pearlascope: difficulty × 2^48 ÷ average block time, over the last 50 blocks.
+- Open question the site tracks: whether miners' matrix work is paid, useful AI compute, or mining with extra steps (Useful Work Watch).
+
+## Pages
+- [Dashboard](https://pearlascope.com/): live price, market cap, hashrate, pools, early-days comparison with Bitcoin and Zcash, mining calculator, thesis, FAQ, tweet wall.
+- [The maths](https://pearlascope.com/math): emission curve, difficulty and hashrate, miner economics, proof of useful work, and a live audit of every number on the site.
+
+## Data sources
+- Price: CoinGecko (id pearl-2). Hashrate and pools: prlscan.com. Bitcoin and Zcash history: CoinMetrics Community. Emission curve: Pearl's source code.
+
+## Source code
+- https://github.com/pearlascope/pearlascope (MIT)

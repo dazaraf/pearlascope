@@ -3,8 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pearlascope · Pearl Analytics</title>
-<meta name="description" content="Live analytics for Pearl (PEARL), the proof-of-useful-work L1: price, hashrate, early-days comparison, and who is actually using it.">
+<title>Pearlascope · Pearl (PEARL) price, hashrate & mining analytics</title>
+<meta name="description" content="Open-source live analytics for Pearl (PEARL), the proof-of-useful-work L1: price, hashrate, mining pools, a mining calculator, and who is really using the AI work.">
+<link rel="canonical" href="https://pearlascope.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#f2f2f3">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pearlascope">
+<meta property="og:title" content="Pearlascope · Pearl (PEARL) price, hashrate & mining analytics">
+<meta property="og:description" content="Open-source live analytics for Pearl (PEARL), the proof-of-useful-work L1: price, hashrate, mining pools, a mining calculator, and who is really using the AI work.">
+<meta property="og:url" content="https://pearlascope.com/">
+<meta property="og:image" content="https://pearlascope.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pearlascope: live analytics for Pearl (PEARL)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@dudubitcoin">
+<meta name="twitter:creator" content="@dudubitcoin">
+<meta name="twitter:title" content="Pearlascope · Pearl (PEARL) price, hashrate & mining analytics">
+<meta name="twitter:description" content="Open-source live analytics for Pearl (PEARL), the proof-of-useful-work L1: price, hashrate, mining pools, a mining calculator, and who is really using the AI work.">
+<meta name="twitter:image" content="https://pearlascope.com/assets/og.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://pearlascope.com/#site", "name": "Pearlascope", "url": "https://pearlascope.com/", "description": "Open-source live analytics for Pearl (PEARL), the proof-of-useful-work layer 1.", "inLanguage": "en", "publisher": {"@id": "https://pearlascope.com/#maker"}}, {"@type": "Person", "@id": "https://pearlascope.com/#maker", "name": "dudubitcoin", "url": "https://x.com/dudubitcoin", "sameAs": ["https://x.com/dudubitcoin", "https://github.com/dazaraf"]}, {"@type": "WebPage", "@id": "https://pearlascope.com/#page", "url": "https://pearlascope.com/", "name": "Pearl (PEARL) price, hashrate and mining analytics", "isPartOf": {"@id": "https://pearlascope.com/#site"}, "about": {"@type": "Thing", "name": "Pearl (PEARL)", "description": "A proof-of-useful-work layer-1 blockchain, forked from btcd, where miners multiply matrices instead of hashing. Max supply 2.1 billion, 194-second blocks, no halvings.", "sameAs": ["https://github.com/pearl-research-labs/pearl"]}}, {"@type": "SoftwareSourceCode", "name": "Pearlascope", "codeRepository": "https://github.com/pearlascope/pearlascope", "license": "https://opensource.org/licenses/MIT", "programmingLanguage": "JavaScript"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Pearl UTXO-based?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pearl is a fork of btcd, the Go implementation of Bitcoin, so it keeps Bitcoin's UTXO model: coins live as unspent outputs, not account balances. Addresses are Taproot and start with prl1. The repo also includes a post-quantum signature scheme (XMSS)."}},{"@type":"Question","name":"What makes it different from Bitcoin?","acceptedAnswer":{"@type":"Answer","text":"The puzzle. Bitcoin miners hash; Pearl miners multiply matrices, the core operation of AI. Each winning block carries a zero-knowledge proof so nodes can verify the work without redoing it. Supply also never halves: it follows 2.1B × H / (H + 650,226), shrinking a little every block."}},{"@type":"Question","name":"Is the \"useful work\" actually useful today?","acceptedAnswer":{"@type":"Answer","text":"Not provably. The chain verifies that matrices were multiplied, not that anyone needed the result. Basu's June study (arXiv 2606.04819) found zero useful compute, and the protocol has since shipped several forks to close the gap. Follow it in Useful Work Watch."}},{"@type":"Question","name":"PEARL or PRL: which is the right one?","acceptedAnswer":{"@type":"Answer","text":"Pearl, CoinGecko id pearl-2, around $1–2. Its ticker changed from PRL to PEARL. The \"PRL\" on KuCoin, MEXC, Gate and Coinbase is Perle, a Solana token around $0.08. Pearl trades as PEARL, or still PRL on a few venues, on BigONE, Ourbit, SafeTrade and Gate's PEARL pair."}},{"@type":"Question","name":"Was there a pre-mine or VC allocation?","acceptedAnswer":{"@type":"Answer","text":"No pre-mine and no investor or founder allocation in the code. But about 121.7M PEARL came out in the first ~6 days at low difficulty, and an earlier whitepaper said that funded team R&D. Separately, the company (not the token) closed $55M of equity and a $75M GPU vehicle on Oct 25 (per Blockworks Research). The lab hasn't disclosed how much PEARL it holds. See The Team."}},{"@type":"Question","name":"Can I mine on a Mac?","acceptedAnswer":{"@type":"Answer","text":"Not in practice. The official vLLM miner needs NVIDIA + CUDA (pool accepts H100/H200 only), and third-party miners target Linux on NVIDIA/AMD. A Mac can run a full node fine; there's an official Apple Silicon build."}},{"@type":"Question","name":"What do I need to run a node?","acceptedAnswer":{"@type":"Answer","text":"The prebuilt pearld for macOS, Linux or Windows from the GitHub releases. It's a btcd-style node: modest RAM, a few tens of GB of disk, always-on internet. Run with --txindex if you want full block and transaction data over RPC."}},{"@type":"Question","name":"Where do I keep PEARL?","acceptedAnswer":{"@type":"Answer","text":"Native PEARL needs a Pearl wallet: Oyster (desktop app or oystercli). MetaMask and Phantom can't hold it. WPRL on Ethereum is a third-party bridge IOU, not native PEARL. Write the seed on paper."}},{"@type":"Question","name":"Is mining profitable?","acceptedAnswer":{"@type":"Answer","text":"Depends on your card, power price and today's difficulty. Plug your numbers into the calculator. Difficulty follows price, and SRBMiner's release notes warn a future upgrade could make consumer GPUs uncompetitive. Rent a card before you buy one."}},{"@type":"Question","name":"Where does this site's data come from?","acceptedAnswer":{"@type":"Answer","text":"CoinGecko for price, prlscan.com for hashrate and pools, CoinMetrics Community for Bitcoin and Zcash history, and Pearl's own source code for the emission curve. Curated rows link their sources. All of it is free, and the code is open."}},{"@type":"Question","name":"Is this financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. It's an analytics page built in public by @dudubitcoin. Verify, then decide."}}]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M6 34c6 16 46 16 52 0z' fill='%23111'/%3E%3Cpath d='M8 30C14 8 50 8 56 30c-8-4-40-4-48 0z' fill='%23111'/%3E%3Ccircle cx='32' cy='31' r='9' fill='%23eef0ff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -56,6 +76,7 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stro
 .chip{background:rgba(255,255,255,.85);border-radius:11px;padding:8px 13px;font-size:13.5px;box-shadow:0 1px 0 #fff inset}
 .chip.ghost{background:none;box-shadow:none;color:var(--ink-2);padding-left:0}
 .stage h1{font-size:clamp(46px,4.6vw,70px);font-weight:400;letter-spacing:-2.5px;line-height:1;margin:18px 0 8px}
+.stage .oss{font-size:13px;color:var(--ink-2);max-width:360px;margin-top:10px;position:relative;z-index:2}.stage .oss a{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
 .stage .sub{font-size:15.5px;color:var(--ink-2);max-width:360px;position:relative;z-index:2}
 .stats{position:relative;margin-top:22px;display:flex;flex-direction:column;gap:10px;z-index:2;width:max-content}
 .stat{display:flex;align-items:center;gap:12px;background:rgba(236,236,239,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:18px;padding:10px 20px 10px 10px;min-width:220px;box-shadow:0 1px 0 rgba(255,255,255,.8) inset}
@@ -300,12 +321,20 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
 @media (max-width:760px){
   .frame{margin:0;border-radius:0;padding:16px}
   .shell{grid-template-columns:1fr}.rail{display:none}
-  .tabs{display:none}.top{grid-template-columns:1fr auto}
-  .stage{min-height:620px;padding:22px}.stats{left:22px;top:180px}
-  .clam{width:92%;right:-14%;top:62%;opacity:.95}
+  .tabs{display:none}.top{grid-template-columns:auto minmax(0,1fr);gap:10px}
+  .brand{font-size:17px;gap:9px}.brand svg{width:38px;height:38px}
+  .right{justify-content:flex-end;min-width:0;gap:8px}
+  .pill{min-width:0;padding:9px 12px;font-size:13.5px;gap:7px}#livePill{overflow:hidden;text-overflow:ellipsis}
+  .icon-btn{width:40px;height:40px;border-radius:14px;flex:none}
+  /* phone hero: text, then the clam, then the stats, all in flow so nothing overlaps */
+  .stage{min-height:0;padding:22px;display:flex;flex-direction:column}
+  .stage h1{margin-top:6px}
+  .clam{order:1;position:relative;right:auto;top:auto;transform:none;width:100%;max-width:380px;margin:4px auto -18px;align-self:center}
+  .stats{order:2;width:auto;margin-top:0}
   .stat{min-width:0}.dock{flex-direction:column;align-items:stretch}
   .sec-head{flex-direction:column;align-items:flex-start}
 }
+@media (max-width:440px){.pill-t{display:none}}
 </style>
 </head>
 <body>
@@ -380,6 +409,7 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
         <div class="stage">
           <h1>Pearl</h1>
           <p class="sub">Bitcoin's design with a different puzzle: miners multiply matrices, the same math that runs AI.</p>
+          <p class="oss">Pearlascope is an open-source Pearl dashboard. Contribute on <a href="https://github.com/pearlascope/pearlascope" target="_blank" rel="noopener">GitHub</a>: add a data source, fix a number, or suggest a panel.</p>
           <div class="stats">
             <div class="stat"><div class="ic lime"><svg class="i" viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/></svg></div><div><small>Price</small><b id="hPrice">—</b><span class="chg" id="hChg"></span></div></div>
             <div class="stat"><div class="ic"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M3 10h18"/></svg></div><div><small>Market cap · FDV</small><b id="hMcap">—</b></div></div>
@@ -868,7 +898,9 @@ function render(){
   const supply12 = (mk.circulating || 0) * (1 + (su.growth12m || 0));
   $$('[data-case]').forEach(e=>{ const v = +e.dataset.case / supply12; e.textContent = supply12 ? '$' + (v < 10 ? v.toFixed(2) : Math.round(v)) : '—'; });
   $$('[data-case-x]').forEach(e=>{ const x = (+e.dataset.caseX / supply12) / (mk.price || NaN); e.textContent = isFinite(x) ? (x < 1 ? '−' + Math.round((1 - x) * 100) + '% from today' : x.toFixed(x < 10 ? 1 : 0) + 'x from today') : ''; });
-  $('#livePill').textContent = `PEARL $${mk.price?.toFixed(2)} · ${new Date(d.updated).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})}`;
+  const pillT = document.createElement('span'); pillT.className = 'pill-t';
+  pillT.textContent = ` · ${new Date(d.updated).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})}`;
+  $('#livePill').textContent = `PEARL $${mk.price?.toFixed(2)}`; $('#livePill').append(pillT);
   $('#footUpd').textContent = 'Last pull: ' + new Date(d.updated).toLocaleString('en-GB');
 
   // price
