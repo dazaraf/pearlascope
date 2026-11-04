@@ -25,7 +25,10 @@
     "www.rootdata.com",
     "www.odaily.news",
     "cfc-stmoritz.com",
-    "glamclam.vercel.app"
+    "glamclam.vercel.app",
+    "schema.org",
+    "opensource.org",
+    "www.sitemaps.org"
   ],
   "scriptHosts": [
     "cdn.jsdelivr.net",
