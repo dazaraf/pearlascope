@@ -49,7 +49,7 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 
 /* hero: one viewport, does not scroll internally */
-.hero{height:calc(100vh - 110px);min-height:670px;max-height:920px;display:grid;grid-template-columns:1fr 380px;grid-template-rows:1fr 205px;gap:20px;overflow:hidden}
+.hero{height:calc(100vh - 150px);min-height:560px;max-height:720px;display:grid;grid-template-columns:1fr 380px;grid-template-rows:1fr;gap:20px;overflow:hidden}
 .stage{grid-column:1;grid-row:1}.desk{grid-column:2;grid-row:1}.minis{grid-column:1;grid-row:2}
 .stage{position:relative;border-radius:var(--r-lg);background:radial-gradient(120% 90% at 70% 40%,#f4f4f6 0%,var(--hero-a) 40%,var(--hero-b) 100%);padding:30px 32px;overflow:hidden;box-shadow:0 1px 0 rgba(255,255,255,.7) inset}
 .chips{display:flex;gap:10px;align-items:center}
@@ -73,7 +73,7 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stro
 .btn-dark{background:var(--black);color:#fff;border-radius:16px;padding:14px 22px;font-size:15px;display:inline-flex;gap:10px;align-items:center;white-space:nowrap}
 .btn-dark:hover{background:#26262a}
 
-.desk{background:var(--card);border-radius:var(--r-lg);padding:24px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow);grid-row:1 / span 2;overflow:hidden}
+.desk{background:var(--card);border-radius:var(--r-lg);padding:24px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow);overflow:hidden}
 .desk-h{display:flex;gap:14px;align-items:center}
 .desk-h .ic{width:46px;height:46px;border-radius:14px;background:var(--card-2);display:grid;place-items:center}
 .desk-h b{font-weight:500;font-size:19px;display:block}
