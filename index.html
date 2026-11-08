@@ -999,15 +999,15 @@ function tweetText(s){
 }
 const kfmt = n => n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(1).replace('.0','')+'K':String(n);
 // Voices of Pearl: people ranked by engagement on their 3 best Pearl posts of the last 30 days.
-// Accounts in voices.json "official" get their own row; "block" stays off. Same esc()/safeUrl() rules as the wall.
+// Accounts in voices.json "official" get their own row; "block" stays off; "featured" always make the board. Same esc()/safeUrl() rules as the wall.
 const vScore = t => t.likes + 3*t.reposts + 2*(t.replies||0);
 function renderVoices(d){
   const cfg = d.voices || {}, lc = a => (a||[]).map(h=>String(h).toLowerCase());
-  const official = new Set(lc(cfg.official)), block = new Set(lc(cfg.block));
+  const official = new Set(lc(cfg.official)), block = new Set(lc(cfg.block)), featured = new Set(lc(cfg.featured));
   const cut = Date.now() - 30*864e5, people = new Map(), orgs = new Map();
   for (const t of d.tweets || []) {
     const a = t.author || {}, h = String(a.handle||'').toLowerCase();
-    if (!h || block.has(h) || !(Date.parse(t.createdAt) >= cut)) continue;
+    if (!h || block.has(h) || !(featured.has(h) || Date.parse(t.createdAt) >= cut)) continue;
     const m = official.has(h) ? orgs : people;
     if (!m.has(h)) m.set(h, { a, posts: [] });
     m.get(h).posts.push(t);
@@ -1016,9 +1016,11 @@ function renderVoices(d){
     p.posts.sort((x,y)=>vScore(y)-vScore(x));
     p.score = p.posts.slice(0,3).reduce((s,t)=>s+vScore(t),0);
     return p;
-  }).sort((x,y)=>y.score-x.score).slice(0,12);
+  }).sort((x,y)=>y.score-x.score);
+  const pinned = ranked.filter(p=>featured.has(String(p.a.handle).toLowerCase())).slice(0,12);
+  const board = [...pinned, ...ranked.filter(p=>!pinned.includes(p)).slice(0,12-pinned.length)].sort((x,y)=>y.score-x.score);
   const profile = h => `https://x.com/${encodeURIComponent(h)}`;
-  $('#voicesGrid').innerHTML = ranked.length ? ranked.map((p,i)=>{
+  $('#voicesGrid').innerHTML = board.length ? board.map((p,i)=>{
     const a = p.a, best = p.posts[0];
     const text = esc(best.text).replace(/https:\/\/t\.co\/\w+/g,'').replace(/\n+/g,' ').trim();
     return `<article class="voice">

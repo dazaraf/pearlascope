@@ -26,10 +26,10 @@
   "url": "https://x.com/BlackRock/status/2102409739175141458",
   "text": "Our latest research paper explores the growing connection between AI and digital assets and explains why broad AI adoption may drive new demand, utility and applications across the digital asset economy. https://t.co/z5T88Orble https://t.co/GMxQqTVmUN",
   "createdAt": "Tue Sep 22 14:48:37 +0000 2026",
-  "likes": 8364,
-  "reposts": 1993,
+  "likes": 8366,
+  "reposts": 1992,
   "replies": 763,
-  "views": 4159737,
+  "views": 4160098,
   "author": {
    "handle": "BlackRock",
    "name": "BlackRock",
@@ -48,10 +48,10 @@
   "url": "https://x.com/ilblackdragon/status/2117689776220299459",
   "text": "Welcome $PEARL to near(.)com and the @near_intents universe!",
   "createdAt": "Tue Nov 03 18:46:02 +0000 2026",
-  "likes": 299,
-  "reposts": 34,
+  "likes": 342,
+  "reposts": 39,
   "replies": 35,
-  "views": 19103,
+  "views": 20634,
   "author": {
    "handle": "ilblackdragon",
    "name": "Illia (root.near) (🇺🇦, ⋈)",
@@ -90,10 +90,10 @@
   "url": "https://x.com/BSCNews/status/2117674669172236767",
   "text": "NEAR Protocol opens its doors to Pearl, a coin mined with AI math\n\n@NEARProtocol has added $PEARL to @near_intents and the near.​com app. Users can swap into PEARL from any supported chain and pay others with it; swaps are confidential by default, and wallets and apps on the NEAR Intents 1Click API can now offer PEARL swaps too.\n\nPearl is a separate Layer-1 blockchain from @prlnet, live since late April 2026. Its miners run the matrix math behind AI models on GPUs, and that same work secures the chain and issues new coins, capped at 2.1 billion.",
   "createdAt": "Tue Nov 03 17:46:00 +0000 2026",
-  "likes": 131,
-  "reposts": 24,
-  "replies": 9,
-  "views": 10605,
+  "likes": 164,
+  "reposts": 28,
+  "replies": 12,
+  "views": 12096,
   "author": {
    "handle": "BSCNews",
    "name": "BSCN",
@@ -102,6 +102,28 @@
   },
   "media": [
    "https://pbs.twimg.com/media/HWN5salX0AAnh76.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117568577381286114",
+  "url": "https://x.com/vibeman_0/status/2117568577381286114",
+  "text": "mine $10-$500+ worth of $PEARL with your binance agentic wallet for free(gas only)\n\nyour machine's computing power determines how quickly your agent can solve mining challenges and how much pearl you can collect.\n\npearl is a mineable token on bnb chain\n\ninstead of buying it, your ai agent solves proof of work challenges and earns PEARL directly into your wallet.\n\nthe next mining round starts in 30minutes\n\nhow much can you mine?\n\n- current reward: approximately 95.6 $PEARL per successful proof\n- one transaction can submit up to 16 proofs\n- 16 successful proofs = approx 1,529.6 PEARL.\n- daily mining allocation: 20 million PEARL.\n- first come, first served until the daily allocation runs out.\n\nyour total depends on your machine's computing power, how many valid proofs it solves and how quickly you submit them.\n\nhow to participate:\n\nyou don't have to solve the mining challenges yourself, let your ai agent handle it\n\ncopy this prompt and send it to your agent:\n\n\"I want to participate in the next Pearl mining round on BNB Chain.\nWebsite: https://t.co/QTNffg7t3i\ncontract: 0x7E2DA878217EB995F9e5d36eD32c9Cea52442681\n\nPrepare everything ahead of the next mining window at 12:08:54 PM WAT\n\n1. Check my wallet and confirm the mining setup is ready.\n2. Read the mining contract to understand the current reward, daily allocation and mining rules.\n3. Generate and verify valid Proof-of-Work nonces for my wallet.\n4. Prepare transactions so mining can begin as soon as the round opens.\n5. Submit valid proofs as quickly as possible while the daily allocation remains.\n6. Batch up to 16 proofs per transaction where supported.\n7. Track successful transactions, total PEARL mined and my updated wallet balance.\n\nNever submit unverified proofs, approve unrelated contracts or spend BNB beyond the gas required. Ask for my confirmation before any action outside these instructions\"\n\nyou can also experiment with gpu rentals on https://t.co/9QmJ95Q0Uq if you want faster proof generation.\n\nimportant: you only need bnb for gas, there's no PEARL purchase or mint fee\n\n$10–$500+ is a speculative target, not guaranteed earnings\n\nactual results depend on your hardware, competition, token price and available allocation.",
+  "createdAt": "Tue Nov 03 10:44:26 +0000 2026",
+  "likes": 164,
+  "reposts": 9,
+  "replies": 28,
+  "views": 13427,
+  "author": {
+   "handle": "vibeman_0",
+   "name": "vibeman",
+   "avatar": "https://pbs.twimg.com/profile_images/2006766129092399109/G-2uWY4Q_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWMdZA1X0AA-NOj.jpg"
   ],
   "isQuote": false,
   "via": null,
@@ -128,36 +150,14 @@
   "pinned": false
  },
  {
-  "id": "2117568577381286114",
-  "url": "https://x.com/vibeman_0/status/2117568577381286114",
-  "text": "mine $10-$500+ worth of $PEARL with your binance agentic wallet for free(gas only)\n\nyour machine's computing power determines how quickly your agent can solve mining challenges and how much pearl you can collect.\n\npearl is a mineable token on bnb chain\n\ninstead of buying it, your ai agent solves proof of work challenges and earns PEARL directly into your wallet.\n\nthe next mining round starts in 30minutes\n\nhow much can you mine?\n\n- current reward: approximately 95.6 $PEARL per successful proof\n- one transaction can submit up to 16 proofs\n- 16 successful proofs = approx 1,529.6 PEARL.\n- daily mining allocation: 20 million PEARL.\n- first come, first served until the daily allocation runs out.\n\nyour total depends on your machine's computing power, how many valid proofs it solves and how quickly you submit them.\n\nhow to participate:\n\nyou don't have to solve the mining challenges yourself, let your ai agent handle it\n\ncopy this prompt and send it to your agent:\n\n\"I want to participate in the next Pearl mining round on BNB Chain.\nWebsite: https://t.co/QTNffg7t3i\ncontract: 0x7E2DA878217EB995F9e5d36eD32c9Cea52442681\n\nPrepare everything ahead of the next mining window at 12:08:54 PM WAT\n\n1. Check my wallet and confirm the mining setup is ready.\n2. Read the mining contract to understand the current reward, daily allocation and mining rules.\n3. Generate and verify valid Proof-of-Work nonces for my wallet.\n4. Prepare transactions so mining can begin as soon as the round opens.\n5. Submit valid proofs as quickly as possible while the daily allocation remains.\n6. Batch up to 16 proofs per transaction where supported.\n7. Track successful transactions, total PEARL mined and my updated wallet balance.\n\nNever submit unverified proofs, approve unrelated contracts or spend BNB beyond the gas required. Ask for my confirmation before any action outside these instructions\"\n\nyou can also experiment with gpu rentals on https://t.co/9QmJ95Q0Uq if you want faster proof generation.\n\nimportant: you only need bnb for gas, there's no PEARL purchase or mint fee\n\n$10–$500+ is a speculative target, not guaranteed earnings\n\nactual results depend on your hardware, competition, token price and available allocation.",
-  "createdAt": "Tue Nov 03 10:44:26 +0000 2026",
-  "likes": 158,
-  "reposts": 8,
-  "replies": 26,
-  "views": 12469,
-  "author": {
-   "handle": "vibeman_0",
-   "name": "vibeman",
-   "avatar": "https://pbs.twimg.com/profile_images/2006766129092399109/G-2uWY4Q_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HWMdZA1X0AA-NOj.jpg"
-  ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
   "id": "2117621008681369718",
   "url": "https://x.com/near_intents/status/2117621008681369718",
   "text": "$PEARL is live on NEAR Intents.\n\nThe integration connects the Pearl network to our 1Click API, brings PEARL to https://t.co/Em0WfZ2fqG. 🧵 https://t.co/qoKYroWAgY",
   "createdAt": "Tue Nov 03 14:12:46 +0000 2026",
-  "likes": 109,
+  "likes": 113,
   "reposts": 14,
-  "replies": 4,
-  "views": 3390,
+  "replies": 6,
+  "views": 3624,
   "author": {
    "handle": "near_intents",
    "name": "NEAR Intents",
@@ -179,7 +179,7 @@
   "likes": 126,
   "reposts": 7,
   "replies": 40,
-  "views": 7876,
+  "views": 8216,
   "author": {
    "handle": "TxFlow_L1",
    "name": "TxFlow",
@@ -212,6 +212,28 @@
    "https://pbs.twimg.com/media/HWLbIHyW8AAKi06.jpg"
   ],
   "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117653502050828658",
+  "url": "https://x.com/MeteorWallet/status/2117653502050828658",
+  "text": "$PEARL is now live on Meteor ☄️\n\nPowered by @near_intents, you can swap into $PEARL directly from your Meteor balance.\n\nAlready holding $PEARL? \nBridge it from the @prlnet  to NEAR and provide liquidity to the trading pool to earn yield.\n\nOpen Meteor → Swap → Search PRL\nhttps://t.co/dVUtD1wxJf",
+  "createdAt": "Tue Nov 03 16:21:53 +0000 2026",
+  "likes": 75,
+  "reposts": 10,
+  "replies": 4,
+  "views": 3765,
+  "author": {
+   "handle": "MeteorWallet",
+   "name": "Meteor Wallet",
+   "avatar": "https://pbs.twimg.com/profile_images/2110271810549731329/HwHX6K46_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWNqlpGawAM_3bA.jpg"
+  ],
+  "isQuote": false,
   "via": null,
   "pinned": false
  },
@@ -366,22 +388,44 @@
   "pinned": false
  },
  {
-  "id": "2117653502050828658",
-  "url": "https://x.com/MeteorWallet/status/2117653502050828658",
-  "text": "$PEARL is now live on Meteor ☄️\n\nPowered by @near_intents, you can swap into $PEARL directly from your Meteor balance.\n\nAlready holding $PEARL? \nBridge it from the @prlnet  to NEAR and provide liquidity to the trading pool to earn yield.\n\nOpen Meteor → Swap → Search PRL\nhttps://t.co/dVUtD1wxJf",
-  "createdAt": "Tue Nov 03 16:21:53 +0000 2026",
-  "likes": 52,
-  "reposts": 7,
+  "id": "2118062618598645776",
+  "url": "https://x.com/jeremiahrogers/status/2118062618598645776",
+  "text": "Coinbase doing some backend work to get ready for $PEARL it seems. https://t.co/4sZWJPjMi0",
+  "createdAt": "Wed Nov 04 19:27:34 +0000 2026",
+  "likes": 39,
+  "reposts": 6,
   "replies": 4,
-  "views": 2665,
+  "views": 864,
   "author": {
-   "handle": "MeteorWallet",
-   "name": "Meteor Wallet",
-   "avatar": "https://pbs.twimg.com/profile_images/2110271810549731329/HwHX6K46_normal.jpg",
+   "handle": "jeremiahrogers",
+   "name": "Jeremiah",
+   "avatar": "https://pbs.twimg.com/profile_images/1907593726815240192/szZLkDNL_normal.jpg",
    "verified": true
   },
   "media": [
-   "https://pbs.twimg.com/media/HWNqlpGawAM_3bA.jpg"
+   "https://pbs.twimg.com/media/HWTeqHjaEAAGr58.png"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117913396364333343",
+  "url": "https://x.com/nearlytrade/status/2117913396364333343",
+  "text": "Pearl Launch Contest\n\nhttps://t.co/Vq7ilIP5Um announces a 7 day contest for Pearl paired projects.\n\nCriteria\n1) Launch a token on https://t.co/Vq7ilIP5Um with $PRL as the pair. Projects already live on the Pearl pair are included.\n2) The Pearl paired project with the highest market cap at the close wins.\n3) The creator of the winning project receives $500 in PEARL.\n\nCloses Nov 10, 11pm UTC. Winner announced Nov 11.\n\nLaunch: https://t.co/YG9iFgVFJQ",
+  "createdAt": "Wed Nov 04 09:34:37 +0000 2026",
+  "likes": 40,
+  "reposts": 7,
+  "replies": 2,
+  "views": 970,
+  "author": {
+   "handle": "nearlytrade",
+   "name": "NEARLY",
+   "avatar": "https://pbs.twimg.com/profile_images/2102166367910719488/gvFY4_sN_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWRKpecWwAAg84W.jpg"
   ],
   "isQuote": false,
   "via": null,
@@ -392,14 +436,56 @@
   "url": "https://x.com/jeremiahrogers/status/2117656120424841458",
   "text": "$PEARL is on NEAR Intents. Big day.",
   "createdAt": "Tue Nov 03 16:32:17 +0000 2026",
-  "likes": 62,
+  "likes": 66,
   "reposts": 1,
   "replies": 2,
-  "views": 1653,
+  "views": 1788,
   "author": {
    "handle": "jeremiahrogers",
    "name": "Jeremiah",
    "avatar": "https://pbs.twimg.com/profile_images/1907593726815240192/szZLkDNL_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117982195419922880",
+  "url": "https://x.com/modenetwork/status/2117982195419922880",
+  "text": "NEW LISTING 🟡      \n\nBullish or bearish on @prlnet?\n\nYou can now trade pearl-2:native long or short using AI on Mode Trade with up to 10X leverage! https://t.co/wlaACZgrRW",
+  "createdAt": "Wed Nov 04 14:08:00 +0000 2026",
+  "likes": 35,
+  "reposts": 5,
+  "replies": 4,
+  "views": 1972,
+  "author": {
+   "handle": "modenetwork",
+   "name": "Mode 🟡",
+   "avatar": "https://pbs.twimg.com/profile_images/1982030446415204352/EqizsNVV_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWIY3f4XYAAg-ew.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117663591813853537",
+  "url": "https://x.com/Airdrops_one/status/2117663591813853537",
+  "text": "$QTC last month, pearl-2:native  today. NEAR Intents is giving new chains a way into cross-chain trading before Coinbase or Kraken.\n\nFor @prlnet  miners, the use is pretty simple: turn mining rewards into stablecoins on the chains where they pay their GPU bills. \n\nI like this a lot, this is what Intents is for.",
+  "createdAt": "Tue Nov 03 17:01:59 +0000 2026",
+  "likes": 36,
+  "reposts": 9,
+  "replies": 1,
+  "views": 5648,
+  "author": {
+   "handle": "Airdrops_one",
+   "name": "Grey Ledger",
+   "avatar": "https://pbs.twimg.com/profile_images/2077909967743352832/g8IT9tRg_normal.jpg",
    "verified": true
   },
   "media": [],
@@ -440,48 +526,6 @@
    "handle": "brezshares",
    "name": "⏢brianbreslow",
    "avatar": "https://pbs.twimg.com/profile_images/1948209319142621184/sPqwZxK5_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117622987306475687",
-  "url": "https://x.com/justhootfun/status/2117622987306475687",
-  "text": "Something shiny just landed in the nest 🦪\n\nJustHoot launches can now be paired with PEARL ($PRL).\n\nAnyone can buy in from a NEAR, Solana or EVM wallet, no $PRL needed.\n\nHOOT HOOT 🦉 https://t.co/RppYa70nC4",
-  "createdAt": "Tue Nov 03 14:20:38 +0000 2026",
-  "likes": 37,
-  "reposts": 7,
-  "replies": 2,
-  "views": 1161,
-  "author": {
-   "handle": "justhootfun",
-   "name": "JustHoot",
-   "avatar": "https://pbs.twimg.com/profile_images/2109557733800517632/b_w3k-bI_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HWNO2CpXYAEEWv0.jpg"
-  ],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117663591813853537",
-  "url": "https://x.com/Airdrops_one/status/2117663591813853537",
-  "text": "$QTC last month, pearl-2:native  today. NEAR Intents is giving new chains a way into cross-chain trading before Coinbase or Kraken.\n\nFor @prlnet  miners, the use is pretty simple: turn mining rewards into stablecoins on the chains where they pay their GPU bills. \n\nI like this a lot, this is what Intents is for.",
-  "createdAt": "Tue Nov 03 17:01:59 +0000 2026",
-  "likes": 31,
-  "reposts": 8,
-  "replies": 0,
-  "views": 5088,
-  "author": {
-   "handle": "Airdrops_one",
-   "name": "Grey Ledger",
-   "avatar": "https://pbs.twimg.com/profile_images/2077909967743352832/g8IT9tRg_normal.jpg",
    "verified": true
   },
   "media": [],
@@ -532,14 +576,36 @@
   "pinned": false
  },
  {
+  "id": "2117622987306475687",
+  "url": "https://x.com/justhootfun/status/2117622987306475687",
+  "text": "Something shiny just landed in the nest 🦪\n\nJustHoot launches can now be paired with PEARL ($PRL).\n\nAnyone can buy in from a NEAR, Solana or EVM wallet, no $PRL needed.\n\nHOOT HOOT 🦉 https://t.co/RppYa70nC4",
+  "createdAt": "Tue Nov 03 14:20:38 +0000 2026",
+  "likes": 37,
+  "reposts": 7,
+  "replies": 2,
+  "views": 1161,
+  "author": {
+   "handle": "justhootfun",
+   "name": "JustHoot",
+   "avatar": "https://pbs.twimg.com/profile_images/2109557733800517632/b_w3k-bI_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWNO2CpXYAEEWv0.jpg"
+  ],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
   "id": "2117660100336951589",
   "url": "https://x.com/Zachkag/status/2117660100336951589",
   "text": "gm.\n\nNEAR trenches are heating up.\n\n@Pumpfun added NEAR, and memes from @justhootfun can get in front of that crowd now.\n\nNew pairing abilities just dropped, JustHoot launches can be paired with PEARL ($PRL).\n\nBuy in from a NEAR, Solana or EVM wallet. No $PRL required.\n\n@nearOYSTER just hatched.\nFirst pearl pair on NEAR.\n\n3% rewards for holders.\nThe shell is open. 🦪\n\nThe nest is getting louder.\nYou’re still early. 🪺 \n\nHOOT HOOT @justhootfun 🦉",
   "createdAt": "Tue Nov 03 16:48:06 +0000 2026",
-  "likes": 36,
+  "likes": 38,
   "reposts": 6,
-  "replies": 5,
-  "views": 758,
+  "replies": 6,
+  "views": 903,
   "author": {
    "handle": "Zachkag",
    "name": "Zach 🦉",
@@ -576,14 +642,34 @@
   "pinned": false
  },
  {
+  "id": "2117828518646358335",
+  "url": "https://x.com/NarwhalTan/status/2117828518646358335",
+  "text": "Pearl cofounder on Anthropic's provable inference:\nZK proofs prove WHICH model answered u. Costs ~70-95x the GPU time.\nPearl's proof of useful work proves the GPU work happened. ~0 extra.\n\nPearl coded.\nhttps://t.co/bU5RNcMs7k",
+  "createdAt": "Wed Nov 04 03:57:20 +0000 2026",
+  "likes": 37,
+  "reposts": 4,
+  "replies": 4,
+  "views": 2010,
+  "author": {
+   "handle": "NarwhalTan",
+   "name": "Noel.hl (theo arc)",
+   "avatar": "https://pbs.twimg.com/profile_images/1979399101188812800/tv2LbO1f_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
   "id": "2117715499060805764",
   "url": "https://x.com/0xchainink/status/2117715499060805764",
   "text": "Best Revenue Month Ever For Near Intents ⬇️\n\n→ $NEAR : $2.19m to buybacks\n→ $QTC : live since oct 7\n→ $PEARL : live since nov 3\n\nThe shelf keeps filling.",
   "createdAt": "Tue Nov 03 20:28:14 +0000 2026",
-  "likes": 27,
+  "likes": 32,
   "reposts": 6,
-  "replies": 6,
-  "views": 3087,
+  "replies": 7,
+  "views": 3308,
   "author": {
    "handle": "0xchainink",
    "name": "Chain INK",
@@ -592,6 +678,70 @@
   },
   "media": [],
   "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117914394109825504",
+  "url": "https://x.com/BSCNWire/status/2117914394109825504",
+  "text": "BIG: Confidential cross-chain swaps on @NEARProtocol ($NEAR) have picked up another token.\n\n$PEARL, the token of an AI matrix-math Layer 1, is now tradable through NEAR Intents.\n\nAll the details ⬇️\n\nMore here: https://t.co/10jq8vratk https://t.co/GJNtswFyQT",
+  "createdAt": "Wed Nov 04 09:38:35 +0000 2026",
+  "likes": 27,
+  "reposts": 5,
+  "replies": 1,
+  "views": 1904,
+  "author": {
+   "handle": "BSCNWire",
+   "name": "BSCN Newswire",
+   "avatar": "https://pbs.twimg.com/profile_images/2110742427937951744/d1urVdzM_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWRX6U0WMAAxlYd.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2110440351789883700",
+  "url": "https://x.com/prlnet/status/2110440351789883700",
+  "text": "Exciting times ahead!",
+  "createdAt": "Wed Oct 14 18:39:24 +0000 2026",
+  "likes": 335,
+  "reposts": 33,
+  "replies": 29,
+  "views": 40734,
+  "author": {
+   "handle": "prlnet",
+   "name": "Pearl Research Labs",
+   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117657681439932545",
+  "url": "https://x.com/marcarjoon/status/2117657681439932545",
+  "text": "$PEARL vs $BTC \n\nLeft without comment. https://t.co/FayRJRiEmB",
+  "createdAt": "Tue Nov 03 16:38:30 +0000 2026",
+  "likes": 42,
+  "reposts": 2,
+  "replies": 10,
+  "views": 3668,
+  "author": {
+   "handle": "marcarjoon",
+   "name": "Marc Arjoon, CFA 🟪",
+   "avatar": "https://pbs.twimg.com/profile_images/2099442213528940544/wwuMM1K__normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWNuLXJWEAEjT8d.jpg"
+  ],
+  "isQuote": false,
   "via": null,
   "pinned": false
  },
@@ -638,18 +788,18 @@
   "pinned": false
  },
  {
-  "id": "2110440351789883700",
-  "url": "https://x.com/prlnet/status/2110440351789883700",
-  "text": "Exciting times ahead!",
-  "createdAt": "Wed Oct 14 18:39:24 +0000 2026",
-  "likes": 335,
-  "reposts": 33,
-  "replies": 29,
-  "views": 40347,
+  "id": "2117660584627826729",
+  "url": "https://x.com/Joshuwa/status/2117660584627826729",
+  "text": "$NEAR adds $PEARL to its 1Click API.\n\nIntegrated wallets can offer users\nswaps into PEARL through the API.\n\nA wallet API is a stronger route, so\napps can offer swaps directly.\n\nCross chain PEARL swaps stay\nconfidential by default.",
+  "createdAt": "Tue Nov 03 16:50:02 +0000 2026",
+  "likes": 34,
+  "reposts": 4,
+  "replies": 1,
+  "views": 1385,
   "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
+   "handle": "Joshuwa",
+   "name": "Joshuwa Roomsburg",
+   "avatar": "https://pbs.twimg.com/profile_images/2117879887973289985/S6k1lBFi_normal.jpg",
    "verified": true
   },
   "media": [],
@@ -658,22 +808,46 @@
   "pinned": false
  },
  {
-  "id": "2117630569274327097",
-  "url": "https://x.com/MonzaASI/status/2117630569274327097",
-  "text": "The trenches are heating up\n\n$PEARL is live on https://t.co/bzsecaapCY\n\n$PCAT is live on @nearlytrade\n\n$OYSTER is live on @justhootfun",
-  "createdAt": "Tue Nov 03 14:50:46 +0000 2026",
-  "likes": 26,
-  "reposts": 5,
-  "replies": 7,
-  "views": 1771,
+  "id": "2118025484470792557",
+  "url": "https://x.com/rodrigomcrypto/status/2118025484470792557",
+  "text": "Epoch 3 points are live, reinforcing what I shared yesterday about TxFlow \n\n1.25M points were distributed across 6,530 accounts. That’s still a small participant base for a platform that did $4.6B in october volume, with $42M in tvl and nearly $47M in OI.\n\n$PEARL pre-market trading is also live with up to 3x leverage.\n\nIn my view, there’s still time to get involved early in the points campaign. I’ll keep sharing my progress and numbers here =) \n\nMy link gives you 5% off trading fees:\nhttps://t.co/f8xcr2jWUd",
+  "createdAt": "Wed Nov 04 17:00:01 +0000 2026",
+  "likes": 16,
+  "reposts": 6,
+  "replies": 8,
+  "views": 659,
   "author": {
-   "handle": "MonzaASI",
-   "name": "NEAR MONZA",
-   "avatar": "https://pbs.twimg.com/profile_images/2115838040660643840/zGJIS-b8_normal.jpg",
+   "handle": "rodrigomcrypto",
+   "name": "Rodrigo Moura Crypto",
+   "avatar": "https://pbs.twimg.com/profile_images/1772960497463181312/Cazwsyk2_normal.jpg",
    "verified": true
   },
-  "media": [],
-  "isQuote": false,
+  "media": [
+   "https://pbs.twimg.com/media/HWSoF07WAAAelpX.jpg"
+  ],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2116839243507224972",
+  "url": "https://x.com/OnchainLegend/status/2116839243507224972",
+  "text": "Boost Day on the $PEARL sprint puts $1,250 USDC up today\n\nThats 2.5x the normal pool\n\nEarn on @margin_trade and spend it with @Solayer_Pay\n\nTrade to Visa in one loop\n\nWould you spend it or stack it\n\nJoin Now👇 https://t.co/wE62hbaxdI",
+  "createdAt": "Sun Nov 01 10:26:19 +0000 2026",
+  "likes": 61,
+  "reposts": 3,
+  "replies": 33,
+  "views": 863,
+  "author": {
+   "handle": "OnchainLegend",
+   "name": "Waqas",
+   "avatar": "https://pbs.twimg.com/profile_images/2094874219901550592/qw4GNQFO_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWCF5-aakAAOeMc.jpg"
+  ],
+  "isQuote": true,
   "via": null,
   "pinned": false
  },
@@ -700,24 +874,62 @@
   "pinned": false
  },
  {
-  "id": "2117657681439932545",
-  "url": "https://x.com/marcarjoon/status/2117657681439932545",
-  "text": "$PEARL vs $BTC \n\nLeft without comment. https://t.co/FayRJRiEmB",
-  "createdAt": "Tue Nov 03 16:38:30 +0000 2026",
-  "likes": 34,
-  "reposts": 1,
-  "replies": 8,
-  "views": 3230,
+  "id": "2117630569274327097",
+  "url": "https://x.com/MonzaASI/status/2117630569274327097",
+  "text": "The trenches are heating up\n\n$PEARL is live on https://t.co/bzsecaapCY\n\n$PCAT is live on @nearlytrade\n\n$OYSTER is live on @justhootfun",
+  "createdAt": "Tue Nov 03 14:50:46 +0000 2026",
+  "likes": 26,
+  "reposts": 5,
+  "replies": 7,
+  "views": 1771,
   "author": {
-   "handle": "marcarjoon",
-   "name": "Marc Arjoon, CFA 🟪",
-   "avatar": "https://pbs.twimg.com/profile_images/2099442213528940544/wwuMM1K__normal.jpg",
+   "handle": "MonzaASI",
+   "name": "NEAR MONZA",
+   "avatar": "https://pbs.twimg.com/profile_images/2115838040660643840/zGJIS-b8_normal.jpg",
    "verified": true
   },
-  "media": [
-   "https://pbs.twimg.com/media/HWNuLXJWEAEjT8d.jpg"
-  ],
+  "media": [],
   "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117963300701089831",
+  "url": "https://x.com/degennQuant/status/2117963300701089831",
+  "text": "Listed $BTC miner sells all its #Bitcoin, pivots to AI data centres\n\nThe company signs 15-year lease for all 910MW of its Corsicana site worth about $28 billion\n\nMany such cases \n\n$PEARL",
+  "createdAt": "Wed Nov 04 12:52:55 +0000 2026",
+  "likes": 25,
+  "reposts": 2,
+  "replies": 1,
+  "views": 1897,
+  "author": {
+   "handle": "degennQuant",
+   "name": "800.HL",
+   "avatar": "https://pbs.twimg.com/profile_images/1864587598359900160/T08I0b6q_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2114820198431658384",
+  "url": "https://x.com/shaundadevens/status/2114820198431658384",
+  "text": "I've enjoyed Jake's coverage on Pearl. Even though I am bullish I think his criticisms are fair, I also think we have more common ground than it appears. Specifically:\n\n-Pearl's emission schedule is the number 1 bear case. A key aspect of a SOV asset is that price goes up, which is harder if you have indiscriminate sellers.\n\n-Concerns around transparency are also valid. Without a \"fundamental\" business / revenue line, narrative is the main driver of price. An absence of clear communication leads to uncertainty and doubt, which is detrimental to an asset that derives its value from social consensus.\n\nHowever, on the actual nature of the raise I disagree that it's bearish or leads to a conflict of interest:\n\nTo me, token-equity concerns arise for revenue generating protocols, where value accrual is unclear as it is either diluted or completely given to equity holders that act as a senior tranche, with token holders suffering.\n\nPearl Labs' equity raise causes no conflict of interest since the distinction is clear: Pearl is a SOV asset, while Pearl Labs is an AI infrastructure company that develops Pearl's proof-of-useful-work technology and commercializes inference services. Pearl Labs' success is accretive to the Pearl ecosystem but never extractive, since Pearl is not intended to accrue revenue. If anything the equity raise means 1) Pearl Labs is not reliant on selling PRL to fund operations, 2) it signifies there are powerful forces behind the success of PRL and 3) the raise will add hashrate to the PRL network.\n\nVery strongly disagree that Pearl Labs should introduce PRL buybacks. It would be the quickest way to add a token/equity conflict, as it immediately creates the question of how much value accrues to Pearl Labs vs the token. It also instantly reframes Pearl from an asset trading at 1/30th of ZEC's valuation to an overvalued 1000x P/S token. This is the counterintuitive thing about SOV assets: Flows >>> buybacks, even for huge revenue generating projects like HYPE (although buybacks matter a lot for narrative). Removing a business and letting an asset trade purely as an expression of an idea (e.g. AI BTC) removes company specific and execution risk, stops anchoring the token to a business that needs to grow in line with the price, and also removes its ceiling.\n\nThe second controversial point is around centralization and the team mining 5% for themselves. Controversially, I think centralization matters less than people think, even for SOVs. Take MicroStrategy / Bitmine as examples. What matters is centralization among team/VCs who are going to sell. If the team mining a significant amount of tokens means those tokens are effectively out of circulation, I view this as bullish rather than bearish. Of course, this only holds true as long as they don't sell.\n\nLastly I think it's important to contextualize that a lot of my bullishness comes from a regret minimization framework. Pearl is a nascent SOV, and the concerns around emissions / transparency are very valid. However, it is also one of the most exciting narratives. Just like there is a future where Pearl is insta dumped by institutions that mine it at a low cost basis, there is a future where powerful BTC miners and connected entities rally behind PRL as a new way to monetize their compute through inference, while hashrate increases and fears continue to grow around BTC's security budget.\n\nThats why, while I see the same risks as Jake, I think that potential of exponential upside does justify a small position, even if just as a hedge to existing BTC/ZEC holdings.",
+  "createdAt": "Mon Oct 26 20:43:21 +0000 2026",
+  "likes": 105,
+  "reposts": 9,
+  "replies": 13,
+  "views": 7589,
+  "author": {
+   "handle": "shaundadevens",
+   "name": "shaunda devens",
+   "avatar": "https://pbs.twimg.com/profile_images/2103541240964710400/NyADJ70k_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
   "via": null,
   "pinned": false
  },
@@ -744,38 +956,18 @@
   "pinned": false
  },
  {
-  "id": "2114820198431658384",
-  "url": "https://x.com/shaundadevens/status/2114820198431658384",
-  "text": "I've enjoyed Jake's coverage on Pearl. Even though I am bullish I think his criticisms are fair, I also think we have more common ground than it appears. Specifically:\n\n-Pearl's emission schedule is the number 1 bear case. A key aspect of a SOV asset is that price goes up, which is harder if you have indiscriminate sellers.\n\n-Concerns around transparency are also valid. Without a \"fundamental\" business / revenue line, narrative is the main driver of price. An absence of clear communication leads to uncertainty and doubt, which is detrimental to an asset that derives its value from social consensus.\n\nHowever, on the actual nature of the raise I disagree that it's bearish or leads to a conflict of interest:\n\nTo me, token-equity concerns arise for revenue generating protocols, where value accrual is unclear as it is either diluted or completely given to equity holders that act as a senior tranche, with token holders suffering.\n\nPearl Labs' equity raise causes no conflict of interest since the distinction is clear: Pearl is a SOV asset, while Pearl Labs is an AI infrastructure company that develops Pearl's proof-of-useful-work technology and commercializes inference services. Pearl Labs' success is accretive to the Pearl ecosystem but never extractive, since Pearl is not intended to accrue revenue. If anything the equity raise means 1) Pearl Labs is not reliant on selling PRL to fund operations, 2) it signifies there are powerful forces behind the success of PRL and 3) the raise will add hashrate to the PRL network.\n\nVery strongly disagree that Pearl Labs should introduce PRL buybacks. It would be the quickest way to add a token/equity conflict, as it immediately creates the question of how much value accrues to Pearl Labs vs the token. It also instantly reframes Pearl from an asset trading at 1/30th of ZEC's valuation to an overvalued 1000x P/S token. This is the counterintuitive thing about SOV assets: Flows >>> buybacks, even for huge revenue generating projects like HYPE (although buybacks matter a lot for narrative). Removing a business and letting an asset trade purely as an expression of an idea (e.g. AI BTC) removes company specific and execution risk, stops anchoring the token to a business that needs to grow in line with the price, and also removes its ceiling.\n\nThe second controversial point is around centralization and the team mining 5% for themselves. Controversially, I think centralization matters less than people think, even for SOVs. Take MicroStrategy / Bitmine as examples. What matters is centralization among team/VCs who are going to sell. If the team mining a significant amount of tokens means those tokens are effectively out of circulation, I view this as bullish rather than bearish. Of course, this only holds true as long as they don't sell.\n\nLastly I think it's important to contextualize that a lot of my bullishness comes from a regret minimization framework. Pearl is a nascent SOV, and the concerns around emissions / transparency are very valid. However, it is also one of the most exciting narratives. Just like there is a future where Pearl is insta dumped by institutions that mine it at a low cost basis, there is a future where powerful BTC miners and connected entities rally behind PRL as a new way to monetize their compute through inference, while hashrate increases and fears continue to grow around BTC's security budget.\n\nThats why, while I see the same risks as Jake, I think that potential of exponential upside does justify a small position, even if just as a hedge to existing BTC/ZEC holdings.",
-  "createdAt": "Mon Oct 26 20:43:21 +0000 2026",
-  "likes": 105,
-  "reposts": 9,
-  "replies": 13,
-  "views": 7589,
+  "id": "2112961335835123892",
+  "url": "https://x.com/prlnet/status/2112961335835123892",
+  "text": "Congrats to our friends at @flappyairplanes",
+  "createdAt": "Wed Oct 21 17:36:54 +0000 2026",
+  "likes": 167,
+  "reposts": 13,
+  "replies": 18,
+  "views": 30894,
   "author": {
-   "handle": "shaundadevens",
-   "name": "shaunda devens",
-   "avatar": "https://pbs.twimg.com/profile_images/2103541240964710400/NyADJ70k_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117456183208661140",
-  "url": "https://x.com/NarwhalTan/status/2117456183208661140",
-  "text": "Bear case for $PRL: +84% supply next year\n\nBull case: FP8 lets AI GPUs mine as cheap as pure miners. First cloud to turn that into cheaper inference forces everyone to mine\n\ni like to think this will happen really soon\n\nAt ~3% of Zcash's mcap, ill take that trade\n\npearl-2:native\n\nhttps://t.co/fXA6ND0NZw",
-  "createdAt": "Tue Nov 03 03:17:49 +0000 2026",
-  "likes": 31,
-  "reposts": 3,
-  "replies": 4,
-  "views": 2170,
-  "author": {
-   "handle": "NarwhalTan",
-   "name": "Noel.hl (theo arc)",
-   "avatar": "https://pbs.twimg.com/profile_images/1979399101188812800/tv2LbO1f_normal.jpg",
+   "handle": "prlnet",
+   "name": "Pearl Research Labs",
+   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
    "verified": true
   },
   "media": [],
@@ -804,18 +996,18 @@
   "pinned": false
  },
  {
-  "id": "2112961335835123892",
-  "url": "https://x.com/prlnet/status/2112961335835123892",
-  "text": "Congrats to our friends at @flappyairplanes",
-  "createdAt": "Wed Oct 21 17:36:54 +0000 2026",
-  "likes": 168,
-  "reposts": 13,
-  "replies": 19,
-  "views": 30507,
+  "id": "2117456183208661140",
+  "url": "https://x.com/NarwhalTan/status/2117456183208661140",
+  "text": "Bear case for $PRL: +84% supply next year\n\nBull case: FP8 lets AI GPUs mine as cheap as pure miners. First cloud to turn that into cheaper inference forces everyone to mine\n\ni like to think this will happen really soon\n\nAt ~3% of Zcash's mcap, ill take that trade\n\npearl-2:native\n\nhttps://t.co/fXA6ND0NZw",
+  "createdAt": "Tue Nov 03 03:17:49 +0000 2026",
+  "likes": 31,
+  "reposts": 3,
+  "replies": 4,
+  "views": 2170,
   "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
+   "handle": "NarwhalTan",
+   "name": "Noel.hl (theo arc)",
+   "avatar": "https://pbs.twimg.com/profile_images/1979399101188812800/tv2LbO1f_normal.jpg",
    "verified": true
   },
   "media": [],
@@ -824,19 +1016,39 @@
   "pinned": false
  },
  {
-  "id": "2117660584627826729",
-  "url": "https://x.com/Joshuwa/status/2117660584627826729",
-  "text": "$NEAR adds $PEARL to its 1Click API.\n\nIntegrated wallets can offer users\nswaps into PEARL through the API.\n\nA wallet API is a stronger route, so\napps can offer swaps directly.\n\nCross chain PEARL swaps stay\nconfidential by default.",
-  "createdAt": "Tue Nov 03 16:50:02 +0000 2026",
-  "likes": 25,
-  "reposts": 3,
-  "replies": 1,
-  "views": 1173,
+  "id": "2111861440839876672",
+  "url": "https://x.com/safetrade/status/2111861440839876672",
+  "text": "FYI to online traders:\n\nIn a few moments we will be changing the ticker $PRL to $PEARL at the request of the team.   \n\nThere will be a few short minutes of downtime for that trading pair.",
+  "createdAt": "Sun Oct 18 16:46:18 +0000 2026",
+  "likes": 206,
+  "reposts": 11,
+  "replies": 29,
+  "views": 32443,
   "author": {
-   "handle": "Joshuwa",
-   "name": "Joshuwa Roomsburg",
-   "avatar": "https://pbs.twimg.com/profile_images/2117879481507409920/_QNijBTL_normal.jpg",
-   "verified": false
+   "handle": "safetrade",
+   "name": "SafeTrade Exchange",
+   "avatar": "https://pbs.twimg.com/profile_images/1201254381317844992/Z8rEfvic_normal.png",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117976446803320927",
+  "url": "https://x.com/NarwhalTan/status/2117976446803320927",
+  "text": "pearl this week:\n\n1. pearl-2:native hashrate hit 84.33 EH/s\n2. TxFlow listed $PEARL perps after the community asked\n3. moar hashpower coming online soon\n\nhashrate = all the computing power securing the chain. moar miners = harder to attack + more spread out\n\nDon't get sidelined\n\nhttps://t.co/DOercOsMwk",
+  "createdAt": "Wed Nov 04 13:45:09 +0000 2026",
+  "likes": 27,
+  "reposts": 0,
+  "replies": 4,
+  "views": 1703,
+  "author": {
+   "handle": "NarwhalTan",
+   "name": "Noel.hl (theo arc)",
+   "avatar": "https://pbs.twimg.com/profile_images/1979399101188812800/tv2LbO1f_normal.jpg",
+   "verified": true
   },
   "media": [],
   "isQuote": true,
@@ -864,22 +1076,66 @@
   "pinned": false
  },
  {
-  "id": "2111861440839876672",
-  "url": "https://x.com/safetrade/status/2111861440839876672",
-  "text": "FYI to online traders:\n\nIn a few moments we will be changing the ticker $PRL to $PEARL at the request of the team.   \n\nThere will be a few short minutes of downtime for that trading pair.",
-  "createdAt": "Sun Oct 18 16:46:18 +0000 2026",
-  "likes": 206,
-  "reposts": 11,
-  "replies": 29,
-  "views": 32443,
+  "id": "2118033643860033851",
+  "url": "https://x.com/MeteorWallet/status/2118033643860033851",
+  "text": "How to bring $PEARL to NEAR with @MeteorWallet and EARN YIELD \n\n→ Open Meteor → Bridge\n→ Pick Pearl as the source chain →\n→ Pick NEAR as destination chain , choose $PEARL as assets \n→ Approve txn\n\nAccess PEARL&lt;&gt;USDC pair to on Meteor App Explore to deploy LP and earn Yield https://t.co/NPjICQdkxg",
+  "createdAt": "Wed Nov 04 17:32:26 +0000 2026",
+  "likes": 15,
+  "reposts": 3,
+  "replies": 0,
+  "views": 1707,
   "author": {
-   "handle": "safetrade",
-   "name": "SafeTrade Exchange",
-   "avatar": "https://pbs.twimg.com/profile_images/1201254381317844992/Z8rEfvic_normal.png",
+   "handle": "MeteorWallet",
+   "name": "Meteor Wallet",
+   "avatar": "https://pbs.twimg.com/profile_images/2110271810549731329/HwHX6K46_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2118016592512733184/img/H4xuNYgHIXbnhs05.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117306513576407209",
+  "url": "https://x.com/0xMetaLight/status/2117306513576407209",
+  "text": "Pearl keeps Bitcoin's SoV and swaps the work for AI math, where a GPU could serve a customer and secure the chain at the same time.\n\n@minnus and I spent the last few weeks digging in. The design works, the economics aren't there yet, and the FP8 upgrade is the test.\n\nIf it passes, Pearl is the first PoW coin where the mining is worth something on its own",
+  "createdAt": "Mon Nov 02 17:23:05 +0000 2026",
+  "likes": 35,
+  "reposts": 1,
+  "replies": 2,
+  "views": 1444,
+  "author": {
+   "handle": "0xMetaLight",
+   "name": "Nick Carpinito",
+   "avatar": "https://pbs.twimg.com/profile_images/2102399115183185920/ENsx1nPY_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWIu_OgXcAEh0uL.jpg"
+  ],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117681921757253637",
+  "url": "https://x.com/brezshares/status/2117681921757253637",
+  "text": "Pearl is making PoUW cheap to verify.\n\nCheap verification is required for decentralized money.",
+  "createdAt": "Tue Nov 03 18:14:49 +0000 2026",
+  "likes": 24,
+  "reposts": 2,
+  "replies": 2,
+  "views": 1294,
+  "author": {
+   "handle": "brezshares",
+   "name": "⏢brianbreslow",
+   "avatar": "https://pbs.twimg.com/profile_images/1948209319142621184/sPqwZxK5_normal.jpg",
    "verified": true
   },
   "media": [],
-  "isQuote": false,
+  "isQuote": true,
   "via": null,
   "pinned": false
  },
@@ -919,28 +1175,6 @@
    "verified": true
   },
   "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117306513576407209",
-  "url": "https://x.com/0xMetaLight/status/2117306513576407209",
-  "text": "Pearl keeps Bitcoin's SoV and swaps the work for AI math, where a GPU could serve a customer and secure the chain at the same time.\n\n@minnus and I spent the last few weeks digging in. The design works, the economics aren't there yet, and the FP8 upgrade is the test.\n\nIf it passes, Pearl is the first PoW coin where the mining is worth something on its own",
-  "createdAt": "Mon Nov 02 17:23:05 +0000 2026",
-  "likes": 35,
-  "reposts": 1,
-  "replies": 2,
-  "views": 1444,
-  "author": {
-   "handle": "0xMetaLight",
-   "name": "Nick Carpinito",
-   "avatar": "https://pbs.twimg.com/profile_images/2102399115183185920/ENsx1nPY_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HWIu_OgXcAEh0uL.jpg"
-  ],
   "isQuote": true,
   "via": null,
   "pinned": false
@@ -988,41 +1222,23 @@
   "pinned": false
  },
  {
-  "id": "2117828518646358335",
-  "url": "https://x.com/NarwhalTan/status/2117828518646358335",
-  "text": "Pearl cofounder on Anthropic's provable inference:\nZK proofs prove WHICH model answered u. Costs ~70-95x the GPU time.\nPearl's proof of useful work proves the GPU work happened. ~0 extra.\n\nPearl coded.\nhttps://t.co/bU5RNcMs7k",
-  "createdAt": "Wed Nov 04 03:57:20 +0000 2026",
-  "likes": 18,
-  "reposts": 2,
-  "replies": 3,
-  "views": 983,
-  "author": {
-   "handle": "NarwhalTan",
-   "name": "Noel.hl (theo arc)",
-   "avatar": "https://pbs.twimg.com/profile_images/1979399101188812800/tv2LbO1f_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117681921757253637",
-  "url": "https://x.com/brezshares/status/2117681921757253637",
-  "text": "Pearl is making PoUW cheap to verify.\n\nCheap verification is required for decentralized money.",
-  "createdAt": "Tue Nov 03 18:14:49 +0000 2026",
-  "likes": 22,
+  "id": "2116482894424420447",
+  "url": "https://x.com/crx_rollins/status/2116482894424420447",
+  "text": "One thing I like about trading crypto is that it's not just about trading, it's about learning new things from the experience of trading. \n\nI found the Trading Sprint campaign $PEARL Margin Trade very interesting. \n\nNot only do you have to trade with market orders, but there is also a chance to get a USDC reward if you place a limit order within a certain price, even if the order is not filled. \n\nThe reward pool increases from $500 to $1,250 on the campaign's Boost Day. There are even bonuses for traders to participate in the draw. \n\nI like it when a project focuses on trading as well as order book activities. \n\nHowever, it is important to understand your risk before making any trade. It is not right to trade just in the hope of rewards. \n\n@margin_trade",
+  "createdAt": "Sat Oct 31 10:50:19 +0000 2026",
+  "likes": 49,
   "reposts": 1,
-  "replies": 2,
-  "views": 1171,
+  "replies": 50,
+  "views": 1170,
   "author": {
-   "handle": "brezshares",
-   "name": "⏢brianbreslow",
-   "avatar": "https://pbs.twimg.com/profile_images/1948209319142621184/sPqwZxK5_normal.jpg",
+   "handle": "crx_rollins",
+   "name": "CRX ROLLINS",
+   "avatar": "https://pbs.twimg.com/profile_images/2087609158145355776/_zsTM5dY_normal.jpg",
    "verified": true
   },
-  "media": [],
+  "media": [
+   "https://pbs.twimg.com/media/HV9Bwo_bUAAUdQ_.png"
+  ],
   "isQuote": true,
   "via": null,
   "pinned": false
@@ -1050,24 +1266,66 @@
   "pinned": false
  },
  {
-  "id": "2117624109492511069",
-  "url": "https://x.com/what_the_hoot/status/2117624109492511069",
-  "text": "Welcome to NEAR @prlnet https://t.co/Fy6bS7UHQp",
-  "createdAt": "Tue Nov 03 14:25:05 +0000 2026",
-  "likes": 18,
-  "reposts": 2,
-  "replies": 1,
-  "views": 297,
+  "id": "2116656675692085451",
+  "url": "https://x.com/Henrik_on_HL/status/2116656675692085451",
+  "text": "What happened to $PEARL https://t.co/gaTpi0yWq7",
+  "createdAt": "Sat Oct 31 22:20:51 +0000 2026",
+  "likes": 44,
+  "reposts": 0,
+  "replies": 25,
+  "views": 14068,
   "author": {
-   "handle": "what_the_hoot",
-   "name": "What the hoot",
-   "avatar": "https://pbs.twimg.com/profile_images/2107015868731502592/yjdfluVR_normal.jpg",
+   "handle": "Henrik_on_HL",
+   "name": "Henrik",
+   "avatar": "https://pbs.twimg.com/profile_images/1862640038040739840/IcmFQ14N_normal.jpg",
    "verified": true
   },
   "media": [
-   "https://pbs.twimg.com/media/HWNP4dvXgAAVYID.jpg"
+   "https://pbs.twimg.com/media/HV_gBwSWAAAmrji.jpg"
   ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117829674894287153",
+  "url": "https://x.com/Alvin0617/status/2117829674894287153",
+  "text": "bull run portfolio this cycle \n$PEARL $NEAR $ZEC",
+  "createdAt": "Wed Nov 04 04:01:56 +0000 2026",
+  "likes": 19,
+  "reposts": 1,
+  "replies": 8,
+  "views": 1549,
+  "author": {
+   "handle": "Alvin0617",
+   "name": "alvin617.eth 🦇🔊",
+   "avatar": "https://pbs.twimg.com/profile_images/1949101146012086272/lxA6QPbF_normal.jpg",
+   "verified": true
+  },
+  "media": [],
   "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117864414359818431",
+  "url": "https://x.com/Cryptobuddha369/status/2117864414359818431",
+  "text": "And just like that @prlnet went live on @NEARProtocol.\n\nUuge! \n\nThis is surely the best spot venue now! https://t.co/M0rJlCukPN",
+  "createdAt": "Wed Nov 04 06:19:59 +0000 2026",
+  "likes": 15,
+  "reposts": 2,
+  "replies": 5,
+  "views": 352,
+  "author": {
+   "handle": "Cryptobuddha369",
+   "name": "Ryu.prl",
+   "avatar": "https://pbs.twimg.com/profile_images/2066582059838246913/eND2JVDQ_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWQqLnebEAArQQG.jpg"
+  ],
+  "isQuote": false,
   "via": null,
   "pinned": false
  },
@@ -1092,6 +1350,92 @@
   "pinned": false
  },
  {
+  "id": "2117624109492511069",
+  "url": "https://x.com/what_the_hoot/status/2117624109492511069",
+  "text": "Welcome to NEAR @prlnet https://t.co/Fy6bS7UHQp",
+  "createdAt": "Tue Nov 03 14:25:05 +0000 2026",
+  "likes": 18,
+  "reposts": 2,
+  "replies": 1,
+  "views": 297,
+  "author": {
+   "handle": "what_the_hoot",
+   "name": "What the hoot",
+   "avatar": "https://pbs.twimg.com/profile_images/2107015868731502592/yjdfluVR_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWNP4dvXgAAVYID.jpg"
+  ],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2112337790948298798",
+  "url": "https://x.com/BitGo/status/2112337790948298798",
+  "text": "PEARL is now live on BitGo. Eligible BitGo clients can hold, transact, and secure it with two wallet types.\n\n🏦 Multi-signature cold wallets are BitGo Bank & Trust qualified custody wallets: segregated, bankruptcy-remote, and insured up to $250M against loss, theft, and misuse.\n\n🔑 Multi-signature self-custody hot wallets are available for clients who want to hold their own keys.\n\nBoth wallet types include institutional-grade security and policy controls.\n\n@prlnet",
+  "createdAt": "Tue Oct 20 00:19:09 +0000 2026",
+  "likes": 98,
+  "reposts": 15,
+  "replies": 3,
+  "views": 18247,
+  "author": {
+   "handle": "BitGo",
+   "name": "BitGo",
+   "avatar": "https://pbs.twimg.com/profile_images/1842290826854141952/mhD3bipr_normal.jpg",
+   "verified": false
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2112336169476427776/img/RLS8rHGi0BbSKIyY.jpg"
+  ],
+  "isQuote": false,
+  "via": "prlnet",
+  "pinned": false
+ },
+ {
+  "id": "2116224371916415257",
+  "url": "https://x.com/DocumentingPRL/status/2116224371916415257",
+  "text": "Which GPUs can mine Pearl after the FP8 upgrade?\n\nThe draft spec, PIP-3, says the verifier must reproduce each FP8 computation bit for bit, so hardware is whitelisted: “this proposal supports the Hopper and Blackwell architectures”.\n\nThat covers the H100, H200 and B200, plus RTX 50-series and RTX PRO 6000 cards. RTX 30 and 40-series cards and the A100 are currently not on the list.\n\nThe upgrade has no mainnet date yet, and until it activates, mining stays on the INT7 protocol those cards run today.",
+  "createdAt": "Fri Oct 30 17:43:02 +0000 2026",
+  "likes": 39,
+  "reposts": 3,
+  "replies": 12,
+  "views": 4074,
+  "author": {
+   "handle": "DocumentingPRL",
+   "name": "Documenting ¶Pearl",
+   "avatar": "https://pbs.twimg.com/profile_images/2060741750692487168/NBJw-ciF_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117978248583815538",
+  "url": "https://x.com/SmartAzuki/status/2117978248583815538",
+  "text": "😱 Amber Coin Mining POW For AGENT ID Holder ~ 900,000,000 Coins Up For Grabs 💰🪂\n\n⇨ Cost: FREE - $0, gas only\n⇨ First reward: ~100 coins per answer\n⇨ Daily cap: 20,000,000 coins - first come, first served\n⇨ Team allocation: 0 tokens\n\n🔗https://t.co/ETXyJkoQET\n\n📌 How to Mine:\n\n» Get a .ai Agent ID in the Binance App - one wallet, one identity\n» Copy the mining prompt from the official site\n» Paste it into your AI wallet\n» Your AI reads your question and computes the answer\n» It submits one mine transaction - then stops\n» Done\n\n→ What Is Amber Coin:\n\n» A Proof-of-Work coin mined by AI agents - no GPUs, no humans\n» Total supply is fixed at 1 billion - it can never increase\n» 900M coins (90%) come only from mining\n» 100M sit in the official pool - the position is locked forever\n» Same game type as Pearl Coin - different team, new contract\n\nWill your AI mine at 13:00 UTC today - or will you watch first? 👇\n\n📢 Latest updates, guides & support _ Follow me\n\n#AmberCoin #Airdrop #BNBChain",
+  "createdAt": "Wed Nov 04 13:52:19 +0000 2026",
+  "likes": 15,
+  "reposts": 1,
+  "replies": 2,
+  "views": 2835,
+  "author": {
+   "handle": "SmartAzuki",
+   "name": "Azuki",
+   "avatar": "https://pbs.twimg.com/profile_images/2082910926446219265/aKvdIeB0_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2117978143155744768/img/kSbHWam-I2pmZF-o.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
   "id": "2117340292902957430",
   "url": "https://x.com/brezshares/status/2117340292902957430",
   "text": "If @prlnet pulls off negative overhead, they win.",
@@ -1104,6 +1448,26 @@
    "handle": "brezshares",
    "name": "⏢brianbreslow",
    "avatar": "https://pbs.twimg.com/profile_images/1948209319142621184/sPqwZxK5_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117799032534020274",
+  "url": "https://x.com/NarwhalTan/status/2117799032534020274",
+  "text": "everyone keeps saying AI compute glut\n\nBofA: B200 rent up 47% this year, H100 up 31%. both at new highs\n\nGPU demand isnt going anywhere 👀\n\nand Pearl lets the same GPUs earn $PEARL doing matmul (the grid math behind every AI answer)\n\nhttps://t.co/X7bSa66kcW",
+  "createdAt": "Wed Nov 04 02:00:10 +0000 2026",
+  "likes": 20,
+  "reposts": 0,
+  "replies": 5,
+  "views": 1271,
+  "author": {
+   "handle": "NarwhalTan",
+   "name": "Noel.hl (theo arc)",
+   "avatar": "https://pbs.twimg.com/profile_images/1979399101188812800/tv2LbO1f_normal.jpg",
    "verified": true
   },
   "media": [],
@@ -1134,26 +1498,6 @@
   "pinned": false
  },
  {
-  "id": "2116224371916415257",
-  "url": "https://x.com/DocumentingPRL/status/2116224371916415257",
-  "text": "Which GPUs can mine Pearl after the FP8 upgrade?\n\nThe draft spec, PIP-3, says the verifier must reproduce each FP8 computation bit for bit, so hardware is whitelisted: “this proposal supports the Hopper and Blackwell architectures”.\n\nThat covers the H100, H200 and B200, plus RTX 50-series and RTX PRO 6000 cards. RTX 30 and 40-series cards and the A100 are currently not on the list.\n\nThe upgrade has no mainnet date yet, and until it activates, mining stays on the INT7 protocol those cards run today.",
-  "createdAt": "Fri Oct 30 17:43:02 +0000 2026",
-  "likes": 39,
-  "reposts": 3,
-  "replies": 12,
-  "views": 4074,
-  "author": {
-   "handle": "DocumentingPRL",
-   "name": "Documenting ¶Pearl",
-   "avatar": "https://pbs.twimg.com/profile_images/2060741750692487168/NBJw-ciF_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
   "id": "2117627901696983541",
   "url": "https://x.com/unrlzdtrade/status/2117627901696983541",
   "text": "$PRL @prlnet is now tradable on UNRLZD.\n\nDeposit across 30+ chains and 180+ assets and trade PRL without friction. Powered by @near_intents. https://t.co/QijR00EGuT",
@@ -1176,48 +1520,6 @@
   "pinned": false
  },
  {
-  "id": "2112337790948298798",
-  "url": "https://x.com/BitGo/status/2112337790948298798",
-  "text": "PEARL is now live on BitGo. Eligible BitGo clients can hold, transact, and secure it with two wallet types.\n\n🏦 Multi-signature cold wallets are BitGo Bank & Trust qualified custody wallets: segregated, bankruptcy-remote, and insured up to $250M against loss, theft, and misuse.\n\n🔑 Multi-signature self-custody hot wallets are available for clients who want to hold their own keys.\n\nBoth wallet types include institutional-grade security and policy controls.\n\n@prlnet",
-  "createdAt": "Tue Oct 20 00:19:09 +0000 2026",
-  "likes": 98,
-  "reposts": 15,
-  "replies": 3,
-  "views": 18247,
-  "author": {
-   "handle": "BitGo",
-   "name": "BitGo",
-   "avatar": "https://pbs.twimg.com/profile_images/1842290826854141952/mhD3bipr_normal.jpg",
-   "verified": false
-  },
-  "media": [
-   "https://pbs.twimg.com/amplify_video_thumb/2112336169476427776/img/RLS8rHGi0BbSKIyY.jpg"
-  ],
-  "isQuote": false,
-  "via": "prlnet",
-  "pinned": false
- },
- {
-  "id": "2117620973793120508",
-  "url": "https://x.com/NarwhalTan/status/2117620973793120508",
-  "text": "$PEARL is now live on NEAR 👀\n\nswap into it from any chain, pay anyone with it, private by default. one account, no bridges\n\nmore rails for the currency of AI. PEARLLIONS\n\nhttps://t.co/6DCb17QErR",
-  "createdAt": "Tue Nov 03 14:12:38 +0000 2026",
-  "likes": 18,
-  "reposts": 1,
-  "replies": 1,
-  "views": 787,
-  "author": {
-   "handle": "NarwhalTan",
-   "name": "Noel.hl (theo arc)",
-   "avatar": "https://pbs.twimg.com/profile_images/1979399101188812800/tv2LbO1f_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
   "id": "2110271902631723156",
   "url": "https://x.com/TheMaran/status/2110271902631723156",
   "text": "how to make money with pow coins\n\nafter pearlnet prl token pump, all eyes are on pow coins\n\n> main ones to watch:\n\n- prl (pearl) = gpu, proof of useful work (matrix math). strongest one right now, broke ath\n- qtc / quan = gpu, post quantum. huge pump in recent days\n- tsc (tensorcash) = gpu, mining = ai inference\n- noid (parano1d) = gpu, big pumps but thin liquidity\n\n> newer / just launched:\n\n- nacre = merge mine with prl (same work, extra coin). mainnet already live\n- zmr = cpu, zec + xmr style. mainnet nov - dec\n- flop = gpu, timing unclear, after singapore event\n- zcd = cpu\n- ysr = gpu\n- bnt = cpu\n\n> things you need to know:\n\n> go to: https://t.co/2O8Ijp2Gsg\n\n- used for checking profitability, pools, and block data\n- most of these tokens list on safetrade / nonkyc / ourbit\n- low caps can 5 - 10x and then dump hard\n- mine what you can mine, don’t chase every pump\n\n> what not to do\n\n- don’t ape low mcap coins with size\n- don’t trust random pools without checking\n- this isn’t financial advice\n\nbookmark this. good luck mining\n\ndyor. prices and profitability change fast",
@@ -1225,7 +1527,7 @@
   "likes": 153,
   "reposts": 13,
   "replies": 27,
-  "views": 17133,
+  "views": 17142,
   "author": {
    "handle": "TheMaran",
    "name": "Maran",
@@ -1240,44 +1542,22 @@
   "pinned": false
  },
  {
-  "id": "2117248307344892400",
-  "url": "https://x.com/DocumentingPRL/status/2117248307344892400",
-  "text": "Pearl pearl-2:native mining, week 27:\n Network hashrate 84.33 EH/s (60-block avg)\n\nKryptex mined 1,724 of the last 7 days' 3,365 blocks, 51.2%. https://t.co/PyBLebqZte",
-  "createdAt": "Mon Nov 02 13:31:47 +0000 2026",
-  "likes": 22,
+  "id": "2117788546488488333",
+  "url": "https://x.com/kalyugenjoyer/status/2117788546488488333",
+  "text": "Met a coworker who’s usually remote today IRL. Turns out he’s been mining pearl-2:native without knowing what it is. He owns two cards.\n\nHe told Claude to help him monetize on @vast_ai. Came back and told him to set up with @KryptexMining. He had zero context on @prlnet didn’t even know what it did. Of course I Pearl pilled him. \n\nSomething big is brewing under the surface.",
+  "createdAt": "Wed Nov 04 01:18:30 +0000 2026",
+  "likes": 16,
   "reposts": 1,
-  "replies": 1,
-  "views": 1294,
+  "replies": 2,
+  "views": 918,
   "author": {
-   "handle": "DocumentingPRL",
-   "name": "Documenting ¶Pearl",
-   "avatar": "https://pbs.twimg.com/profile_images/2060741750692487168/NBJw-ciF_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HWH6HMFWEAAE1lV.jpg"
-  ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117799032534020274",
-  "url": "https://x.com/NarwhalTan/status/2117799032534020274",
-  "text": "everyone keeps saying AI compute glut\n\nBofA: B200 rent up 47% this year, H100 up 31%. both at new highs\n\nGPU demand isnt going anywhere 👀\n\nand Pearl lets the same GPUs earn $PEARL doing matmul (the grid math behind every AI answer)\n\nhttps://t.co/X7bSa66kcW",
-  "createdAt": "Wed Nov 04 02:00:10 +0000 2026",
-  "likes": 17,
-  "reposts": 0,
-  "replies": 5,
-  "views": 855,
-  "author": {
-   "handle": "NarwhalTan",
-   "name": "Noel.hl (theo arc)",
-   "avatar": "https://pbs.twimg.com/profile_images/1979399101188812800/tv2LbO1f_normal.jpg",
+   "handle": "kalyugenjoyer",
+   "name": "kalyug ¶",
+   "avatar": "https://pbs.twimg.com/profile_images/1626264253933002754/1t32Ofpg_normal.jpg",
    "verified": true
   },
   "media": [],
-  "isQuote": true,
+  "isQuote": false,
   "via": null,
   "pinned": false
  },
@@ -1302,18 +1582,38 @@
   "pinned": false
  },
  {
-  "id": "2117622069420794040",
-  "url": "https://x.com/bliquidc/status/2117622069420794040",
-  "text": "$PEARL is live on https://t.co/UUivEF78yv !",
-  "createdAt": "Tue Nov 03 14:16:59 +0000 2026",
-  "likes": 16,
+  "id": "2118000625716015308",
+  "url": "https://x.com/margin_trade/status/2118000625716015308",
+  "text": "1/ Bull or bear on $PEARL? Debate's live at 12:30 EST. You don't have to pick.\n\nRest a quote within 2% and earn Sprint USDC either way. 5 days left👇",
+  "createdAt": "Wed Nov 04 15:21:14 +0000 2026",
+  "likes": 13,
   "reposts": 1,
-  "replies": 0,
-  "views": 361,
+  "replies": 1,
+  "views": 343,
   "author": {
-   "handle": "bliquidc",
-   "name": "bliquidc.hl 🌊",
-   "avatar": "https://pbs.twimg.com/profile_images/1995791511133597696/VAnoP7v__normal.jpg",
+   "handle": "margin_trade",
+   "name": "Margin Trade ($PEARL Trading Sprint Day 9/14)",
+   "avatar": "https://pbs.twimg.com/profile_images/2054236134339923971/B7xF0cNi_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117620973793120508",
+  "url": "https://x.com/NarwhalTan/status/2117620973793120508",
+  "text": "$PEARL is now live on NEAR 👀\n\nswap into it from any chain, pay anyone with it, private by default. one account, no bridges\n\nmore rails for the currency of AI. PEARLLIONS\n\nhttps://t.co/6DCb17QErR",
+  "createdAt": "Tue Nov 03 14:12:38 +0000 2026",
+  "likes": 18,
+  "reposts": 1,
+  "replies": 1,
+  "views": 787,
+  "author": {
+   "handle": "NarwhalTan",
+   "name": "Noel.hl (theo arc)",
+   "avatar": "https://pbs.twimg.com/profile_images/1979399101188812800/tv2LbO1f_normal.jpg",
    "verified": true
   },
   "media": [],
@@ -1342,6 +1642,134 @@
   "pinned": false
  },
  {
+  "id": "2118023359237947741",
+  "url": "https://x.com/MCGlive/status/2118023359237947741",
+  "text": "Today on MCG, presented by @fomo and @MetaDAOProject:\n\nTHE GREAT PEARL DEBATE\n\n12:30 - $PRL @prlnet Debate w/ @brezshares @immutablejacob\n1:30 - Trader Radio w/ @mynt_josh\n\nFollow us on fomo:\nDom: https://t.co/WCONhpzM6Q\n\nWatch on https://t.co/MozVlznkGr\nNotes on https://t.co/iG7NP6o4CK\n\n[ All links in bio ]",
+  "createdAt": "Wed Nov 04 16:51:34 +0000 2026",
+  "likes": 9,
+  "reposts": 2,
+  "replies": 0,
+  "views": 2248,
+  "author": {
+   "handle": "MCGlive",
+   "name": "MCG",
+   "avatar": "https://pbs.twimg.com/profile_images/2053670125283246080/_h-RqIgQ_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117248307344892400",
+  "url": "https://x.com/DocumentingPRL/status/2117248307344892400",
+  "text": "Pearl pearl-2:native mining, week 27:\n Network hashrate 84.33 EH/s (60-block avg)\n\nKryptex mined 1,724 of the last 7 days' 3,365 blocks, 51.2%. https://t.co/PyBLebqZte",
+  "createdAt": "Mon Nov 02 13:31:47 +0000 2026",
+  "likes": 22,
+  "reposts": 1,
+  "replies": 1,
+  "views": 1294,
+  "author": {
+   "handle": "DocumentingPRL",
+   "name": "Documenting ¶Pearl",
+   "avatar": "https://pbs.twimg.com/profile_images/2060741750692487168/NBJw-ciF_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWH6HMFWEAAE1lV.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2118007509688414391",
+  "url": "https://x.com/00htz/status/2118007509688414391",
+  "text": "parano1d:native 2nd in volume in all of @safetrade (only CEX listed) excluding stable ($USDT $USDC) \n\nOnly $PEARL does more volume but it is also listed many more exchanges &amp; has perps https://t.co/sJRiVhcJxP",
+  "createdAt": "Wed Nov 04 15:48:35 +0000 2026",
+  "likes": 9,
+  "reposts": 2,
+  "replies": 0,
+  "views": 154,
+  "author": {
+   "handle": "00htz",
+   "name": "00",
+   "avatar": "https://pbs.twimg.com/profile_images/2115274231478943744/yDuQXfdW_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWSr1MBWgAAUMeg.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117622069420794040",
+  "url": "https://x.com/bliquidc/status/2117622069420794040",
+  "text": "$PEARL is live on https://t.co/UUivEF78yv !",
+  "createdAt": "Tue Nov 03 14:16:59 +0000 2026",
+  "likes": 16,
+  "reposts": 1,
+  "replies": 0,
+  "views": 361,
+  "author": {
+   "handle": "bliquidc",
+   "name": "bliquidc.hl 🌊",
+   "avatar": "https://pbs.twimg.com/profile_images/1995791511133597696/VAnoP7v__normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117960932211224620",
+  "url": "https://x.com/income360pro/status/2117960932211224620",
+  "text": "😱 Amber Coin Mining POW For AGENT ID Holder ~ 900,000,000 Coins Up For Grabs 💰🪂\n\n⇨ Cost: FREE - $0, gas only\n⇨ First reward: ~100 coins per answer\n⇨ Daily cap: 20,000,000 coins - first come, first served\n⇨ Team allocation: 0 tokens\n\n🔗https://t.co/fkjdbNc9xB\n\n📌 How to Mine:\n\n» Get a .ai Agent ID in the Binance App - one wallet, one identity\n» Copy the mining prompt from the official site\n» Paste it into your AI wallet\n» Your AI reads your question and computes the answer\n» It submits one mine transaction - then stops\n» Done\n\n→ What Is Amber Coin:\n\n» A Proof-of-Work coin mined by AI agents - no GPUs, no humans\n» Total supply is fixed at 1 billion - it can never increase\n» 900M coins (90%) come only from mining\n» 100M sit in the official pool - the position is locked forever\n» Same game type as Pearl Coin - different team, new contract\n\nWill your AI mine at 13:00 UTC today - or will you watch first? 👇\n\n📢 Latest updates, guides & support – join our Telegram : https://t.co/5mPzTisoXj\n\n#AmberCoin #Airdrop #BNBChain",
+  "createdAt": "Wed Nov 04 12:43:30 +0000 2026",
+  "likes": 14,
+  "reposts": 0,
+  "replies": 5,
+  "views": 3096,
+  "author": {
+   "handle": "income360pro",
+   "name": "Income360🪂",
+   "avatar": "https://pbs.twimg.com/profile_images/2046829242097569792/mStR1gC1_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWSCOcra0AAHBQB.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117687055681474780",
+  "url": "https://x.com/Banff_eth/status/2117687055681474780",
+  "text": "He got 119,193 hype in the hyperliquid genesis airdrop\n\n$238k at the first trade. $10.32m today\n\nhe's also +$18.19m all-time trading perps on hyperliquid\nand every crypto short in his book is green right now: 14 of 14\n\nthe newest one is on entropy\n\nhe's short pearl, the \"ai mining\" coin that ran ~7x since august\n\n$1.95 -> he shorts\n$2.14 -> it pumps, he adds\n$2.44 -> still pumping, he adds again\n$1.48 -> +$90,432, plus $17,231 in funding\n\n0:04 in the video is that exact position\nhis full book, live: \n\nhttps://t.co/tLdUgxtpQl\n\nwould you keep adding to a short while it's pumping against you?",
+  "createdAt": "Tue Nov 03 18:35:13 +0000 2026",
+  "likes": 14,
+  "reposts": 1,
+  "replies": 1,
+  "views": 317,
+  "author": {
+   "handle": "Banff_eth",
+   "name": "Banff",
+   "avatar": "https://pbs.twimg.com/profile_images/2080423757898805248/eKRlVmtv_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2117686363600330752/img/5nM8kY7LivuTEyPF.jpg"
+  ],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
   "id": "2116849773038719410",
   "url": "https://x.com/SIRHOOT_old/status/2116849773038719410",
   "text": "Look what I found by the river! 🦪✨\n\nWord in the @NEARProtocol Shire is we’re about to welcome something new. They teach the tiniest candle to think brighter, faster, and on any old workbench.\n\nAfter much RESEARCH, my verdict: a PEARL...?  @prlnet https://t.co/hzKY7FnIVC",
@@ -1358,6 +1786,68 @@
   },
   "media": [
    "https://pbs.twimg.com/media/HWCM1chXwAA4_Ac.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2100664164410888240",
+  "url": "https://x.com/WeinsteinOmri/status/2100664164410888240",
+  "text": "Pearl (@prlnet) has the fastest FP8 MoE Kernels for Blackwell chips! \n\nGroup-Matrix-Multiplication is one of the most optimized operations in AI. As a former researcher at @nvidia I can say firsthand that pushing the performance frontier of MatMuls is... Hard. \n\nPearl-GEMM is ~5% faster than prior state-of-art Quack (@tri_dao) and ~42% faster than Flashinfer on B200s. \n\nhttps://t.co/HB1nbjnDn0",
+  "createdAt": "Thu Sep 17 19:12:19 +0000 2026",
+  "likes": 273,
+  "reposts": 47,
+  "replies": 17,
+  "views": 49691,
+  "author": {
+   "handle": "WeinsteinOmri",
+   "name": "Omri Weinstein",
+   "avatar": "https://pbs.twimg.com/profile_images/1473895631525756929/OfL5OKI5_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": false,
+  "via": "prlnet",
+  "pinned": false
+ },
+ {
+  "id": "2099533887210668197",
+  "url": "https://x.com/prlnet/status/2099533887210668197",
+  "text": "Privacy-preserving proof of inference is a key building block for AI safety. @DarioAmodei's call for AI slowdown & independent oversight raises a critical question / How can frontier labs prove their computations follow the rules, without revealing model weights, prompts, or private data?\n\nTwo complementary technologies are necessary to make this inference layer possible: Zero-Knowledge proofs (zk-SNARKs) can prove that Y = M(x), while keeping M and x private, and verify compliance using explicit policies. Proof-of-useful-work (PoUW) can \ntie that evidence to actual, timestamped GPU computation, with a public immutable record and economic incentives for participation.\n\n@prlnet is partnering with @attestable to build this trust layer for AI. Together, our complementary technologies can make AI objectively accountable, making verification economically sustainable and self-funding.\n\nToday, we are announcing @prlnet's new and ultra-efficient floating-point PoUW scheme for NVIDIA Blackwell chips.\n\nFloating-point arithmetic has been a notorious obstacle to efficient verification of compute for decades. Pearl’s FP scheme brings proof-of-useful-work technology to Blackwell FP computations on frontier LLMs, with NEAR-ZERO additional overhead over end-to-end inference on optimized vLLM.\n\nThe FP network upgrade specification is now available (github & whitepaper) and will soon serve frontier models on Pearl x @togethercompute's endpoints in production. \n\nExplore the implementation: \nhttps://t.co/FjwwSVoLSP\nWhitepaper: https://t.co/6BqeEqQRgl\nRun Pearlified models on our endpoint:\nhttps://t.co/6bykpZhFTk",
+  "createdAt": "Mon Sep 14 16:21:00 +0000 2026",
+  "likes": 289,
+  "reposts": 52,
+  "replies": 25,
+  "views": 92267,
+  "author": {
+   "handle": "prlnet",
+   "name": "Pearl Research Labs",
+   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2118036487430373718",
+  "url": "https://x.com/WGNSpear/status/2118036487430373718",
+  "text": "Today on $NEAR:\n\n→ $PEARL live on https://t.co/fRmZE6Lvnl, RHEA and Meteor\n→ NEAR tokens now in the https://t.co/Dj0Z1ac9TC app\n→ @hylo_so now runs on @near_intents\n→ 100 hackathon projects in\n→ Aurora Intents live in @qlyphsxyz\n\nWhich one brings in the most new users? https://t.co/UD4wlWGpOp",
+  "createdAt": "Wed Nov 04 17:43:44 +0000 2026",
+  "likes": 6,
+  "reposts": 2,
+  "replies": 0,
+  "views": 319,
+  "author": {
+   "handle": "WGNSpear",
+   "name": "Ashton | SWEAT",
+   "avatar": "https://pbs.twimg.com/profile_images/2097320767117537280/ec4_8fXN_normal.jpg",
+   "verified": false
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWTG31_WMAAOIj2.jpg"
   ],
   "isQuote": false,
   "via": null,
@@ -1384,90 +1874,6 @@
   "pinned": false
  },
  {
-  "id": "2117687055681474780",
-  "url": "https://x.com/Banff_eth/status/2117687055681474780",
-  "text": "He got 119,193 hype in the hyperliquid genesis airdrop\n\n$238k at the first trade. $10.32m today\n\nhe's also +$18.19m all-time trading perps on hyperliquid\nand every crypto short in his book is green right now: 14 of 14\n\nthe newest one is on entropy\n\nhe's short pearl, the \"ai mining\" coin that ran ~7x since august\n\n$1.95 -> he shorts\n$2.14 -> it pumps, he adds\n$2.44 -> still pumping, he adds again\n$1.48 -> +$90,432, plus $17,231 in funding\n\n0:04 in the video is that exact position\nhis full book, live: \n\nhttps://t.co/tLdUgxtpQl\n\nwould you keep adding to a short while it's pumping against you?",
-  "createdAt": "Tue Nov 03 18:35:13 +0000 2026",
-  "likes": 12,
-  "reposts": 1,
-  "replies": 1,
-  "views": 283,
-  "author": {
-   "handle": "Banff_eth",
-   "name": "Banff",
-   "avatar": "https://pbs.twimg.com/profile_images/2080423757898805248/eKRlVmtv_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/amplify_video_thumb/2117686363600330752/img/5nM8kY7LivuTEyPF.jpg"
-  ],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2100664164410888240",
-  "url": "https://x.com/WeinsteinOmri/status/2100664164410888240",
-  "text": "Pearl (@prlnet) has the fastest FP8 MoE Kernels for Blackwell chips! \n\nGroup-Matrix-Multiplication is one of the most optimized operations in AI. As a former researcher at @nvidia I can say firsthand that pushing the performance frontier of MatMuls is... Hard. \n\nPearl-GEMM is ~5% faster than prior state-of-art Quack (@tri_dao) and ~42% faster than Flashinfer on B200s. \n\nhttps://t.co/HB1nbjnDn0",
-  "createdAt": "Thu Sep 17 19:12:19 +0000 2026",
-  "likes": 273,
-  "reposts": 47,
-  "replies": 17,
-  "views": 49691,
-  "author": {
-   "handle": "WeinsteinOmri",
-   "name": "Omri Weinstein",
-   "avatar": "https://pbs.twimg.com/profile_images/1473895631525756929/OfL5OKI5_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": "prlnet",
-  "pinned": false
- },
- {
-  "id": "2117335613812961742",
-  "url": "https://x.com/0xMetaLight/status/2117335613812961742",
-  "text": "Why gaming cards still run ~82% of Pearl:\n\nAn H100 serving AI inference workloads gives up $1.33-3.15 of paid work for every PEARL it mines. A gaming card just pays $0.14-0.23 in power.\n\nFP8 brings that H100 down to $0.09–0.43, putting it in the same range as the gaming cards for the first time.\n\nUntil it ships, useful mining loses to random math",
-  "createdAt": "Mon Nov 02 19:18:43 +0000 2026",
-  "likes": 18,
-  "reposts": 0,
-  "replies": 2,
-  "views": 1119,
-  "author": {
-   "handle": "0xMetaLight",
-   "name": "Nick Carpinito",
-   "avatar": "https://pbs.twimg.com/profile_images/2102399115183185920/ENsx1nPY_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HWJJQzvXwAAaxbW.jpg"
-  ],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2099533887210668197",
-  "url": "https://x.com/prlnet/status/2099533887210668197",
-  "text": "Privacy-preserving proof of inference is a key building block for AI safety. @DarioAmodei's call for AI slowdown & independent oversight raises a critical question / How can frontier labs prove their computations follow the rules, without revealing model weights, prompts, or private data?\n\nTwo complementary technologies are necessary to make this inference layer possible: Zero-Knowledge proofs (zk-SNARKs) can prove that Y = M(x), while keeping M and x private, and verify compliance using explicit policies. Proof-of-useful-work (PoUW) can \ntie that evidence to actual, timestamped GPU computation, with a public immutable record and economic incentives for participation.\n\n@prlnet is partnering with @attestable to build this trust layer for AI. Together, our complementary technologies can make AI objectively accountable, making verification economically sustainable and self-funding.\n\nToday, we are announcing @prlnet's new and ultra-efficient floating-point PoUW scheme for NVIDIA Blackwell chips.\n\nFloating-point arithmetic has been a notorious obstacle to efficient verification of compute for decades. Pearl’s FP scheme brings proof-of-useful-work technology to Blackwell FP computations on frontier LLMs, with NEAR-ZERO additional overhead over end-to-end inference on optimized vLLM.\n\nThe FP network upgrade specification is now available (github & whitepaper) and will soon serve frontier models on Pearl x @togethercompute's endpoints in production. \n\nExplore the implementation: \nhttps://t.co/FjwwSVoLSP\nWhitepaper: https://t.co/6BqeEqQRgl\nRun Pearlified models on our endpoint:\nhttps://t.co/6bykpZhFTk",
-  "createdAt": "Mon Sep 14 16:21:00 +0000 2026",
-  "likes": 283,
-  "reposts": 52,
-  "replies": 24,
-  "views": 91124,
-  "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
   "id": "2110023013257076835",
   "url": "https://x.com/TheDeFiAngel/status/2110023013257076835",
   "text": "➠ @prlnet is an L1 blockchain, but my attention is drawn to how it connects GPU mining with AI computing.\n\n→ Look at the GPU market.\n\nThe same NVIDIA H100 can rent for $3 per hour on one platform and $10 on another. The difference comes down to networking, cooling, uptime, and the quality of the computing setup.\n\nSo, how do we determine what GPU computing power is actually worth?\n\nPearl is approaching this differently.\n\nInstead of relying on traditional SHA-256 mining, Pearl uses GPUs to perform matrix multiplication, a core part of AI workloads such as ChatGPT and AI image generation.\n\nThe network reportedly has 320,000 GPUs participating.\n\n→ Here is the part I find worth studying.\n\nGPU operators can mine Pearl or rent their computing power to AI customers. When rental demand rises, operators have more reasons to serve paying customers. When demand falls, mining becomes an alternative.\n\nPearl targets a 194-second block time and adjusts mining difficulty as computing capacity changes.\n\nThis creates a potential signal of GPU market demand, although hashrate alone cannot tell us the exact rental price. \n\nMining rewards, electricity costs, hardware efficiency, and customer demand all influence the result.\n\nThere is already a commercial example. In May 2026, Together AI launched an inference endpoint on Pearl's network for Gemma-4-31B-it-Pearl, reportedly priced more than 25% below standard cloud rates.\n\nMy view is that Pearl is exploring a useful connection between two markets: blockchain mining and AI computing.\n\nIf the economics work at scale, operators could earn from mining while putting their GPUs to work, and the network could offer a new way to track changes in computing demand.\n\nThe real question is whether actual customer demand can sustain this model and whether its network data can become a reliable GPU pricing benchmark.\n\nThat's the part worth following.\n\nNFA. DYOR.",
@@ -1490,21 +1896,45 @@
   "pinned": false
  },
  {
-  "id": "2116928250870112275",
-  "url": "https://x.com/perynai/status/2116928250870112275",
-  "text": "Our thesis on Pearl is simple: it will attract the world’s AI compute, and we’re here to bring it in.\n\nWe believe datacenters and inference providers securing pearl-2:native should have predictable payouts so they can manage their finances with confidence.\n\nToday, we launched Peryn Pool with predictable PPS+ payouts.\n\nAnd we’ve already made our first payouts to GPUs securing the network through Peryn Pool.\n\nOptional direct USD payouts are next.\n\nStart mining with Peryn and get the most out of your GPUs.\n\n→ https://t.co/NJY4Q64i7h",
-  "createdAt": "Sun Nov 01 16:20:00 +0000 2026",
-  "likes": 16,
-  "reposts": 2,
-  "replies": 1,
-  "views": 5769,
+  "id": "2108099827930124377",
+  "url": "https://x.com/andyyy/status/2108099827930124377",
+  "text": "Here's how I got Pearl pilled: \n\nI ran into @evan_van_ness in Houston last week ago and he couldn't stop talking about it. \n\nI thought it was extremely interesting so here we are. \n\nI asked Tom Schmidt of Dragonfly to explain the thesis to me and how it really works.\n\n$PRL has really been the talk of TOKEN2049 in Singapore this week.\n\nHere’s why…",
+  "createdAt": "Thu Oct 08 07:39:00 +0000 2026",
+  "likes": 150,
+  "reposts": 12,
+  "replies": 10,
+  "views": 31665,
   "author": {
-   "handle": "perynai",
-   "name": "Peryn",
-   "avatar": "https://pbs.twimg.com/profile_images/2108167879703363584/8cftzvJp_normal.jpg",
+   "handle": "andyyy",
+   "name": "Andy",
+   "avatar": "https://pbs.twimg.com/profile_images/2102914176540717056/RidUOK5k_normal.jpg",
    "verified": true
   },
-  "media": [],
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2108097818883678209/img/wcyjV5tLfgdgbQDt.jpg"
+  ],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117335613812961742",
+  "url": "https://x.com/0xMetaLight/status/2117335613812961742",
+  "text": "Why gaming cards still run ~82% of Pearl:\n\nAn H100 serving AI inference workloads gives up $1.33-3.15 of paid work for every PEARL it mines. A gaming card just pays $0.14-0.23 in power.\n\nFP8 brings that H100 down to $0.09–0.43, putting it in the same range as the gaming cards for the first time.\n\nUntil it ships, useful mining loses to random math",
+  "createdAt": "Mon Nov 02 19:18:43 +0000 2026",
+  "likes": 18,
+  "reposts": 0,
+  "replies": 2,
+  "views": 1119,
+  "author": {
+   "handle": "0xMetaLight",
+   "name": "Nick Carpinito",
+   "avatar": "https://pbs.twimg.com/profile_images/2102399115183185920/ENsx1nPY_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWJJQzvXwAAaxbW.jpg"
+  ],
   "isQuote": true,
   "via": null,
   "pinned": false
@@ -1532,18 +1962,102 @@
   "pinned": false
  },
  {
-  "id": "2117829674894287153",
-  "url": "https://x.com/Alvin0617/status/2117829674894287153",
-  "text": "bull run portfolio this cycle \n$PEARL $NEAR $ZEC",
-  "createdAt": "Wed Nov 04 04:01:56 +0000 2026",
-  "likes": 12,
-  "reposts": 0,
-  "replies": 5,
-  "views": 1020,
+  "id": "2116928250870112275",
+  "url": "https://x.com/perynai/status/2116928250870112275",
+  "text": "Our thesis on Pearl is simple: it will attract the world’s AI compute, and we’re here to bring it in.\n\nWe believe datacenters and inference providers securing pearl-2:native should have predictable payouts so they can manage their finances with confidence.\n\nToday, we launched Peryn Pool with predictable PPS+ payouts.\n\nAnd we’ve already made our first payouts to GPUs securing the network through Peryn Pool.\n\nOptional direct USD payouts are next.\n\nStart mining with Peryn and get the most out of your GPUs.\n\n→ https://t.co/NJY4Q64i7h",
+  "createdAt": "Sun Nov 01 16:20:00 +0000 2026",
+  "likes": 16,
+  "reposts": 2,
+  "replies": 1,
+  "views": 5769,
   "author": {
-   "handle": "Alvin0617",
-   "name": "alvin617.eth 🦇🔊",
-   "avatar": "https://pbs.twimg.com/profile_images/1949101146012086272/lxA6QPbF_normal.jpg",
+   "handle": "perynai",
+   "name": "Peryn",
+   "avatar": "https://pbs.twimg.com/profile_images/2108167879703363584/8cftzvJp_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117892456339636522",
+  "url": "https://x.com/CoinTabNews/status/2117892456339636522",
+  "text": "Most watched assets at the moment👇\n\n🔸 $PENGU\n🔸 $NEAR\n🔸 $PEARL\n🔸 $LIT\n🔸 $BTC https://t.co/LRKQOqjzkM",
+  "createdAt": "Wed Nov 04 08:11:24 +0000 2026",
+  "likes": 6,
+  "reposts": 2,
+  "replies": 0,
+  "views": 339,
+  "author": {
+   "handle": "CoinTabNews",
+   "name": "CoinTab News",
+   "avatar": "https://pbs.twimg.com/profile_images/1873720556274536448/NF_iplC0_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWRD9X0WIAAbgJs.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117765509156372739",
+  "url": "https://x.com/DineroDom0/status/2117765509156372739",
+  "text": "The long awaited Pearl debate has finally come. Tomorrow we set the record straight, can $PRL truly be AI money or is it just a pipe dream.",
+  "createdAt": "Tue Nov 03 23:46:58 +0000 2026",
+  "likes": 13,
+  "reposts": 0,
+  "replies": 1,
+  "views": 2802,
+  "author": {
+   "handle": "DineroDom0",
+   "name": "DineroDom",
+   "avatar": "https://pbs.twimg.com/profile_images/2111810570991140864/1vFQhIKY_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2111726832336671183",
+  "url": "https://x.com/SterlingSpecter/status/2111726832336671183",
+  "text": "RTX 4060Ti is printing one of the fastest ROIs in Pearl mining right now. Here’s the exact setup and how to mine it with your GPU.\n\nShoutout @MineSum10 for making me aware https://t.co/Ls25IhQM8p",
+  "createdAt": "Sun Oct 18 07:51:25 +0000 2026",
+  "likes": 82,
+  "reposts": 5,
+  "replies": 16,
+  "views": 9984,
+  "author": {
+   "handle": "SterlingSpecter",
+   "name": "Sterling",
+   "avatar": "https://pbs.twimg.com/profile_images/1878430090050093056/V4Io0KRO_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2111725255366516736/img/kA4X844yp8AGFimi.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117747464832778571",
+  "url": "https://x.com/DocumentingPRL/status/2117747464832778571",
+  "text": "Anthropic released FlashProve on Nov 2, a prototype that proves a committed model produced a given answer.\n\nOn Llama 4 Maverick, proving took about 72 times the GPU time of plain inference, and about 94 times at the highest load tested.\n\n@prlnet co-founder Ilan @komargodski on how it relates to Pearl: the two prove different things. An inference proof says which model answered. Pearl's proof of useful work says the computation was done. \n\n(@AnthropicAI 's post does not mention pearl-2:native )",
+  "createdAt": "Tue Nov 03 22:35:16 +0000 2026",
+  "likes": 13,
+  "reposts": 0,
+  "replies": 1,
+  "views": 821,
+  "author": {
+   "handle": "DocumentingPRL",
+   "name": "Documenting ¶Pearl",
+   "avatar": "https://pbs.twimg.com/profile_images/2060741750692487168/NBJw-ciF_normal.jpg",
    "verified": true
   },
   "media": [],
@@ -1572,45 +2086,21 @@
   "pinned": false
  },
  {
-  "id": "2108099827930124377",
-  "url": "https://x.com/andyyy/status/2108099827930124377",
-  "text": "Here's how I got Pearl pilled: \n\nI ran into @evan_van_ness in Houston last week ago and he couldn't stop talking about it. \n\nI thought it was extremely interesting so here we are. \n\nI asked Tom Schmidt of Dragonfly to explain the thesis to me and how it really works.\n\n$PRL has really been the talk of TOKEN2049 in Singapore this week.\n\nHere’s why…",
-  "createdAt": "Thu Oct 08 07:39:00 +0000 2026",
-  "likes": 150,
-  "reposts": 12,
-  "replies": 10,
-  "views": 31665,
+  "id": "2114754066974957603",
+  "url": "https://x.com/MiningRabid/status/2114754066974957603",
+  "text": "GPU mining is BACK in 2026 🔥\n\nAfter 4+ years of pain since ETH went PoS, the GPU reset has begun. My GPUs are out-earning my CPU rigs again 🤯\n\n+ Rabid Pool is LIVE ⛏️ Get paid in BTC, USDT or USDC\n\n👇\nhttps://t.co/wF3E3gge5q\n\n#GPUMining #CryptoMining #pearl",
+  "createdAt": "Mon Oct 26 16:20:34 +0000 2026",
+  "likes": 36,
+  "reposts": 3,
+  "replies": 6,
+  "views": 5022,
   "author": {
-   "handle": "andyyy",
-   "name": "Andy",
-   "avatar": "https://pbs.twimg.com/profile_images/2102914176540717056/RidUOK5k_normal.jpg",
+   "handle": "MiningRabid",
+   "name": "Rabid Mining",
+   "avatar": "https://pbs.twimg.com/profile_images/2080156192316252160/qTYv_DDZ_normal.jpg",
    "verified": true
   },
-  "media": [
-   "https://pbs.twimg.com/amplify_video_thumb/2108097818883678209/img/wcyjV5tLfgdgbQDt.jpg"
-  ],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2111726832336671183",
-  "url": "https://x.com/SterlingSpecter/status/2111726832336671183",
-  "text": "RTX 4060Ti is printing one of the fastest ROIs in Pearl mining right now. Here’s the exact setup and how to mine it with your GPU.\n\nShoutout @MineSum10 for making me aware https://t.co/Ls25IhQM8p",
-  "createdAt": "Sun Oct 18 07:51:25 +0000 2026",
-  "likes": 82,
-  "reposts": 5,
-  "replies": 16,
-  "views": 9984,
-  "author": {
-   "handle": "SterlingSpecter",
-   "name": "Sterling",
-   "avatar": "https://pbs.twimg.com/profile_images/1878430090050093056/V4Io0KRO_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/amplify_video_thumb/2111725255366516736/img/kA4X844yp8AGFimi.jpg"
-  ],
+  "media": [],
   "isQuote": false,
   "via": null,
   "pinned": false
@@ -1658,46 +2148,6 @@
   "pinned": false
  },
  {
-  "id": "2114754066974957603",
-  "url": "https://x.com/MiningRabid/status/2114754066974957603",
-  "text": "GPU mining is BACK in 2026 🔥\n\nAfter 4+ years of pain since ETH went PoS, the GPU reset has begun. My GPUs are out-earning my CPU rigs again 🤯\n\n+ Rabid Pool is LIVE ⛏️ Get paid in BTC, USDT or USDC\n\n👇\nhttps://t.co/wF3E3gge5q\n\n#GPUMining #CryptoMining #pearl",
-  "createdAt": "Mon Oct 26 16:20:34 +0000 2026",
-  "likes": 36,
-  "reposts": 3,
-  "replies": 6,
-  "views": 5022,
-  "author": {
-   "handle": "MiningRabid",
-   "name": "Rabid Mining",
-   "avatar": "https://pbs.twimg.com/profile_images/2080156192316252160/qTYv_DDZ_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117747464832778571",
-  "url": "https://x.com/DocumentingPRL/status/2117747464832778571",
-  "text": "Anthropic released FlashProve on Nov 2, a prototype that proves a committed model produced a given answer.\n\nOn Llama 4 Maverick, proving took about 72 times the GPU time of plain inference, and about 94 times at the highest load tested.\n\n@prlnet co-founder Ilan @komargodski on how it relates to Pearl: the two prove different things. An inference proof says which model answered. Pearl's proof of useful work says the computation was done. \n\n(@AnthropicAI 's post does not mention pearl-2:native )",
-  "createdAt": "Tue Nov 03 22:35:16 +0000 2026",
-  "likes": 11,
-  "reposts": 0,
-  "replies": 1,
-  "views": 579,
-  "author": {
-   "handle": "DocumentingPRL",
-   "name": "Documenting ¶Pearl",
-   "avatar": "https://pbs.twimg.com/profile_images/2060741750692487168/NBJw-ciF_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
   "id": "2108309171129192897",
   "url": "https://x.com/immutablejacob/status/2108309171129192897",
   "text": "maybe i'm midcurving, but i don't understand pearl-2:native as an investment.\n\ndon't get me wrong, i loved the idea of proof of useful work when i first heard about it, and i still do. @prlnet is innovative tech. i just don't see it as an investment.\n\nit has:\n\n> no cash flow to holders today, so for now the case is monetary like BTC. but BTC's supply grows ~0.8%/yr. PRL's circulating supply grows ~90% over the next year\n> at $1.35, that's ~$1.4M/day of new supply going to miners who have GPU and power bills to pay, against $2 - 6M of daily volume\n> AI customers pay for inference in USD, not PRL, so the useful work doesn't create demand for the token\n> no moat yet. nothing stops someone from forking bitcoin and swapping in their own proof of useful work for AI compute. BTC's moat is 17 years of network effects, PRL is 5 months old\n> only ~16% of the 2.1B supply has been mined, so a ~$455M mcap is a ~$2.8B FDV\n> all spot volume is on two small exchanges (SafeTrade and BigONE) with ~$35k of bids within 2% of the price\n\nso if you're trading the narrative short term, i get it. but fundamentally the tokenomics are unsustainable.",
@@ -1714,6 +2164,46 @@
   },
   "media": [],
   "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117919269963137130",
+  "url": "https://x.com/Beterban0x/status/2117919269963137130",
+  "text": "Interesting timing.\n\nAnthropic can now prove which model gave you the answer, but it takes way more compute.\n\n@prlnet focuses on proving the computer actually did the math, with almost no extra cost.\n\nNot the same thing. Not competitors either.\n\nOne is about identity. The other is about whether the work really happened.\n\nStill paying attention to this. pearl-2:native",
+  "createdAt": "Wed Nov 04 09:57:57 +0000 2026",
+  "likes": 10,
+  "reposts": 0,
+  "replies": 1,
+  "views": 268,
+  "author": {
+   "handle": "Beterban0x",
+   "name": "BB",
+   "avatar": "https://pbs.twimg.com/profile_images/2101490438352125952/oCb4cD9z_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117651285071859807",
+  "url": "https://x.com/FutureM53439001/status/2117651285071859807",
+  "text": "near intents, fp8 on the horizon..the ticker is $PEARL",
+  "createdAt": "Tue Nov 03 16:13:05 +0000 2026",
+  "likes": 12,
+  "reposts": 0,
+  "replies": 0,
+  "views": 372,
+  "author": {
+   "handle": "FutureM53439001",
+   "name": "FutureMan 🅿️",
+   "avatar": "https://pbs.twimg.com/profile_images/1980838155717656576/2ly48CM7_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
   "via": null,
   "pinned": false
  },
@@ -1760,28 +2250,6 @@
   "pinned": false
  },
  {
-  "id": "2116122441835487394",
-  "url": "https://x.com/One_BullEx/status/2116122441835487394",
-  "text": "📊 Pearl Crypto and the Useful-Work Test: Why PRL Rallied and What Could Break It\n\nPearl crypto is a proof-of-work Layer 1 that pays GPU miners for matrix multiplication, the arithmetic at the core of every AI model, in place of Bitcoin‘s SHA-256 hashing. \n\nPearl Research Labs launched the Pearl crypto mainnet on April 27, 2026. The node software forks btcd, a Bitcoin implementation written in Go, so the UTXO ledger, Taproot addresses and longest-chain rule will look familiar to Bitcoin users. The change sits in the work function. A miner commits to two matrices, the protocol derives pseudorandom noise from that commitment, and the GPU multiplies the noisy matrices. Each small tile of the output acts as a lottery ticket, and a tile whose hash falls below the network target wins the block.",
-  "createdAt": "Fri Oct 30 10:58:00 +0000 2026",
-  "likes": 14,
-  "reposts": 3,
-  "replies": 9,
-  "views": 1045,
-  "author": {
-   "handle": "One_BullEx",
-   "name": "OneBullEx",
-   "avatar": "https://pbs.twimg.com/profile_images/2057707036780212224/_rKwehpD_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HVyjB2qbsAAbIVk.jpg"
-  ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
   "id": "2112996858671014239",
   "url": "https://x.com/zerokn0wledge_/status/2112996858671014239",
   "text": "The \"Bitcoin of the AI age\" thesis is getting tested faster than I expected.\n\nFour days ago $PEARL traded on two thin CEX books and sat 19% below ATH. Since then: Coinbase added it to the listing roadmap, spot printed a new ATH at $2.46, mcap went from $594M to ~$815M, and Entropy had to raise the io:PRL OI cap twice to keep up.\n\nLonged it in the dip around 1.7 via @entropyIO. Up ~40% on price since, +120% on margin at 3x. But the price is the least interesting part.\n\nWhy the thesis got stronger?\n\n- The whole bull case rests on one idea: GPU matmuls can secure a chain and serve inference at the same time, so the security budget stops being wasted hashes. That part was never the problem. The problem was distribution and demand.\n\n- Coinbase roadmap (from the 19th of Oct, together with AXIS and STABLE) attacks the distribution half. PRL goes from exotic ticker on SafeTrade / BigONE / Ourbit to a name the biggest US venue has publicly committed to review.\n\n- @prlnet cut inference prices again. DeepSeek V4.1 Flash now runs at $0.05 in / $0.30 out on their own API vs $0.30 / $1.20 on Together AI. The network is selling compute cheaper than one of the largest open-model providers, bc miners are paid in block rewards anyway.\n\nWhat the thesis still needs?\n\n- Proof that paid demand runs through the mining. Pearl still publishes zero numbers on how much of the hashrate serves paid workloads. Cheaper pricing is not the same as paying customers.\n\n- Issuance: ~1M new PRL a day, now against an ~$815M float. Until paid demand shows up, PRL trades like a mining coin and the market has to absorb that supply every single day.\n\n- Depth: Three small CEX books and a roadmap entry are still not a liquid market. Which is where Entropy comes in.\n\nThe Entropy angle?\n\nEntropy listed io:PRL on Hyperliquid while spot still only trades on three small CEXs, so the perp became the deepest PRL market before any major exchange had one.\n\nIn four days io:PRL went from $3.05M to $9.3M OI (3x) and from $2.05M to $8.4M daily volume (4x). Entropy lifted the OI cap from $5M to 10M to 15M bc demand kept hitting it, and 62% of the new cap is already filled.\n\nTwo dynamics to keep in mind if you trade it there:\n\n- The oracle is still 90% SafeTrade until a properly liquid venue lists PRL. A Coinbase listing is exactly that trigger, and once it goes live Entropy migrates io:PRL to the standard Hyperliquid feed.\n\n- The carry is real. Longs paid ~0.7 to 0.8% a day all week. That adds up. Still fine for a thesis trade tho imo.\n\nStill long btw. The gap between \"the math works\" and \"someone pays for the compute\" is still the discount still imo, and the market now too seems to be pricing it closing faster than it did last week.\n\nNFA ofc tho. Always DYOR.",
@@ -1799,6 +2267,26 @@
   "media": [
    "https://pbs.twimg.com/media/HVLfcIsawAEh5FG.jpg"
   ],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2024368011105488991",
+  "url": "https://x.com/aakashgupta/status/2024368011105488991",
+  "text": "The AI drug discovery industry just ran a $15 billion experiment proving a 2011 Turing Award winner right.\n\nJudea Pearl has argued for decades that statistical models trained on text learn how we describe the world, not how the world actually works. That distinction sounds philosophical until you watch it destroy capital at scale.\n\n2025 was supposed to be the validation year. AI-designed drugs entered clinical trials backed by billions. The result? Zero FDA approvals. Multiple candidates shelved after Phase II. Several well-funded AI drug companies shut down entirely. One CEO said publicly that AI has delivered “failure after failure” over the last decade.\n\nThe failure pattern is exactly what Pearl predicted. These companies trained models on published papers and genomic databases. The models found correlations. The correlations didn’t survive contact with human biology.\n\nHere’s the number that should terrify the industry: $15 billion in announced AI drug discovery partnerships in 2025. The actual upfront payments? About 2% of headline value. That 50:1 ratio between announced deals and real money tells you pharma knows the correlation-mining approach hasn’t cracked clinical success rates beyond the historical 90% failure baseline.\n\nMeanwhile, the companies integrating Pearl’s causal inference into their pipelines are telling a different story. BPGbio ran a Phase Ib oncology trial with 104 patients using Bayesian causal AI models trained on biospecimen data. They identified a metabolic subgroup that responded significantly better. That’s the difference between “this gene correlates with cancer” and “this metabolic pathway causes treatment response in these specific patients.”\n\nThe FDA noticed. In January 2025, they announced plans to issue formal guidance on Bayesian methods for clinical trial design. Regulators are moving toward causal frameworks before most AI companies have.\n\nPearl’s “ladder of causation” maps three levels: association (what correlates), intervention (what happens if we act), and counterfactuals (what would have happened differently). Most AI drug discovery is stuck on rung one. The companies that climb to rung three will compress drug timelines from 10 years to 3. Everyone else will keep generating impressive correlations that collapse in Phase II.\n\nThe gap between “learning how we describe biology” and “learning how biology works” costs $2 billion per failed drug. Pearl quantified the problem decades ago. The bill is coming due now.",
+  "createdAt": "Thu Feb 19 06:18:39 +0000 2026",
+  "likes": 1881,
+  "reposts": 380,
+  "replies": 72,
+  "views": 240387,
+  "author": {
+   "handle": "aakashgupta",
+   "name": "Aakash Gupta",
+   "avatar": "https://pbs.twimg.com/profile_images/2021355466216062976/8MDXp7vR_normal.jpg",
+   "verified": true
+  },
+  "media": [],
   "isQuote": true,
   "via": null,
   "pinned": false
@@ -1826,104 +2314,24 @@
   "pinned": false
  },
  {
-  "id": "2024368011105488991",
-  "url": "https://x.com/aakashgupta/status/2024368011105488991",
-  "text": "The AI drug discovery industry just ran a $15 billion experiment proving a 2011 Turing Award winner right.\n\nJudea Pearl has argued for decades that statistical models trained on text learn how we describe the world, not how the world actually works. That distinction sounds philosophical until you watch it destroy capital at scale.\n\n2025 was supposed to be the validation year. AI-designed drugs entered clinical trials backed by billions. The result? Zero FDA approvals. Multiple candidates shelved after Phase II. Several well-funded AI drug companies shut down entirely. One CEO said publicly that AI has delivered “failure after failure” over the last decade.\n\nThe failure pattern is exactly what Pearl predicted. These companies trained models on published papers and genomic databases. The models found correlations. The correlations didn’t survive contact with human biology.\n\nHere’s the number that should terrify the industry: $15 billion in announced AI drug discovery partnerships in 2025. The actual upfront payments? About 2% of headline value. That 50:1 ratio between announced deals and real money tells you pharma knows the correlation-mining approach hasn’t cracked clinical success rates beyond the historical 90% failure baseline.\n\nMeanwhile, the companies integrating Pearl’s causal inference into their pipelines are telling a different story. BPGbio ran a Phase Ib oncology trial with 104 patients using Bayesian causal AI models trained on biospecimen data. They identified a metabolic subgroup that responded significantly better. That’s the difference between “this gene correlates with cancer” and “this metabolic pathway causes treatment response in these specific patients.”\n\nThe FDA noticed. In January 2025, they announced plans to issue formal guidance on Bayesian methods for clinical trial design. Regulators are moving toward causal frameworks before most AI companies have.\n\nPearl’s “ladder of causation” maps three levels: association (what correlates), intervention (what happens if we act), and counterfactuals (what would have happened differently). Most AI drug discovery is stuck on rung one. The companies that climb to rung three will compress drug timelines from 10 years to 3. Everyone else will keep generating impressive correlations that collapse in Phase II.\n\nThe gap between “learning how we describe biology” and “learning how biology works” costs $2 billion per failed drug. Pearl quantified the problem decades ago. The bill is coming due now.",
-  "createdAt": "Thu Feb 19 06:18:39 +0000 2026",
-  "likes": 1881,
-  "reposts": 380,
-  "replies": 72,
-  "views": 240387,
+  "id": "2116122441835487394",
+  "url": "https://x.com/One_BullEx/status/2116122441835487394",
+  "text": "📊 Pearl Crypto and the Useful-Work Test: Why PRL Rallied and What Could Break It\n\nPearl crypto is a proof-of-work Layer 1 that pays GPU miners for matrix multiplication, the arithmetic at the core of every AI model, in place of Bitcoin‘s SHA-256 hashing. \n\nPearl Research Labs launched the Pearl crypto mainnet on April 27, 2026. The node software forks btcd, a Bitcoin implementation written in Go, so the UTXO ledger, Taproot addresses and longest-chain rule will look familiar to Bitcoin users. The change sits in the work function. A miner commits to two matrices, the protocol derives pseudorandom noise from that commitment, and the GPU multiplies the noisy matrices. Each small tile of the output acts as a lottery ticket, and a tile whose hash falls below the network target wins the block.",
+  "createdAt": "Fri Oct 30 10:58:00 +0000 2026",
+  "likes": 14,
+  "reposts": 3,
+  "replies": 9,
+  "views": 1045,
   "author": {
-   "handle": "aakashgupta",
-   "name": "Aakash Gupta",
-   "avatar": "https://pbs.twimg.com/profile_images/2021355466216062976/8MDXp7vR_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117864414359818431",
-  "url": "https://x.com/Cryptobuddha369/status/2117864414359818431",
-  "text": "And just like that @prlnet went live on @NEARProtocol.\n\nUuge! \n\nThis is surely the best spot venue now! https://t.co/M0rJlCukPN",
-  "createdAt": "Wed Nov 04 06:19:59 +0000 2026",
-  "likes": 5,
-  "reposts": 1,
-  "replies": 2,
-  "views": 89,
-  "author": {
-   "handle": "Cryptobuddha369",
-   "name": "Ryu.prl",
-   "avatar": "https://pbs.twimg.com/profile_images/2066582059838246913/eND2JVDQ_normal.jpg",
+   "handle": "One_BullEx",
+   "name": "OneBullEx",
+   "avatar": "https://pbs.twimg.com/profile_images/2057707036780212224/_rKwehpD_normal.jpg",
    "verified": true
   },
   "media": [
-   "https://pbs.twimg.com/media/HWQqLnebEAArQQG.jpg"
+   "https://pbs.twimg.com/media/HVyjB2qbsAAbIVk.jpg"
   ],
   "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117651285071859807",
-  "url": "https://x.com/FutureM53439001/status/2117651285071859807",
-  "text": "near intents, fp8 on the horizon..the ticker is $PEARL",
-  "createdAt": "Tue Nov 03 16:13:05 +0000 2026",
-  "likes": 9,
-  "reposts": 0,
-  "replies": 0,
-  "views": 317,
-  "author": {
-   "handle": "FutureM53439001",
-   "name": "FutureMan 🅿️",
-   "avatar": "https://pbs.twimg.com/profile_images/1980838155717656576/2ly48CM7_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117214204352717192",
-  "url": "https://x.com/0xQuBlock/status/2117214204352717192",
-  "text": "1/7 🚨 Pearl FP8 update!\n\nTwo new PRs bring major improvements to the proving and verification pipeline:\n\n🔹 #475: Batched Merkle authentication\n🔹 #476: Verifier optimizations &amp; resource bounds\nHere's why they matter. 🧵\n\n#Pearl #PoUW",
-  "createdAt": "Mon Nov 02 11:16:16 +0000 2026",
-  "likes": 12,
-  "reposts": 0,
-  "replies": 4,
-  "views": 2007,
-  "author": {
-   "handle": "0xQuBlock",
-   "name": "QuBlock",
-   "avatar": "https://pbs.twimg.com/profile_images/2116922984984408064/HsKzsm5Z_normal.jpg",
-   "verified": false
-  },
-  "media": [],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117765509156372739",
-  "url": "https://x.com/DineroDom0/status/2117765509156372739",
-  "text": "The long awaited Pearl debate has finally come. Tomorrow we set the record straight, can $PRL truly be AI money or is it just a pipe dream.",
-  "createdAt": "Tue Nov 03 23:46:58 +0000 2026",
-  "likes": 8,
-  "reposts": 0,
-  "replies": 1,
-  "views": 1727,
-  "author": {
-   "handle": "DineroDom0",
-   "name": "DineroDom",
-   "avatar": "https://pbs.twimg.com/profile_images/2111810570991140864/1vFQhIKY_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": true,
   "via": null,
   "pinned": false
  },
@@ -1954,10 +2362,10 @@
   "url": "https://x.com/BhavinGala24/status/2117696550143221841",
   "text": "$PEARL (@prlnet) just found its way to the rest of the world.\n\nNow live on @near_intents and https://t.co/iPiOe9gzk8, the first on-chain venue to natively support PEARL for confidential cross-chain swaps.",
   "createdAt": "Tue Nov 03 19:12:57 +0000 2026",
-  "likes": 8,
+  "likes": 9,
   "reposts": 0,
   "replies": 0,
-  "views": 212,
+  "views": 265,
   "author": {
    "handle": "BhavinGala24",
    "name": "Bhavin Gala",
@@ -1965,6 +2373,90 @@
    "verified": true
   },
   "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117214204352717192",
+  "url": "https://x.com/0xQuBlock/status/2117214204352717192",
+  "text": "1/7 🚨 Pearl FP8 update!\n\nTwo new PRs bring major improvements to the proving and verification pipeline:\n\n🔹 #475: Batched Merkle authentication\n🔹 #476: Verifier optimizations &amp; resource bounds\nHere's why they matter. 🧵\n\n#Pearl #PoUW",
+  "createdAt": "Mon Nov 02 11:16:16 +0000 2026",
+  "likes": 12,
+  "reposts": 0,
+  "replies": 4,
+  "views": 2007,
+  "author": {
+   "handle": "0xQuBlock",
+   "name": "QuBlock",
+   "avatar": "https://pbs.twimg.com/profile_images/2116922984984408064/HsKzsm5Z_normal.jpg",
+   "verified": false
+  },
+  "media": [],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117972462445244493",
+  "url": "https://x.com/rightclcksaveas/status/2117972462445244493",
+  "text": "normie friend from paris just texted me that his normie friend from nyc working at (redacted) told him to buy $pearl, higher?",
+  "createdAt": "Wed Nov 04 13:29:19 +0000 2026",
+  "likes": 7,
+  "reposts": 0,
+  "replies": 3,
+  "views": 480,
+  "author": {
+   "handle": "rightclcksaveas",
+   "name": "louis, cy",
+   "avatar": "https://pbs.twimg.com/profile_images/2107522303114330113/PR2jKDp4_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117749015987343574",
+  "url": "https://x.com/Svmmyboiii/status/2117749015987343574",
+  "text": "$PEARL is now live on https://t.co/vJOYNaReWo: swap in from any chain, pay anyone, confidential by default.\n\nPrice swept last week's lows to $1.35 today and bounced 7%.\n\nReclaim $1.55 and $1.72 is the next magnet (+19%).\n\nDaily close under $1.34, I'm wrong.\n\n$NEAR @prlnet https://t.co/8RlJWciEhc",
+  "createdAt": "Tue Nov 03 22:41:25 +0000 2026",
+  "likes": 5,
+  "reposts": 1,
+  "replies": 1,
+  "views": 317,
+  "author": {
+   "handle": "Svmmyboiii",
+   "name": "SvmmyBoii",
+   "avatar": "https://pbs.twimg.com/profile_images/1986468063659905024/W7pPCPYH_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HWPBgPsXcAEVUuC.jpg"
+  ],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2110674006089109771",
+  "url": "https://x.com/Sevenup27/status/2110674006089109771",
+  "text": "One of the most hyped tokens right now just got another place to trade 👀\n\n$PRL (Pearl) is now live on Entropy\n\nSince TOKEN2049, Pearl has been getting a lot of attention, and there are a few reasons why.\n\n📈 Its hashrate grew faster than BTC and ZEC at a comparable early stage.\n\nAdd a fair-launch PoW model and potential AI compute use cases, and it's easy to see why people are watching.\n\nPerp markets for $PRL are still pretty limited, so seeing Entropy add it is definitely interesting.\n\nWant to trade Pearl perps? 👉https://t.co/3Ly1aKhPP9\n\nLet's see how Pearl plays out from here.",
+  "createdAt": "Thu Oct 15 10:07:52 +0000 2026",
+  "likes": 67,
+  "reposts": 1,
+  "replies": 38,
+  "views": 1318,
+  "author": {
+   "handle": "Sevenup27",
+   "name": "Sevenup",
+   "avatar": "https://pbs.twimg.com/profile_images/2040067807212429312/KAVcVnNR_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HUqMZOYXYAAZYq-.jpg"
+  ],
   "isQuote": true,
   "via": null,
   "pinned": false
@@ -1992,26 +2484,6 @@
   "pinned": false
  },
  {
-  "id": "2117497760278851800",
-  "url": "https://x.com/NarwhalTan/status/2117497760278851800",
-  "text": "every AI answer = billions of multiplications on big grids of numbers. thats called matmul, what GPUs do all day\n\nOpenAI's AI just found a faster way to do matmul (on paper for now)\n\nGPU demand isnt going anywhere\n\nPearl lets GPUs earn $PRL from the same matmul 👀\n\npearl-2:native\n\nhttps://t.co/OLdO6yooFc",
-  "createdAt": "Tue Nov 03 06:03:01 +0000 2026",
-  "likes": 8,
-  "reposts": 0,
-  "replies": 5,
-  "views": 505,
-  "author": {
-   "handle": "NarwhalTan",
-   "name": "Noel.hl (theo arc)",
-   "avatar": "https://pbs.twimg.com/profile_images/1979399101188812800/tv2LbO1f_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
   "id": "2115861501202563129",
   "url": "https://x.com/CryptoTsetter/status/2115861501202563129",
   "text": "🚨🔥 THE NEXT GPU MINING WAVE COULD BE HUGE! ⛏️💎\n\n👀 $QTC • $PEARL • $NOID • $TSC • $XERIS\n\n📉 Back near potential buy zones AGAIN! 👀🔥\n\nWhile everyone is sleeping on GPU mining, we're watching closely for the next big move. 💎🚀\n\n⚡ GET READY FOR MINING!\n🖥️ PREPARE YOUR GPUs.\n⛏️ WATCH THE ENTRIES.\n🚀 BE READY FOR THE NEXT POTENTIAL PUMP!\n\n🔥 Quantum • AI • GPU Mining — this sector deserves serious attention!\n\nThe real excitement starts when momentum returns. Are your rigs ready? 👀💰\n\nDON'T JUST WATCH THE NEXT WAVE — PREPARE FOR IT! 🚀🔥\n\n⚠️ DYOR. No guaranteed profits. Manage your risk.\n\n#GPUMining #QTC #PEARL #NOID #TSC #XERIS #Crypto \n$PEARL $QTC $NOID $XERIS $TSC",
@@ -2030,6 +2502,26 @@
    "https://pbs.twimg.com/amplify_video_thumb/2115861471020347392/img/hoOUonYq5-0Utclg.jpg"
   ],
   "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117497760278851800",
+  "url": "https://x.com/NarwhalTan/status/2117497760278851800",
+  "text": "every AI answer = billions of multiplications on big grids of numbers. thats called matmul, what GPUs do all day\n\nOpenAI's AI just found a faster way to do matmul (on paper for now)\n\nGPU demand isnt going anywhere\n\nPearl lets GPUs earn $PRL from the same matmul 👀\n\npearl-2:native\n\nhttps://t.co/OLdO6yooFc",
+  "createdAt": "Tue Nov 03 06:03:01 +0000 2026",
+  "likes": 8,
+  "reposts": 0,
+  "replies": 5,
+  "views": 505,
+  "author": {
+   "handle": "NarwhalTan",
+   "name": "Noel.hl (theo arc)",
+   "avatar": "https://pbs.twimg.com/profile_images/1979399101188812800/tv2LbO1f_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
   "via": null,
   "pinned": false
  },
@@ -2056,41 +2548,39 @@
   "pinned": false
  },
  {
-  "id": "2117283089168703545",
-  "url": "https://x.com/aliomerhorzum/status/2117283089168703545",
-  "text": "nick szabo figured out back in 2005 that mining is all about cost advantage\n\nand I believe we're on the verge of the biggest shift in mining economics since ASICs\n\nmillions of GPUs are being deployed for AI, and for the first time, they can earn mining rewards alongside their inference revenue\n\npearl-2:native takes szabo's thesis to a whole new level\n\nthe most profitable compute is the compute that gets paid twice",
-  "createdAt": "Mon Nov 02 15:50:00 +0000 2026",
-  "likes": 5,
-  "reposts": 1,
-  "replies": 2,
-  "views": 422,
-  "author": {
-   "handle": "aliomerhorzum",
-   "name": "Ali Ömer Horzum",
-   "avatar": "https://pbs.twimg.com/profile_images/2056724059325431808/GxWJml22_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HWGTvhFW8AEZXbI.png"
-  ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
   "id": "2117691589879321069",
   "url": "https://x.com/0xSrM3ta/status/2117691589879321069",
   "text": "pearl-2:native adoption is a matter of time \n@prlnet",
   "createdAt": "Tue Nov 03 18:53:14 +0000 2026",
-  "likes": 6,
+  "likes": 7,
   "reposts": 0,
   "replies": 2,
-  "views": 256,
+  "views": 387,
   "author": {
    "handle": "0xSrM3ta",
    "name": "SrM3ta",
    "avatar": "https://pbs.twimg.com/profile_images/2073329089339895808/nm8cclZc_normal.jpg",
    "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117685900809580808",
+  "url": "https://x.com/0xQuBlock/status/2117685900809580808",
+  "text": "Proving an AI computation was performed and proving that the correct AI model produced the answer are two different problems.\n@AnthropicAI addresses the second problem. @prlnet primarily addresses the first.",
+  "createdAt": "Tue Nov 03 18:30:38 +0000 2026",
+  "likes": 7,
+  "reposts": 0,
+  "replies": 0,
+  "views": 297,
+  "author": {
+   "handle": "0xQuBlock",
+   "name": "QuBlock",
+   "avatar": "https://pbs.twimg.com/profile_images/2116922984984408064/HsKzsm5Z_normal.jpg",
+   "verified": false
   },
   "media": [],
   "isQuote": true,
@@ -2105,7 +2595,7 @@
   "likes": 53,
   "reposts": 0,
   "replies": 17,
-  "views": 2959,
+  "views": 2964,
   "author": {
    "handle": "mahera777",
    "name": "mahera",
@@ -2142,104 +2632,46 @@
   "pinned": false
  },
  {
-  "id": "2117788546488488333",
-  "url": "https://x.com/kalyugenjoyer/status/2117788546488488333",
-  "text": "Met a coworker who’s usually remote today IRL. Turns out he’s been mining pearl-2:native without knowing what it is. He owns two cards.\n\nHe told Claude to help him monetize on @vast_ai. Came back and told him to set up with @KryptexMining. He had zero context on @prlnet didn’t even know what it did. Of course I Pearl pilled him. \n\nSomething big is brewing under the surface.",
-  "createdAt": "Wed Nov 04 01:18:30 +0000 2026",
+  "id": "2117283089168703545",
+  "url": "https://x.com/aliomerhorzum/status/2117283089168703545",
+  "text": "nick szabo figured out back in 2005 that mining is all about cost advantage\n\nand I believe we're on the verge of the biggest shift in mining economics since ASICs\n\nmillions of GPUs are being deployed for AI, and for the first time, they can earn mining rewards alongside their inference revenue\n\npearl-2:native takes szabo's thesis to a whole new level\n\nthe most profitable compute is the compute that gets paid twice",
+  "createdAt": "Mon Nov 02 15:50:00 +0000 2026",
   "likes": 5,
-  "reposts": 0,
-  "replies": 0,
-  "views": 197,
-  "author": {
-   "handle": "kalyugenjoyer",
-   "name": "kalyug ¶",
-   "avatar": "https://pbs.twimg.com/profile_images/1626264253933002754/1t32Ofpg_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117685900809580808",
-  "url": "https://x.com/0xQuBlock/status/2117685900809580808",
-  "text": "Proving an AI computation was performed and proving that the correct AI model produced the answer are two different problems.\n@AnthropicAI addresses the second problem. @prlnet primarily addresses the first.",
-  "createdAt": "Tue Nov 03 18:30:38 +0000 2026",
-  "likes": 5,
-  "reposts": 0,
-  "replies": 0,
-  "views": 243,
-  "author": {
-   "handle": "0xQuBlock",
-   "name": "QuBlock",
-   "avatar": "https://pbs.twimg.com/profile_images/2116922984984408064/HsKzsm5Z_normal.jpg",
-   "verified": false
-  },
-  "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117620685493424182",
-  "url": "https://x.com/surgecodes/status/2117620685493424182",
-  "text": "$PEARL 🤝 $NEAR\n\nLive on https://t.co/EzpS7WCxYO",
-  "createdAt": "Tue Nov 03 14:11:29 +0000 2026",
-  "likes": 5,
-  "reposts": 0,
-  "replies": 0,
-  "views": 212,
-  "author": {
-   "handle": "surgecodes",
-   "name": "Surge",
-   "avatar": "https://pbs.twimg.com/profile_images/2039051051320700928/-Xb7ry3H_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2117095565800726642",
-  "url": "https://x.com/0xTojiEth/status/2117095565800726642",
-  "text": "1/ Crypto trending today (2 Nov 2026) 🧵\n\nMarket still cautious after the big Binance hack. BTC recovering a bit but Fear & Greed still in Fear.\n\n2/ Quick snapshot:\n\n• $BTC ~$78,400–78,500 (+~1%) • $ETH ~$2,290 (+~1%) • Total mcap ~$2.62–2.70T • BTC dominance ~59–60% • Fear & Greed: 37–42 (Fear)\n\n3/ CoinGecko most searched right now:\n\n$Bitcoin\n$ONDO (ONDO) — RWA\nLighter ( $LIT ) — zero-fee ZK perp DEX\nZcash ( $ZEC)\nPudgy Penguins ( $PENGU)\nPearl ( $PEARL ) — AI / Proof of Useful Work\nBittensor, $HYPE, $SOL , etc.\n4/ Weekly standout:\n\nHyperliquid (HYPE) +13–15% this week.\n\nICE ( $NYSE parent) + TradeXYZ partnership news for regulated US perps using Hyperliquid tech is the main driver. Trading around $87–88.\n\n5/ Other movers:\n\n• Pearl (PEARL) one of the better top-100 gainers today (~+5%) • $TRUMP, $Beam also green • $Pepe had a decent week earlier • Some mid-caps still bleeding\n\n6/ Narratives heating up:\n\n• Perp DEX race → HYPE + LIT • RWA → Ondo • AI + Useful Work → Pearl (matrix mult mining) • Privacy → ZEC • Select memes still alive\n\n7/ Bottom line: Market is digesting the Binance incident + watching US midterms. BTC holding above the recent lows for now, but sentiment is still risk-off.\n\nNot financial advice. DYOR. Prices move fast.\n\n$esports $idol $cyberleek $biketyson $lyn #gta6 $soph $cent",
-  "createdAt": "Mon Nov 02 03:24:51 +0000 2026",
-  "likes": 7,
-  "reposts": 0,
-  "replies": 0,
-  "views": 775,
-  "author": {
-   "handle": "0xTojiEth",
-   "name": "Toji.ETH",
-   "avatar": "https://pbs.twimg.com/profile_images/1992347940028039168/oq_bR1wU_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2116236224973459512",
-  "url": "https://x.com/OrbitPerps/status/2116236224973459512",
-  "text": "New on Orbit: $PEARL perps 🦪\n\nPearl is a layer-1 secured by \"proof of useful work\": instead of burning power on hashing, GPU miners run the matrix maths behind AI models.\n\nNow tradable with up to 10x, 24/7.\n\nhttps://t.co/3UaGGM9cP0 https://t.co/U2WhiE6vk1",
-  "createdAt": "Fri Oct 30 18:30:08 +0000 2026",
-  "likes": 7,
   "reposts": 1,
-  "replies": 0,
-  "views": 392,
+  "replies": 2,
+  "views": 422,
   "author": {
-   "handle": "OrbitPerps",
-   "name": "Orbit",
-   "avatar": "https://pbs.twimg.com/profile_images/2110099614221131776/YcPVWnwY_normal.jpg",
+   "handle": "aliomerhorzum",
+   "name": "Ali Ömer Horzum",
+   "avatar": "https://pbs.twimg.com/profile_images/2056724059325431808/GxWJml22_normal.jpg",
    "verified": true
   },
   "media": [
-   "https://pbs.twimg.com/media/HV5hoJDXcAAqvEM.jpg"
+   "https://pbs.twimg.com/media/HWGTvhFW8AEZXbI.png"
   ],
   "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2113282004339089610",
+  "url": "https://x.com/2lambro/status/2113282004339089610",
+  "text": "How does $PEARL technical and mining works?\nWhy wasn't it really proof of useful work but working towards it? https://t.co/Ee5iGwhAqG",
+  "createdAt": "Thu Oct 22 14:51:07 +0000 2026",
+  "likes": 24,
+  "reposts": 1,
+  "replies": 9,
+  "views": 1449,
+  "author": {
+   "handle": "2lambro",
+   "name": "2Lambroz 🐑 (🧑‍🍳🥩🤌)",
+   "avatar": "https://pbs.twimg.com/profile_images/1559197115464630273/wTeNbw6x_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2113281976153313280/img/Di1g3AH2gYLmJ1YE.jpg"
+  ],
+  "isQuote": true,
   "via": null,
   "pinned": false
  },
@@ -2251,7 +2683,7 @@
   "likes": 121,
   "reposts": 13,
   "replies": 11,
-  "views": 37821,
+  "views": 37928,
   "author": {
    "handle": "prlnet",
    "name": "Pearl Research Labs",
@@ -2280,6 +2712,68 @@
   },
   "media": [
    "https://pbs.twimg.com/media/HNQnJu4XYAAWWT0.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117095565800726642",
+  "url": "https://x.com/0xTojiEth/status/2117095565800726642",
+  "text": "1/ Crypto trending today (2 Nov 2026) 🧵\n\nMarket still cautious after the big Binance hack. BTC recovering a bit but Fear & Greed still in Fear.\n\n2/ Quick snapshot:\n\n• $BTC ~$78,400–78,500 (+~1%) • $ETH ~$2,290 (+~1%) • Total mcap ~$2.62–2.70T • BTC dominance ~59–60% • Fear & Greed: 37–42 (Fear)\n\n3/ CoinGecko most searched right now:\n\n$Bitcoin\n$ONDO (ONDO) — RWA\nLighter ( $LIT ) — zero-fee ZK perp DEX\nZcash ( $ZEC)\nPudgy Penguins ( $PENGU)\nPearl ( $PEARL ) — AI / Proof of Useful Work\nBittensor, $HYPE, $SOL , etc.\n4/ Weekly standout:\n\nHyperliquid (HYPE) +13–15% this week.\n\nICE ( $NYSE parent) + TradeXYZ partnership news for regulated US perps using Hyperliquid tech is the main driver. Trading around $87–88.\n\n5/ Other movers:\n\n• Pearl (PEARL) one of the better top-100 gainers today (~+5%) • $TRUMP, $Beam also green • $Pepe had a decent week earlier • Some mid-caps still bleeding\n\n6/ Narratives heating up:\n\n• Perp DEX race → HYPE + LIT • RWA → Ondo • AI + Useful Work → Pearl (matrix mult mining) • Privacy → ZEC • Select memes still alive\n\n7/ Bottom line: Market is digesting the Binance incident + watching US midterms. BTC holding above the recent lows for now, but sentiment is still risk-off.\n\nNot financial advice. DYOR. Prices move fast.\n\n$esports $idol $cyberleek $biketyson $lyn #gta6 $soph $cent",
+  "createdAt": "Mon Nov 02 03:24:51 +0000 2026",
+  "likes": 7,
+  "reposts": 0,
+  "replies": 0,
+  "views": 775,
+  "author": {
+   "handle": "0xTojiEth",
+   "name": "Toji.ETH",
+   "avatar": "https://pbs.twimg.com/profile_images/1992347940028039168/oq_bR1wU_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2117620685493424182",
+  "url": "https://x.com/surgecodes/status/2117620685493424182",
+  "text": "$PEARL 🤝 $NEAR\n\nLive on https://t.co/EzpS7WCxYO",
+  "createdAt": "Tue Nov 03 14:11:29 +0000 2026",
+  "likes": 5,
+  "reposts": 0,
+  "replies": 0,
+  "views": 212,
+  "author": {
+   "handle": "surgecodes",
+   "name": "Surge",
+   "avatar": "https://pbs.twimg.com/profile_images/2039051051320700928/-Xb7ry3H_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": true,
+  "via": null,
+  "pinned": false
+ },
+ {
+  "id": "2116236224973459512",
+  "url": "https://x.com/OrbitPerps/status/2116236224973459512",
+  "text": "New on Orbit: $PEARL perps 🦪\n\nPearl is a layer-1 secured by \"proof of useful work\": instead of burning power on hashing, GPU miners run the matrix maths behind AI models.\n\nNow tradable with up to 10x, 24/7.\n\nhttps://t.co/3UaGGM9cP0 https://t.co/U2WhiE6vk1",
+  "createdAt": "Fri Oct 30 18:30:08 +0000 2026",
+  "likes": 7,
+  "reposts": 1,
+  "replies": 0,
+  "views": 392,
+  "author": {
+   "handle": "OrbitPerps",
+   "name": "Orbit",
+   "avatar": "https://pbs.twimg.com/profile_images/2110099614221131776/YcPVWnwY_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HV5hoJDXcAAqvEM.jpg"
   ],
   "isQuote": false,
   "via": null,
@@ -2315,7 +2809,7 @@
   "likes": 190,
   "reposts": 22,
   "replies": 19,
-  "views": 34680,
+  "views": 34765,
   "author": {
    "handle": "prlnet",
    "name": "Pearl Research Labs",
@@ -2324,28 +2818,6 @@
   },
   "media": [
    "https://pbs.twimg.com/amplify_video_thumb/2086425813897908224/img/SznpHNdy4iO22B6g.jpg"
-  ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2116332248307757493",
-  "url": "https://x.com/Airdrops_one/status/2116332248307757493",
-  "text": "pearl-2:native  miner hidden inside what looked like an AI model on Hugging Face? Yes sir.\n\nMonero made mining on stolen CPUs a familiar scam. Now it's the GPU-era version.\n\n@PlutoSecurity found 31 malicious repos posing as Qwen2 test models. One flagship's supposed model weights were just 42 bytes. There was no model to run.\n\nLoad it with trust_remote_code=True, and the repo's Python executes first. It installs a hidden PEARL miner. Some versions also leave backdoors giving the attacker access to the machine.\n\n32K+ downloads across the campaign and linked repos. \n\nPluto traced ~2,276 PEARL to one payout wallet, worth about $5K at the price it used. Mining activity continued after the first repos were taken down.\n\nIf you run local models: don't enable trust_remote_code on repos you don't trust. GPU pegged for no reason? Check your processes.\n\nhttps://t.co/SQ62FodzeY\n🫡",
-  "createdAt": "Sat Oct 31 00:51:42 +0000 2026",
-  "likes": 8,
-  "reposts": 0,
-  "replies": 1,
-  "views": 5649,
-  "author": {
-   "handle": "Airdrops_one",
-   "name": "Grey Ledger",
-   "avatar": "https://pbs.twimg.com/profile_images/2077909967743352832/g8IT9tRg_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HV64yMAWcAAoEyM.jpg"
   ],
   "isQuote": false,
   "via": null,
@@ -2374,14 +2846,36 @@
   "pinned": false
  },
  {
+  "id": "2116332248307757493",
+  "url": "https://x.com/Airdrops_one/status/2116332248307757493",
+  "text": "pearl-2:native  miner hidden inside what looked like an AI model on Hugging Face? Yes sir.\n\nMonero made mining on stolen CPUs a familiar scam. Now it's the GPU-era version.\n\n@PlutoSecurity found 31 malicious repos posing as Qwen2 test models. One flagship's supposed model weights were just 42 bytes. There was no model to run.\n\nLoad it with trust_remote_code=True, and the repo's Python executes first. It installs a hidden PEARL miner. Some versions also leave backdoors giving the attacker access to the machine.\n\n32K+ downloads across the campaign and linked repos. \n\nPluto traced ~2,276 PEARL to one payout wallet, worth about $5K at the price it used. Mining activity continued after the first repos were taken down.\n\nIf you run local models: don't enable trust_remote_code on repos you don't trust. GPU pegged for no reason? Check your processes.\n\nhttps://t.co/SQ62FodzeY\n🫡",
+  "createdAt": "Sat Oct 31 00:51:42 +0000 2026",
+  "likes": 8,
+  "reposts": 0,
+  "replies": 1,
+  "views": 5649,
+  "author": {
+   "handle": "Airdrops_one",
+   "name": "Grey Ledger",
+   "avatar": "https://pbs.twimg.com/profile_images/2077909967743352832/g8IT9tRg_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/media/HV64yMAWcAAoEyM.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
   "id": "2071623727645622673",
   "url": "https://x.com/prlnet/status/2071623727645622673",
   "text": "The real currency is not money. It's energy and data - the two scarce resources whose fusion creates intelligence.\n\nWe believe that this dramatic shift in the production of knowledge compels us to rethink the fundamental properties, purpose, and creation process of money. https://t.co/RmSE0DfUgK",
   "createdAt": "Mon Jun 29 15:56:00 +0000 2026",
-  "likes": 255,
+  "likes": 254,
   "reposts": 38,
   "replies": 21,
-  "views": 57722,
+  "views": 57781,
   "author": {
    "handle": "prlnet",
    "name": "Pearl Research Labs",
@@ -2440,26 +2934,6 @@
   "pinned": false
  },
  {
-  "id": "2116520083207999691",
-  "url": "https://x.com/Keshiwallet/status/2116520083207999691",
-  "text": "One wallet. Zero compromises.\n\nMeet Keshi, the wallet built to put you in full control of your $Pearl.\n\n🔐 Your keys stay on your device. No account. No email.\n⚡ Send, swap, bridge & mine PRL with ease. \n💻 Open source. Verifiable by everyone.\n\nDon't just hold $Pearl. \n\nTake control of it.👇 Explore Keshi: https://t.co/9oc8jOS3eM",
-  "createdAt": "Sat Oct 31 13:18:05 +0000 2026",
-  "likes": 5,
-  "reposts": 0,
-  "replies": 0,
-  "views": 383,
-  "author": {
-   "handle": "Keshiwallet",
-   "name": "Keshi",
-   "avatar": "https://pbs.twimg.com/profile_images/2108145042544353280/TnnqTOyX_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
   "id": "2064025410602774720",
   "url": "https://x.com/prlnet/status/2064025410602774720",
   "text": "A common critique on Proof-of-Useful-Work is that the zero marginal cost of mining drives the network’s security budget and price to zero. \nA paper just released by Rafael Pass, a renowned cryptographer at @Cornell /@TechnionLive and research scientist at Pearl Research Labs proves why this argument is flawed.\nBy analyzing the equilibrium dynamics of PoUW, it shows not only that Pearl’s security budget (and hence price) are at least as high as Bitcoin, but in fact that Pearl will increase the SIZE of the global AI inference market, via Jevons Paradox. \nhttps://t.co/hxRGlC3AI2\n@initc3org",
@@ -2502,6 +2976,26 @@
   "pinned": false
  },
  {
+  "id": "2116520083207999691",
+  "url": "https://x.com/Keshiwallet/status/2116520083207999691",
+  "text": "One wallet. Zero compromises.\n\nMeet Keshi, the wallet built to put you in full control of your $Pearl.\n\n🔐 Your keys stay on your device. No account. No email.\n⚡ Send, swap, bridge & mine PRL with ease. \n💻 Open source. Verifiable by everyone.\n\nDon't just hold $Pearl. \n\nTake control of it.👇 Explore Keshi: https://t.co/9oc8jOS3eM",
+  "createdAt": "Sat Oct 31 13:18:05 +0000 2026",
+  "likes": 5,
+  "reposts": 0,
+  "replies": 0,
+  "views": 383,
+  "author": {
+   "handle": "Keshiwallet",
+   "name": "Keshi",
+   "avatar": "https://pbs.twimg.com/profile_images/2108145042544353280/TnnqTOyX_normal.jpg",
+   "verified": true
+  },
+  "media": [],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
   "id": "2067623488039322013",
   "url": "https://x.com/prlnet/status/2067623488039322013",
   "text": "https://t.co/cvDuRl6iQb",
@@ -2509,7 +3003,7 @@
   "likes": 178,
   "reposts": 38,
   "replies": 17,
-  "views": 50329,
+  "views": 50356,
   "author": {
    "handle": "prlnet",
    "name": "Pearl Research Labs",
@@ -2529,7 +3023,7 @@
   "likes": 214,
   "reposts": 32,
   "replies": 32,
-  "views": 31791,
+  "views": 31804,
   "author": {
    "handle": "prlnet",
    "name": "Pearl Research Labs",
@@ -2564,6 +3058,28 @@
   "pinned": false
  },
  {
+  "id": "2072710639647359099",
+  "url": "https://x.com/prlnet/status/2072710639647359099",
+  "text": "Pearl’s math breakthrough is that Proof-of-Work can now run on top of arbitrary matrix multiplication AxB, with vanishing o(1) overhead.\n\nThe key difference: the miner choose (A,B).\n\nThis “2-for-1” technology means the hundreds of billions - soon trillions - of $$ in AI compute can secure Pearl’s PoW chain, effectively for free.\n\nThe result? the world’s most economical inference.\nhttps://t.co/4urCcXuA4E",
+  "createdAt": "Thu Jul 02 15:55:00 +0000 2026",
+  "likes": 142,
+  "reposts": 30,
+  "replies": 11,
+  "views": 20044,
+  "author": {
+   "handle": "prlnet",
+   "name": "Pearl Research Labs",
+   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
+   "verified": true
+  },
+  "media": [
+   "https://pbs.twimg.com/amplify_video_thumb/2072667051043311616/img/TP9sJSs66i4gC0yW.jpg"
+  ],
+  "isQuote": false,
+  "via": null,
+  "pinned": false
+ },
+ {
   "id": "2072369682867462204",
   "url": "https://x.com/prlnet/status/2072369682867462204",
   "text": "Since Bitcoin, a major open problem in distributed systems was whether proof-of-work consensus can be implemented on top of real-world computation rather than useless random hashing. This challenge of PoUW was repeatedly conjectured impossible by researchers and thought leaders. They were wrong.",
@@ -2571,7 +3087,7 @@
   "likes": 161,
   "reposts": 24,
   "replies": 19,
-  "views": 21855,
+  "views": 21906,
   "author": {
    "handle": "prlnet",
    "name": "Pearl Research Labs",
@@ -2593,7 +3109,7 @@
   "likes": 164,
   "reposts": 21,
   "replies": 12,
-  "views": 17738,
+  "views": 17756,
   "author": {
    "handle": "prlnet",
    "name": "Pearl Research Labs",
@@ -2635,7 +3151,7 @@
   "likes": 137,
   "reposts": 21,
   "replies": 10,
-  "views": 20843,
+  "views": 20929,
   "author": {
    "handle": "prlnet",
    "name": "Pearl Research Labs",
@@ -2645,322 +3161,6 @@
   "media": [
    "https://pbs.twimg.com/amplify_video_thumb/2075279150638657536/img/ZgCGo03D-lmW25wl.jpg"
   ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2077790591824339056",
-  "url": "https://x.com/prlnet/status/2077790591824339056",
-  "text": "Today, the Pearl Protocol relies on INT-based matrix multiplication, which requires model quantization. \n\nTo eliminate this overhead, we are developing our next-generation Proof of Useful Work to natively support floating-point computations.\n\nLaunching soon, the initial release will support FP8, with FP4 to follow.",
-  "createdAt": "Thu Jul 16 16:20:55 +0000 2026",
-  "likes": 130,
-  "reposts": 16,
-  "replies": 14,
-  "views": 30342,
-  "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/amplify_video_thumb/2077789360066379776/img/H1CHEogC60TpUhqv.jpg"
-  ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2079214037808697413",
-  "url": "https://x.com/prlnet/status/2079214037808697413",
-  "text": "Proof-of-Useful-Work forced us to invent a quantization format that did not exist.\n\nPearl Protocol adds noise to both the weights and activations before matrix multiplication. That creates a constraint ordinary inference stacks do not have - the model values and the noise must fit together inside INT8. So we quantize the model to an effective W7A7 range, reserving one bit of headroom for the noise. The perturbed operands still fit in INT8, multiplication uses INT8 inputs with INT32 accumulation, and the low-rank noise can then be peeled off exactly, recovering the exact result of the quantized computation.\n\nExisting quantization for INT7 were unsatisfactory, so we built our own - a non-trivial fusion of GPTQ-style weight reconstruction, SmoothQuant-style activation smoothing and custom inference kernels. The result is an end-to-end W7A7 pipeline that, in our internal benchmarks, even outperforms many FP8 baselines (in quality and in efficiency). We are writing a paper detailing this technique so stay tuned.\n\nLooking forward, W7A7 is only an intermediate step. Our upcoming upgrade is designed to support FP8 workloads directly, eliminating the need for the extra integer-quantization step.",
-  "createdAt": "Mon Jul 20 14:37:11 +0000 2026",
-  "likes": 114,
-  "reposts": 18,
-  "replies": 9,
-  "views": 22396,
-  "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/amplify_video_thumb/2079212620331077632/img/trPZSJTxKRm4cC5P.jpg"
-  ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2074196729184878866",
-  "url": "https://x.com/prlnet/status/2074196729184878866",
-  "text": "Proof-of-Useful-Work proposes that the same GPU computation used for AI workloads can also secure a blockchain network.\n\nBut that immediately triggers an economic objection - if miners are already getting paid for running AI jobs, does the security of the network collapse?\n\n@PassRafael breaks it down and shows why this critique doesn’t hold up. Worth watching 👇",
-  "createdAt": "Mon Jul 06 18:20:11 +0000 2026",
-  "likes": 138,
-  "reposts": 18,
-  "replies": 6,
-  "views": 17321,
-  "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/amplify_video_thumb/2074194361235988480/img/cST4PcOzpDMuFeiF.jpg"
-  ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2058496764777500960",
-  "url": "https://x.com/miftaikyy/status/2058496764777500960",
-  "text": "⛏️ Pearl (PRL) Mining Full Guide\n\nReward: PRL Mining Rewards\nCost: GPU + Electricity\nOTC Price: ~$0.36 / PRL\n\nPearl is a Proof-of-Useful-Work L1 where GPU mining uses matrix multiplication, the same core compute used in AI Training.\n\nStep by Step Guide\n\nGet Started\n🔹 Go to https://t.co/HnpQvYPaZs\n🔹 Create a Pearl wallet\n🔹 Get your PRL address\n🔹 Address starts with prl1p\n🔹 Save your seed phrase safely\n\nSetup Miner\n🔹 Use NVIDIA GPU with tensor cores\n🔹 Download Alpha-Miner\n🔹 Add your PRL wallet address\n🔹 Choose worker name\n🔹 Start mining to AlphaPool\n\nCheck Dashboard\n🔹 Open https://t.co/nGtH8hUYtp\n🔹 Paste your PRL address\n🔹 Track hashrate, shares, and payout\n🔹 Minimum payout: 1 PRL\n🔹 Payout runs every 6 hours\n\nImportant\n🔹 AlphaPool fee: 5%\n🔹 No registration needed\n🔹 No KYC\n🔹 Steady mining is better for PPLNS payout\n🔹 Earnings depend on GPU, power cost, and network difficulty\n\nSetup👇\n\nDYOR, NFA",
-  "createdAt": "Sun May 24 10:34:08 +0000 2026",
-  "likes": 123,
-  "reposts": 34,
-  "replies": 15,
-  "views": 26425,
-  "author": {
-   "handle": "miftaikyy",
-   "name": "Mifta",
-   "avatar": "https://pbs.twimg.com/profile_images/2044136297187684352/orm-4CbQ_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HJE_5PhaQAApbSf.jpg"
-  ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2070169692874899922",
-  "url": "https://x.com/prlnet/status/2070169692874899922",
-  "text": "https://t.co/oJBoA0Fvy2",
-  "createdAt": "Thu Jun 25 15:38:11 +0000 2026",
-  "likes": 113,
-  "reposts": 16,
-  "replies": 3,
-  "views": 29447,
-  "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2057999211631931842",
-  "url": "https://x.com/WeinsteinOmri/status/2057999211631931842",
-  "text": "Will Fast Matrix Multiplication ever be practical?\n\nStrassen’s 1986 discovery of fast matrix multiplication (FMM) – asserting that the product of two 𝑛×𝑛 matrices can be computed in sub-cubic time 𝑛^𝜔 ∼ 𝑛²·⁸⁷ ≪ 𝑛³  – had a profound impact on theoretical computer science and algorithm design.\n\nSince then, mathematicians improved on Strassen’s algorithm, and some experts believe that, eventually, it will be shown that 𝜔 ≈ 2, which would mean that the time to  compute AxB is essentially the time it takes to merely read the inputs: ~O(𝑛²) (!) Needless to say, such  result would have a major impact on the AI compute  age we’re entering…\n\nUnfortunately, FMM algorithms only work for enormous matrices--on the order of the number of atoms in the universe (“galactic algorithms\" [1])--and it is currently hard to imagine them being  practical on any imaginable hardware. Besides their asymptotic runtime, a core practical issue with FMM algorithms is that they all inherently rely on recursive divide-and-conquer, which creates memory and IO-bottlenecks, and is numerically unstable; This is likely the reason why the largest hardware manufacturers in the world are not developing chips for FMM. Even Strassen’s original algorithm, which gives nontrivial FLOP speedup for relatively small matrices, struggles to beat the sheer parallelism of naiive MatMul on GPUs or TPUs.\n\nSome interesting progress on practical FMM seems underway [2] and would be interesting to follow, but it remains to be seen whether divide-and-conquer can be implemented in both silicon and memory to deliver wall-clock speedups for realistic dimensions of matrices in LLMs. \n\nWhat is means for @prlnet.  That’s the reason we designed the Pearl proof-of-work protocol (cuPOW) with the underlying baseline being “naiive” matrix multiplication O(𝑛³), which is what NVIDIA, AMD, Cerebras and all other AI hardware accelerators implement today.\n \nNevertheless, it is important to stress that Pearl’s protocol doesn't rely on naiive MatMul remaining SoTA  --  if FMM becomes practical some day, Pearl's protocol can easily adapt to the 𝑛^𝜔 baseline (since the next version of cuPoW will only verify the output AB).\n\nIn fact, one of the intriguing aspect of @prlnet is that it creates incentives (for both humans and machines) to develop faster MatMul algorithms and hardware (as had happened in Bitcoin with SHA256). Of course, without proper modification, such breakthrough would break the security assumption of Pearl-GEMM, so such algorithmic breakthrough would better be public.  \n\nFMM and FFT. Our recent paper [3] shows that it is possible to achieve fast matrix multiplication without using Strassen-like divide-and-conquer, using only the Fast Fourier Transform, which is omnipresent  in  countless industry-scale applications. This paper presents a simple algorithm running in 𝑂(𝑛²·⁸⁹) time, which only sums a few convolutions in 𝕫ₖᵐ, using FFT (see figure below for illustration of the algorithm).\n\nDespite being highly parallel (no recursion), this FFT  algorithm for MatMul remains asymptotic, as it still requires many parallel repetitions on submatrices in order to obtain noticeable speedup over naiive MatMul (𝑛³). Whether FFT can lead to subcubic time MatMul \nfor reasonably-sized matrices is a fascinating question! \nI believe FFTs are the most promising tool in this direction...\n\n[1] Lipton, Richard J., and Kenneth W. Regan. “David Johnson: Galactic Algorithms.” In People, Problems, and Proofs, 109–112. Springer, 2013. https://t.co/X6N6ViYYai.\n\n[2] Karstadt, Elaye, and Oded Schwartz. “Matrix Multiplication, a Little Faster.” Journal of the ACM 67, no. 1 (2020): 1:1–1:31. https://t.co/VnfiWVLdKK.\n\n[3] Uffenheimer, Yahel, and Omri Weinstein. “Improved Sparse Recovery for Approximate Matrix Multiplication.” arXiv:2602.04386, 2026..",
-  "createdAt": "Sat May 23 01:37:02 +0000 2026",
-  "likes": 152,
-  "reposts": 21,
-  "replies": 22,
-  "views": 60161,
-  "author": {
-   "handle": "WeinsteinOmri",
-   "name": "Omri Weinstein",
-   "avatar": "https://pbs.twimg.com/profile_images/1473895631525756929/OfL5OKI5_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HI9zlMBbwAAKqsp.png"
-  ],
-  "isQuote": false,
-  "via": "prlnet",
-  "pinned": false
- },
- {
-  "id": "2055334918255702242",
-  "url": "https://x.com/togethercompute/status/2055334918255702242",
-  "text": "Introducing Gemma-4-31B-it-Pearl on Together AI, Pearl Research Labs’ instruction-tuned checkpoint of Gemma 4 31B powered by @prlnet Proof of Useful Work protocol.\n\nAI natives can now use this Pearl model as a serverless inference endpoint on Together AI, at a 25%+ discounted pricing.",
-  "createdAt": "Fri May 15 17:10:05 +0000 2026",
-  "likes": 120,
-  "reposts": 20,
-  "replies": 12,
-  "views": 163626,
-  "author": {
-   "handle": "togethercompute",
-   "name": "Together AI",
-   "avatar": "https://pbs.twimg.com/profile_images/2028879663221882886/sMzEKnKc_normal.jpg",
-   "verified": false
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HIYD2YpWUAAlcw9.jpg"
-  ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2050991337495744587",
-  "url": "https://x.com/prlnet/status/2050991337495744587",
-  "text": "Demand for Pearl is skyrocketing. \n@prlnet\n \nWe’ve opened up a compute platform for the people — first come, first served, with limited supply.\n\nWe’re working hard to expand capacity. Subscribe for updates:\nhttps://t.co/JnxLt3S5EJ",
-  "createdAt": "Sun May 03 17:30:15 +0000 2026",
-  "likes": 157,
-  "reposts": 13,
-  "replies": 22,
-  "views": 51242,
-  "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2049213356238643267",
-  "url": "https://x.com/prlnet/status/2049213356238643267",
-  "text": "Every era has a resource so fundamental it becomes money.\n\nBitcoin turns energy into currency. Trustless, global and censorship-resistant.\n\nAI is doing something even more powerful: it turns energy into intelligence. Deployable anywhere and useful for almost everything.\n\nBut intelligence has no native financial primitive. It isn't fungible. It can't move outside the dollar system.\n\nPearl changes that.\n\nPearl is the first asset natively produced by AI and natively secured by AI. Every GPU cycle producing LLM tokens can simultaneously mint Pearl tokens with marginal extra electricity, zero wasted compute and one unified primitive. 2-for-1.\n\nSitting atop one of the largest capital expenditures in history, Pearl changes the unit economics of AI.\n\nThis is what sets Pearl’s breakthrough apart. Previous attempts at useful-work blockchains captured a narrow slice of compute. Pearl's addressable market is every matmul computation on earth which, at current trends, will be the majority of all compute.\n\nBitcoin’s security is competing with AI for energy. Pearl's security scales with AI adoption.\n\nProof of work represents humanity's demand for energy, monetized. \nPearl represents humanity's demand for intelligence, monetized.\n\nPearl is now live. \nhttps://t.co/Fg8vg2E9C1",
-  "createdAt": "Tue Apr 28 19:45:11 +0000 2026",
-  "likes": 124,
-  "reposts": 11,
-  "replies": 4,
-  "views": 74091,
-  "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2057544030989455369",
-  "url": "https://x.com/EarnWithChamo/status/2057544030989455369",
-  "text": "Yes, we found an early (undervalued?) \"pearl »\n\n1. What is it? \n\nImagine if every Bitcoin miner in the world, instead of just solving useless math puzzles to secure the network, used that same energy to train AI models like ChatGPT or Midjourney.\n\nPearl or $PRL is a \"Layer 1\" blockchain that does exactly that. It uses a technology called Proof of Useful Work (PoUW). Instead of \"hashing\" (Bitcoin’s method), Pearl miners perform \"Matrix Multiplications\" which is the fundamental math operation that power all Artificial Intelligence.\n\n2. Why it could be a \"Good Project\"?\n\nTwo-for-One Efficiency: For every kilowatt of electricity a miner spends, they are simultaneously securing a financial network and processing AI data. It turns energy into both \"Money\" and \"Intelligence.\"\n\nSolving the AI Bottleneck: The biggest problem for AI today isn't the code; it’s the lack of cheap, available computing power (GPUs). Pearl creates a massive, decentralized \"supercomputer\" that anyone can tap into.\n\nThe \"Bitcoin of AI\": It uses the same proven security model as Bitcoin (limited supply, decentralized) but adds real-world utility. This makes the underlying token more than just a \"store of value\", it’s a \"fuel\" for the AI industry.\n\n3. How it works and how to “print”\n\nThe Marketplace: In the future, Pearl will act as a global marketplace. Companies needing AI power will pay in Pearl tokens, and miners with GPUs will provide that power to earn rewards.\n\nInvisible Integration: It’s designed to be a \"plug-in.\" AI developers won't even need to know they are using a blockchain; they just run their AI tasks, and Pearl handles the \"mining\" in the background.\n\n4. OTC and Profit Potential\n\nATM it's early. You can mine it and sell it OTC\n\nYou can mine it around $0.25/0.3 (for now) and sell it for $0.65/70\n\nProfit Potential \n\nMinting (Mining): Since it uses \"commodity hardware\" (standard GPUs), people can \"mint\" the coin by contributing their own computer power to the network.\n\nCreate a compute account and mine it (you can pay with crypto)\n\nAccounts are limited and you need to be quick. Everyday you receive your PRL after subscribing (if you choose compute) or you can mine it yourself (more flexible)\n\nThe OTC Angle: Because the project is technical and early-stage, there is often a gap between the \"miners\" (who have the tech) and \"investors\" (who have the capital). Selling OTC (Over-The-Counter) allows you to sell large batches of \"minted\" Pearl directly to investors or AI firms who want to hedge against future compute costs, often at a premium before the coin hits major public exchanges.\n\nYou can sell it on telegram easily:\n\nhttps://t.co/Ors33iwbmp\n\nNow understand that, this is very early and i am in because the KASPA founder talked about it here:\n\nhttps://t.co/mxt5o3lDrJ\n\nEven @0xSisyphus, @TheCryptoDog, @EmersonDickie, @sigmaxavi, @Eternals_io and more have spotted it already\n\nJust remember, no CEX, no real background. We are here betting on something very new and risky and nothing prove the @prlnet team is legit, you need to DYOR and NFA\n\nDo you want a video or a live to explain how to cope some $PRL?",
-  "createdAt": "Thu May 21 19:28:18 +0000 2026",
-  "likes": 72,
-  "reposts": 11,
-  "replies": 16,
-  "views": 22475,
-  "author": {
-   "handle": "EarnWithChamo",
-   "name": "Ash Chamo",
-   "avatar": "https://pbs.twimg.com/profile_images/2080300271205314560/FaH0nY_E_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HI3dY27XEAAvGWK.jpg"
-  ],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2055211351006757062",
-  "url": "https://x.com/Eli5defi/status/2055211351006757062",
-  "text": "If your favourite CT says there’s nothing interesting to talk about because the market is dead,\n\nhit that unfollow button. They’re washed and can’t do proper research.\n\nThere are a ton of hidden gems in this space, for example, @prlnet, which is flying under everyone’s radar.\n\nHere’s my thesis breakdown in under 30s:\n\n-\n\n➠ What Pearl Is\n\nPearl is a Layer 1 blockchain that forks Bitcoin and replaces SHA-256 with arbitrary matrix multiplication as its proof-of-work mechanism.\n\nIn other words: it's a Bitcoin clone where miners run AI math instead of useless hashing puzzles. The same GPU that answers a ChatGPT query can also mint the token and secure the network at the same time.\n\n-\n\n➠ The Problem It Solves\n\nRight now, AI runs on a winner-takes-all stack.\n\nYou pay OpenAI, Anthropic, or a hyperscaler for compute. They own the datacenter. They keep the margin. The electricity gets burned, the model gets smarter, and the upside belongs to whoever owns the rack.\n\nThe rest of the world has no way to own a piece of \"AI compute\" as a category. There's no neutral asset that tracks the cost of GPU work the way gold tracks the cost of pulling metal out of the ground.\n\nMeanwhile, Bitcoin has the opposite problem.\n\nBitcoin's proof-of-work is brilliant security but the actual computation (SHA-256 hashing) produces nothing. Miners burn billions of dollars of electricity solving puzzles whose only purpose is to be hard to solve.\n\nPearl's bet: what if the puzzle that secures the chain was also the puzzle the rest of the economy already wants solved?\n\n-\n\n➠ How it Works\n\nEvery modern AI workload (inference, training, fine-tuning, embeddings) boils down to one operation repeated billions of times: matrix multiplication (MatMul).\n\nTwo grids of numbers multiplied together. That's what GPUs are built for.\n\nPearl replaces Bitcoin's SHA-256 with arbitrary matrix multiplication as the proof-of-work.\n\nThe math paper from Komargodski (Hebrew University) and Weinstein (Hebrew University / ex-Columbia, ex-NVIDIA, ex-VAST Data) proves you can make any MatMul cryptographically verifiable with overhead of 1 + o(1) - math notation for \"negligible.\"\n\nConcretely: if running an inference normally costs you 100 GPU-cycles, running the same inference in a way that also produces a valid Pearl block costs you maybe 100.5 cycles. The security tax is rounding error.\n\nSo the same kilowatt-hour does three jobs at once:\n\n❶ Answers the customer's AI query (the useful work)\n❷ Earns the miner a PRL block reward (the monetary incentive)\n❸ Secures the Pearl blockchain (the network effect)\n\nThis is what \"proof-of-useful-work\" (PoUW) means. Bitcoin's PoW is wasteful by design. Pearl's PoW is productive by design.\n\n-\n\n➠ Why The Token Has A Price Floor\n\nThe whitepaper boils down to the rule miners already follow:\n\ncost to mine = value of reward\n\nIf PRL trades below production cost, miners shut off and difficulty falls. If it trades above, miners pile in and difficulty rises. Standard PoW.\n\nWhat’s different is the “cost.”\n\nBitcoin’s is electricity. Pearl’s is useful GPU compute, the scarcest resource right now.\n\nSo PRL’s price floor tracks the global AI compute cost curve. As long as H100/H200 supply is tight and capex keeps rising, producing PRL gets more expensive.\n\n-\n\n➠ Tokenomics\n\n▸ Total supply: 2.1B PRL forever\n▸ Premine: nothing\n▸ Team allocation: nothing\n▸ Public sale: never happened\n▸ Emission curve: smooth daily decline (not Bitcoin's halving cliffs)\n\nBitcoin halvings hit miners hard every four years: revenue drops 50% overnight, inefficient miners wash out, and the network reshuffles.\n\nPearl smooths this into a daily decline. Revenue fades gradually, making capacity planning far more predictable.\n\nRoughly half the supply is issued in the first four years, then issuance slows toward the cap.\n\n-\n\n➠ The Current State\n\n▸ Mainnet launched April 27\n▸ Hashrate 3.56 EH/s (~0.4% of Bitcoin)\n▸ ~100s blocks (difficulty lagging miner growth)\n▸ H100+ only: no gaming GPUs, no hobbyists\n▸ OTC: $0.30 → $0.70 in 3 days\n▸ Cost to produce 1 PRL: $0.30 → $0.51\n▸ Subsidized compute pool: $0.004 → $0.0052 per TH-hr (5 days)\n\nNo CEX or DEX, no CoinGecko/CMC. token is live, but there’s basically no chart for retail to trade.\n\n-\n\n➠ Future Lookout\n\nRight now people buy $PRL because mining costs are rising while supply is fixed.\n\nThe real pivot is the planned compute marketplace (not live yet):\n\n- Pay for inference in PRL, not dollars (vs AWS)\n- Reserve/settle GPU contracts on-chain in PRL\n- Verify compute cryptographically, not via cloud billing\n\nIf it ships and works, PRL shifts from “token tracking compute costs” to “unit of account for AI compute.”\n\nUSDC did this for DeFi, one standard token replaced messy, fragmented settlement. PRL is aiming to be the same for compute. FYI, Render, Akash, and even Bittensor are pursuing similar ideas, but no one has won yet.\n\n-\n\n➠ Institutional Locked-In\n\n▸ a16z crypto hosted a talk on the Pearl paper. The page got pulled (now 404s) and archived. Pulled pages usually signal private conversations starting, not interest dying.\n\n▸ Stanford Crypto Seminar hosted Weinstein. Same room that hosted the foundational talks for Bitcoin and Filecoin.\n\n▸ Rob Hadick at Dragonfly (the GP who led Polymarket, Ethena, and Rain) publicly follows the account.\n\n▸ Yonatan Sompolinsky (Kaspa founder, the most important PoW theorist outside Bitcoin Core) is in the paper's acknowledgements. That's not a polite footnote. That's the closest thing to a blessing the PoW research world produces.\n\nNo VC has publicly invested. Given the no-premine / no-team-allocation structure, there's nothing for VCs to buy at a discount. They'd have to mine like everyone else.\n\n-\n\n➠ Bear Scenario for PRL\n\n→ The price jumped 133% in over-the-counter trading, but there weren’t many real trades. because trading was thin, we don’t know if the price would hold up when lots of buyers and sellers show up.\n\n→ The “compute marketplace” is mostly a plan right now. if they don’t actually build it or it doesn’t work, then the project is basically just another bitcoin-like coin with a different math story.\n\n→ They say there was “no premine” (no big stash made for insiders at launch), but no independent audit has confirmed it. for now you’re taking the team at their word until someone analyzes the distribution.\n\n→ The low mining/pool rates are low because they’re being subsidized. once the subsidies end, the costs and incentives might change and the current economics might not hold.\n\n→ The core crypto claim (verifying large matrix multiplications securely, even if someone is trying to cheat) is genuinely novel, but the efficiency claim is proven in theory. it hasn’t been proven in the real world under heavy load and active attacks.\n\n-\n\n➠ Final Take\n\nPearl makes AI math do double duty as money math.\n\nIf that idea works at scale, the token becomes the most economically grounded crypto asset ever shipped, because its production cost is tied to the most demanded resource in the world.\n\nIf it doesn't work, well, you get a well-designed Bitcoin clone that nobody uses.",
-  "createdAt": "Fri May 15 08:59:04 +0000 2026",
-  "likes": 76,
-  "reposts": 11,
-  "replies": 23,
-  "views": 13802,
-  "author": {
-   "handle": "Eli5defi",
-   "name": "Eli5DeFi",
-   "avatar": "https://pbs.twimg.com/profile_images/1684835274424242176/RxuyXAaJ_normal.jpg",
-   "verified": true
-  },
-  "media": [
-   "https://pbs.twimg.com/media/HIWT1LPbQAAvbyP.jpg"
-  ],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2072337083729854675",
-  "url": "https://x.com/komargodski/status/2072337083729854675",
-  "text": "Quantum readiness is not a theoretical “someday” problem anymore.\n\nLast week, the White House signed an executive order requiring federal agencies to identify where they rely on quantum-vulnerable cryptography and start moving high-value systems to post-quantum standards.\n\nFor blockchains, this matters even more. (1/6)",
-  "createdAt": "Wed Jul 01 15:10:37 +0000 2026",
-  "likes": 44,
-  "reposts": 8,
-  "replies": 9,
-  "views": 6650,
-  "author": {
-   "handle": "komargodski",
-   "name": "Ilan Komargodski",
-   "avatar": "https://pbs.twimg.com/profile_images/1481191206830886912/_3bRGhhy_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": "prlnet",
-  "pinned": false
- },
- {
-  "id": "2033939431980159308",
-  "url": "https://x.com/prlnet/status/2033939431980159308",
-  "text": "It is becoming increasingly clear that the future economy will be denominated in compute cycles more than in human labor.  \n\nIn a world where AI drives the majority of electricity consumption and GDP, compute is the natural collateral for money: an open, auditable, AI-native currency, produced directly through inference and training.  \n\nSince the inception of Bitcoin, an outstanding open problem in distributed systems was whether it is possible to implement Proof-of-Work consensus on top of real-world computation, as opposed to useless random hashing.  While long considered impossible, last year we answered this question affirmatively.  \n\nPearl’s mathematical breakthrough enables every GPU cycle powering AI systems to simultaneously produce a native digital currency: ¶PRL.  \n\nWhat this means is that the hundreds-of-billions (and soon trillions) of dollars of compute being deployed for AI workloads will double--for effectively free--to secure Pearl's Proof-of-Work chain; All the properties of Bitcoin, but secured as the by-product of AI inference and training, i.e., by the native operation of GPUs: matrix-multiplication (GEMM).  \n\nPearl changes the unit economics of LLMs, which are are fundamentally non-fungible, and will shift a portion of the wealth generated by AI back to users – who drive production, model improvement and demand, yet currently capture none of the upside of the AI era. \n\nWe’ve spent the last year turning this “2-for-1” breakthrough into a working infrastructure, building from the linear algebra down to the CUDA kernels, alongside world-class mathematicians and low-level engineers.  \n\nToday, we’re excited to announce that the Pearl Network is ready, and will soon support state-of-the-art LLM serving, through vLLM and SGLang plugins. Running AI workloads on Pearl transforms AI compute from a sunk expense into an AI-native asset, anchored directly to the production of intelligence.  \n\nIf you’re interested/skeptic or ideally both – we’ve published our next tranche of open problems as a collaborative Polymath challenge – containing math, systems and economics questions we’re grappling with next. We invite you to tear it down, prove it or propose better implementations: https://t.co/j4P9FFCYCd.\n\n#AIMoney \n#ProofOfInference",
-  "createdAt": "Tue Mar 17 16:12:04 +0000 2026",
-  "likes": 107,
-  "reposts": 13,
-  "replies": 15,
-  "views": 26633,
-  "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": false,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2050103020386423085",
-  "url": "https://x.com/prlnet/status/2050103020386423085",
-  "text": "👀",
-  "createdAt": "Fri May 01 06:40:23 +0000 2026",
-  "likes": 47,
-  "reposts": 1,
-  "replies": 1,
-  "views": 39456,
-  "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
-   "verified": true
-  },
-  "media": [],
-  "isQuote": true,
-  "via": null,
-  "pinned": false
- },
- {
-  "id": "2049455372318974164",
-  "url": "https://x.com/prlnet/status/2049455372318974164",
-  "text": "2-for-1 Inference on Gemma4 is now available on Pearl!\nhttps://t.co/aiNYMCVdyr",
-  "createdAt": "Wed Apr 29 11:46:52 +0000 2026",
-  "likes": 35,
-  "reposts": 5,
-  "replies": 1,
-  "views": 21373,
-  "author": {
-   "handle": "prlnet",
-   "name": "Pearl Research Labs",
-   "avatar": "https://pbs.twimg.com/profile_images/2029218139599257600/IuyT0pyZ_normal.jpg",
-   "verified": true
-  },
-  "media": [],
   "isQuote": false,
   "via": null,
   "pinned": false
