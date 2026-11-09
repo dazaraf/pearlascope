@@ -1,0 +1,27 @@
+{
+  "_note": "Voices of Pearl curation. official = projects, companies, exchanges, media and the Pearl team: shown in their own row, never ranked. featured = people always on the board (ranked by score with the rest, kept even outside the top 12 or the 30-day window). block = handles kept off the board entirely (noise, paid campaigns, pump accounts). Handles are case-insensitive.",
+  "featured": [
+    "yonatansela",
+    "minnus"
+  ],
+  "official": [
+    "prlnet",
+    "WeinsteinOmri",
+    "komargodski",
+    "NEARProtocol",
+    "near_intents",
+    "nearlytrade",
+    "MeteorWallet",
+    "Anchorage",
+    "BitGo",
+    "OrderlyNetwork",
+    "TxFlow_L1",
+    "safetrade",
+    "BSCNews",
+    "MarketBubble"
+  ],
+  "block": [
+    "BlackRock",
+    "ilblackdragon"
+  ]
+}

@@ -172,6 +172,23 @@ td a{border-bottom:1px solid var(--line-2)}
 
 .wall{columns:3 320px;column-gap:20px}
 .wall>*{break-inside:avoid;margin-bottom:20px}
+.voices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.voice{background:var(--card);border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}
+.voice header{display:flex;gap:11px;align-items:center}
+.v-n{font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums;width:18px;flex:none}
+.voice .tw-who a:hover b{text-decoration:underline}
+.v-best{font-size:14px;line-height:1.5;margin-top:12px;color:#1d1d20;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;word-wrap:break-word}
+.v-best a{color:var(--pearl)}
+.voice footer{display:flex;justify-content:space-between;gap:12px;margin-top:auto;padding-top:14px;font-size:12.5px;color:var(--mute)}
+.voice footer a{color:var(--ink)}
+.voices-foot{margin-top:20px;display:grid;gap:12px}
+.v-official{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.v-official .eyebrow{margin-right:6px}
+.v-chip{display:inline-flex;align-items:center;gap:7px;background:var(--card);border-radius:12px;padding:5px 11px 5px 5px;font-size:13px;box-shadow:var(--shadow)}
+.v-chip img{width:24px;height:24px;border-radius:8px;object-fit:cover;background:var(--card-2)}
+.v-how{font-size:13px;color:var(--ink-2);max-width:820px}.v-how a{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
+@media (max-width:1180px){.voices{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.voices{grid-template-columns:1fr}}
 .tweet-card{background:var(--card);border-radius:var(--r-md);padding:18px;box-shadow:var(--shadow)}
 .note{background:var(--black);color:#fff;border-radius:var(--r-lg);padding:26px}
 .note h3{font-weight:500;font-size:20px;margin:14px 0 10px}
@@ -374,6 +391,7 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
       <a href="#top" class="on" data-tab>Overview</a>
       <a href="#price" data-tab>Charts</a>
       <a href="#useful" data-tab>Useful Work</a>
+      <a href="#voices" data-tab>Voices</a>
       <a href="#wall" data-tab>Wall</a>
     </nav>
     <div class="right">
@@ -390,6 +408,7 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
         <a href="#hashrate"><svg class="i" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg><span>Hashrate</span></a>
         <a href="#early"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><span>Early days vs BTC &amp; ZEC</span></a>
         <a href="#useful"><svg class="i" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Useful Work Watch</span></a>
+        <a href="#voices"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a3 3 0 013 3v5a3 3 0 01-6 0V6a3 3 0 013-3z"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21"/></svg><span>Voices of Pearl</span></a>
         <a href="#wall"><svg class="i" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg><span>Wall of Pearl</span></a>
         <a href="#thesis"><svg class="i" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h4"/></svg><span>PEARL Thesis</span></a>
         <a href="#team"><svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 010 7M18 14.8c1.8.8 3 2.6 3.5 5.2"/></svg><span>The Team</span></a>
@@ -515,8 +534,17 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
       </section>
 
       <!-- WALL -->
+      <section class="sec" id="voices">
+        <div class="sec-head"><div><span class="eyebrow">05 · Community</span><h2>Voices of Pearl</h2><p>The people explaining Pearl best this month: threads, mining guides, bull and bear cases. Ranked by engagement on each person's three best Pearl posts of the last 30 days. Project and company accounts sit in their own row.</p></div></div>
+        <div class="voices" id="voicesGrid"></div>
+        <div class="voices-foot">
+          <div class="v-official" id="voicesOfficial"></div>
+          <p class="v-how">Score: likes + 3×reposts + 2×replies, top three posts per person, refreshed on every update. Curated by hand: paid campaigns and off-topic accounts stay off. Explained Pearl well and missing? <a href="https://x.com/dudubitcoin" target="_blank" rel="noopener">Tell @dudubitcoin</a>.</p>
+        </div>
+      </section>
+
       <section class="sec" id="wall">
-        <div class="sec-head"><div><span class="eyebrow">05 · Timeline</span><h2>Wall of Pearl</h2><p>The hottest Pearl posts on X: likes and reposts, weighted toward the last few days so fresh posts rise. Perle is filtered out, and the list is curated by hand on top.</p></div></div>
+        <div class="sec-head"><div><span class="eyebrow">06 · Timeline</span><h2>Wall of Pearl</h2><p>The hottest Pearl posts on X: likes and reposts, weighted toward the last few days so fresh posts rise. Perle is filtered out, and the list is curated by hand on top.</p></div></div>
         <div class="wall" id="wallGrid">
           <div class="note">
             <span class="btn-lime" style="pointer-events:none">Help build this</span>
@@ -535,7 +563,7 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
 
       <!-- THESIS (v2, 2026-11-02 draft: rewritten with the Blockworks report, the Jacob bear case and the FP8 status; Dudu reviews before release) -->
       <section class="sec" id="thesis">
-        <div class="sec-head"><div><span class="eyebrow">06 · Opinion</span><h2>The PEARL Thesis</h2><p>The best idea in crypto × AI this year, priced like a GPU coin. The whole bet is whether FP8 turns it into Bitcoin for AI before the dilution eats the holders.</p></div></div>
+        <div class="sec-head"><div><span class="eyebrow">07 · Opinion</span><h2>The PEARL Thesis</h2><p>The best idea in crypto × AI this year, priced like a GPU coin. The whole bet is whether FP8 turns it into Bitcoin for AI before the dilution eats the holders.</p></div></div>
         <div class="card">
           <div class="thesis-sum">
             <div class="ts case bear"><span class="eyebrow">Bear · just another GPU coin</span><div class="case-n"><span data-case="0.25e9">—</span><small>per PEARL · <span data-case-x="0.25e9"></span></small></div><p>FP8 slips or doesn't change the math. Gaming cards keep mining random matrices and dumping ~<span data-k="payout">$1.4M</span> a day. Their power bill (~$0.10–0.23 a coin) is the only floor: ~$0.25B.</p></div>
@@ -644,14 +672,14 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
 
       <!-- TEAM -->
       <section class="sec" id="team">
-        <div class="sec-head"><div><span class="eyebrow">07 · People</span><h2>The Team</h2><p>Pearl Research Labs. Researchers first, company second.</p></div></div>
+        <div class="sec-head"><div><span class="eyebrow">08 · People</span><h2>The Team</h2><p>Pearl Research Labs. Researchers first, company second.</p></div></div>
         <div class="team" id="teamGrid"></div>
       </section>
 
 
       <!-- CALCULATOR -->
       <section class="sec" id="calc">
-        <div class="sec-head"><div><span class="eyebrow">08 · Mining</span><h2>Mining profitability</h2><p>Your share of the network times the coins minted per day, minus pool fee and power. Network hashrate, reward and price are live; everything else is yours to change.</p></div></div>
+        <div class="sec-head"><div><span class="eyebrow">09 · Mining</span><h2>Mining profitability</h2><p>Your share of the network times the coins minted per day, minus pool fee and power. Network hashrate, reward and price are live; everything else is yours to change.</p></div></div>
         <div class="two">
           <div class="card">
             <div class="calc-grid">
@@ -695,7 +723,7 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
 
       <!-- GET -->
       <section class="sec" id="get">
-        <div class="sec-head"><div><span class="eyebrow">09 · Practical</span><h2>Getting PEARL</h2></div></div>
+        <div class="sec-head"><div><span class="eyebrow">10 · Practical</span><h2>Getting PEARL</h2></div></div>
         <div class="ways">
           <div class="card"><span class="eyebrow">Way 01</span><div class="card-h" style="margin-top:8px"><b>Buy on an exchange</b></div><p class="prose" style="font-size:14.5px;margin-top:8px">BigONE or Ourbit, PEARL/USDT, limit orders only. Small venues, so withdraw to Oyster afterwards.</p></div>
           <div class="card"><span class="eyebrow">Way 02</span><div class="card-h" style="margin-top:8px"><b>Wrapped on Ethereum</b></div><p class="prose" style="font-size:14.5px;margin-top:8px">WPRL on Uniswap via the third-party PearlBridge. It's an IOU on a bridge, not native PEARL.</p></div>
@@ -707,7 +735,7 @@ details.full[open] summary .btn-dark{background:var(--card-2);color:var(--ink)}
 
       <!-- FAQ -->
       <section class="sec" id="faq">
-        <div class="sec-head"><div><span class="eyebrow">10 · Questions</span><h2>FAQ</h2></div></div>
+        <div class="sec-head"><div><span class="eyebrow">11 · Questions</span><h2>FAQ</h2></div></div>
         <div class="card faq" id="faqList"></div>
       </section>
 
@@ -950,6 +978,8 @@ function render(){
   $('#wallMore')?.remove();
   if(tw.length>WALL_N) $('#wallGrid').insertAdjacentHTML('afterend',`<div class="wall-more" id="wallMore"><button class="btn-dark" onclick="window.__wallAll=true;render()">Show all ${tw.length} posts</button></div>`);
 
+  renderVoices(d);
+
   initCalc();
   renderThesis();
 
@@ -968,6 +998,44 @@ function tweetText(s){
     .replace(/\n/g,'<br>');
 }
 const kfmt = n => n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(1).replace('.0','')+'K':String(n);
+// Voices of Pearl: people ranked by engagement on their 3 best Pearl posts of the last 30 days.
+// Accounts in voices.json "official" get their own row; "block" stays off; "featured" always make the board. Same esc()/safeUrl() rules as the wall.
+const vScore = t => t.likes + 3*t.reposts + 2*(t.replies||0);
+function renderVoices(d){
+  const cfg = d.voices || {}, lc = a => (a||[]).map(h=>String(h).toLowerCase());
+  const official = new Set(lc(cfg.official)), block = new Set(lc(cfg.block)), featured = new Set(lc(cfg.featured));
+  const cut = Date.now() - 30*864e5, people = new Map(), orgs = new Map();
+  for (const t of d.tweets || []) {
+    const a = t.author || {}, h = String(a.handle||'').toLowerCase();
+    if (!h || block.has(h) || !(featured.has(h) || Date.parse(t.createdAt) >= cut)) continue;
+    const m = official.has(h) ? orgs : people;
+    if (!m.has(h)) m.set(h, { a, posts: [] });
+    m.get(h).posts.push(t);
+  }
+  const ranked = [...people.values()].map(p => {
+    p.posts.sort((x,y)=>vScore(y)-vScore(x));
+    p.score = p.posts.slice(0,3).reduce((s,t)=>s+vScore(t),0);
+    return p;
+  }).sort((x,y)=>y.score-x.score);
+  const pinned = ranked.filter(p=>featured.has(String(p.a.handle).toLowerCase())).slice(0,12);
+  const board = [...pinned, ...ranked.filter(p=>!pinned.includes(p)).slice(0,12-pinned.length)].sort((x,y)=>y.score-x.score);
+  const profile = h => `https://x.com/${encodeURIComponent(h)}`;
+  $('#voicesGrid').innerHTML = board.length ? board.map((p,i)=>{
+    const a = p.a, best = p.posts[0];
+    const text = esc(best.text).replace(/https:\/\/t\.co\/\w+/g,'').replace(/\n+/g,' ').trim();
+    return `<article class="voice">
+      <header><span class="v-n">${i+1}</span><img class="tw-av" src="${safeUrl(a.avatar)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+        <div class="tw-who"><a href="${profile(a.handle)}" target="_blank" rel="noopener"><b>${esc(a.name)}${a.verified?' <span class="tw-v">✓</span>':''}</b></a><small>@${esc(a.handle)}</small></div>
+        <a class="tw-x" href="${profile(a.handle)}" target="_blank" rel="noopener" title="@${esc(a.handle)} on X"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.9 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg></a></header>
+      <p class="v-best">${text}</p>
+      <footer><span>${p.posts.length} post${p.posts.length>1?'s':''} · ♥ ${kfmt(p.posts.reduce((s,t)=>s+t.likes,0))}</span><a href="${safeUrl(best.url)}" target="_blank" rel="noopener">Best post →</a></footer>
+    </article>`;
+  }).join('') : `<div class="voice"><div class="empty" style="border:0;padding:12px">Voices fill from the posts in <code>tweets.json</code>.</div></div>`;
+  const o = [...orgs.values()].sort((x,y)=>y.posts.length-x.posts.length);
+  $('#voicesOfficial').innerHTML = o.length ? `<span class="eyebrow">Official &amp; ecosystem</span>` + o.map(({a})=>
+    `<a class="v-chip" href="${profile(a.handle)}" target="_blank" rel="noopener"><img src="${safeUrl(a.avatar)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">${esc(a.name)}</a>`).join('') : '';
+}
+
 function tweetCard(t){
   const a=t.author||{}; const d=new Date(t.createdAt);
   return `<article class="tweet-card tw">
