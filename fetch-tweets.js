@@ -38,6 +38,8 @@ async function search(q, cursor, type = 'Top') {
 // Recency-weighted engagement, same formula as the page: likes + 3×reposts, decayed by age (HN-style gravity)
 const hot = t => (t.likes + 3 * t.reposts) / Math.pow(1 + (Date.now() - Date.parse(t.createdAt)) / 864e5 / 5, 1.5);
 
+// twitterapi.io sometimes returns the $PEARL cashtag as its CoinGecko id
+const cashtag = s => (s || '').replace(/pearl-2:native( (?= ))?/g, () => '$PEARL');
 const media = t => (t.extendedEntities?.media || t.entities?.media || [])
   .map(m => m.media_url_https).filter(Boolean).slice(0, 1);
 
@@ -56,7 +58,7 @@ const media = t => (t.extendedEntities?.media || t.entities?.media || [])
         if (seen.has(t.id)) continue;
         seen.set(t.id, {
           id: t.id, url: t.url || `https://x.com/${t.author?.userName}/status/${t.id}`,
-          text: t.text, createdAt: t.createdAt,
+          text: cashtag(t.text), createdAt: t.createdAt,
           likes: t.likeCount || 0, reposts: t.retweetCount || 0, replies: t.replyCount || 0, views: t.viewCount || 0,
           author: { handle: t.author?.userName, name: t.author?.name, avatar: t.author?.profilePicture, verified: !!(t.author?.isBlueVerified || t.author?.verified) },
           media: media(t), isQuote: !!t.quoted_tweet, via,
@@ -68,7 +70,7 @@ const media = t => (t.extendedEntities?.media || t.entities?.media || [])
   }
   // Keep earlier posts the searches no longer return; re-seen posts get fresh metrics
   const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : [];
-  for (const t of prev) if (!seen.has(t.id)) seen.set(t.id, t);
+  for (const t of prev) if (!seen.has(t.id)) seen.set(t.id, { ...t, text: cashtag(t.text) });
   const block = new Set(cur.block || []), blockA = new Set((cur.blockAuthors || []).map(s => s.toLowerCase()));
   const pin = cur.pin || [];
   const list = [...seen.values()]
