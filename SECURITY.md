@@ -15,3 +15,4 @@ In scope: code injection through API or tweet data, link or address tampering, b
 - Workflows run with read-only permissions and no secrets, and never on `pull_request_target`.
 - The repo is not connected to the host. Merging deploys nothing; the maintainer deploys by hand after review.
 - No API keys live in the repo or in CI. The live data comes from free public APIs.
+- One exception to integrity pinning: Google Analytics (`analytics.js`). Google serves gtag.js unversioned, so it can't carry an SRI hash. It loads only on pearlascope.com, only from www.googletagmanager.com, with ad signals off.

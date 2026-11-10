@@ -28,11 +28,16 @@
     "glamclam.vercel.app",
     "schema.org",
     "opensource.org",
-    "www.sitemaps.org"
+    "www.sitemaps.org",
+    "www.googletagmanager.com",
+    "www.google-analytics.com",
+    "region1.google-analytics.com",
+    "region1.analytics.google.com"
   ],
   "scriptHosts": [
     "cdn.jsdelivr.net",
-    "cdnjs.cloudflare.com"
+    "cdnjs.cloudflare.com",
+    "www.googletagmanager.com"
   ],
   "noIntegrity": [
     "fonts.googleapis.com"
